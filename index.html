@@ -2,25 +2,60 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
 </head>
   <body>
+    <!-- Header Block Start---------------------------------------------------->
     <div class="header">
       <div class="logo">
-        <p>Maguwo Host</p>
+          <a href="#">Maguwo<span class="header-logo-bold-text">Host</span></a>
       </div>
-      <div class="headerNav">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Pricing</li>
-          <li>Domain</li>
-          <li>Hosting</li>
+        <ul class="header-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Domain</a></li>
+          <li><a href="#">Hosting</a></li>
         </ul>
+        <div class="header-divider"></div>
+      <div class="header-contacts">
+        <p class="contacts-plain-text">Do you need help ? Just Email, Live chat or Call us</p>
+        <a href="#">Live Chat</a>
+        <div class="header-contacts-separator"></div>
+        <p class="contacts-phone-number">6284-6534</p>
       </div>
-      <div class="headerContacts">
-        <p>Do you need help ? Just Email, Live chat or Call us</p>
-        <input type="button" name="LiveChat" value="Live Chat">
-        <p>6284-6534</p>
+    </div>
+
+    <!-- Search Block Start ------------------------------------------------->
+      <div class="search-block" >
+        <h1>Just a Proffesional Web Hosting Services</h1>
+        <p>modern  -  fast  -  reliable</p>
+        <div></div>
+        <form class="search" action="index.html" method="post">
+          <input type="text" name="searchField" value="Your Domain Name ...">
+          <select name="domainName">
+            <option value=".com">.COM</option>
+            <option value=".net">.NET</option>
+            <option value=".eu">.EU</option>
+          </select>
+          <input type="button" name="serchBtn" value="Check Availability">
+        </form>
+      </div>
+
+    <!-- Articles Block Start-------------------------------------------------->
+    <div class="articles-block">
+      <div class="article">
+        <div></div>
+        <p>#1 Webhost Services</p>
+        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p>
+        <input type="button" name="articleBtn" value="More">
+      </div>
+
+      <div class="article">
+        <div></div>
+        <p>#1 Domain Services</p>
+        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh</p>
+        <input type="button" name="articleBtn" value="More">
       </div>
     </div>
   </body>

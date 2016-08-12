@@ -1,0 +1,158 @@
+body{
+  width: 1400px;
+  margin: auto;
+  padding: 0;
+}
+/*-----------------------------Header---------------------------------------------*/
+.header{
+  /*border: solid 1px red;*/
+  height: 147px;
+  background: #ffffff;
+  color: #202242;
+}
+/*-------------------Logo--------*/
+.logo{
+  /*border: solid 1px black;*/
+  height: 32px;
+  width: 225px;
+  background: url("images/header-logo-Icon.png") no-repeat;
+  margin: 59px 0 0 115px;
+  float:left;
+}
+
+.logo a{
+  display: block;
+  font-size: 30px;
+  font-family: "Rockwell", sans-serif;
+  line-height: 0.8;
+  margin: 4px 0 0 44px ;;
+  text-decoration: none;
+}
+
+.header-logo-bold-text{
+  font-weight: bolder;
+}
+
+/*----------------------Navigation menu------------------------------*/
+.header-nav{
+  /*border: solid 1px black;*/
+  margin: 65px 0 0 103px;
+  width:464px;
+  list-style: none;
+	padding: 0;
+  float:left;
+}
+
+.header-nav li{
+  float: left;
+  margin-right: 38px;
+}
+
+.header-nav li:last-child{
+  margin-right: 0;
+}
+
+.header-nav li a{
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.header-nav li a:hover{
+  color: #ffe13e;
+}
+
+.header-divider{
+  float: left;
+  background: url("images/header-divider.png");
+  width: 1px;
+  height: 100%;
+  margin-left: 50px;
+}
+
+/*----------------------Header Contacts------------------------------*/
+.header-contacts{
+  width: 290px;
+  height: 85px;
+  margin: 32px 0 0 47px;
+  float: left;
+  position: relative;
+}
+
+.contacts-plain-text{
+  font-size: 12px;
+  font-family: "Raleway" ,sans-serif;;
+  font-weight: bold;
+  line-height: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.header-contacts a{
+  position: absolute;
+  bottom: 0;
+  display: block;
+  background: #ffe13e;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;;
+  font-weight: bold;
+  line-height: 1.714;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.header-contacts-separator{
+  background: url("images/header-contacts-separator.png");
+  width: 1px;
+  height: 34px;
+  position: absolute;
+  left: 147px;
+  bottom: 5px;
+}
+
+.contacts-phone-number{
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  font-size: 24px;
+  font-family: "Lato", sans-serif;;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------------------------Search Block---------------------*/
+
+.search-block{
+  height:794px;
+  background: #2f2f2f url("images/search-block-main-image.jpg");
+  position: relative;
+}
+
+.search-block h1 {
+  font-size: 48px;
+  font-family: "Rockwell", sans-serif;;
+  color: #ffffff;
+  line-height: 0.5;
+  padding: 0;
+  position: absolute;
+  top: 234px;
+  left: 260px;
+}
+
+.search-block p{
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  line-height: 0.8;
+  text-align: center;
+  padding: 0;
+  position: absolute;
+}
