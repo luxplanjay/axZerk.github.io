@@ -20,7 +20,7 @@ body{
   /*border: solid 1px black;*/
   height: 32px;
   width: 225px;
-  background: url("images/header-logo-Icon.png") no-repeat;
+  background: url("images/header-logo-icon.png") no-repeat;
   margin: 59px 0 0 115px;
   float:left;
 }
