@@ -8,10 +8,6 @@ body {
   color: #e6e6e6;
 }
 
-img {
-  padding: 0;
-  margin: 0;
-}
 .wrapper {
   background: #fff url("../images/body-bckgrnd.jpg") 0 0 no-repeat;
   box-sizing: border-box;
@@ -82,7 +78,7 @@ img {
   margin-right: 0;
 }
 
-.destinations li span {
+.destinations-name {
   font-size: 18px;
   -moz-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
   -webkit-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
