@@ -1,0 +1,54 @@
+@import "normalize.css";
+
+body {
+  background: url(http://html5book.ru/wp-content/uploads/2015/06/background311.png);
+  color: #555;
+  margin: 0;
+}
+
+p {
+  border: 2px dashed grey;
+  padding: 10px;
+  font: 1.2em/1.4em "Times New Roman", serif;
+  text-align: justify;
+}
+
+p::first-letter {
+  font: bold 2em "Times New Roman", serif;
+  padding: 3px 10px;
+  margin-right: 5px;
+  background: #EE9966;
+  color: #FAF4F4;
+  float: left;
+  text-shadow: -1px -1px 1px white, 1px 1px 1px #9E9D99;
+  box-shadow: -1px -1px 1px white, 1px 1px 1px #9E9D99;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font: bold 2em "Times New Roman", serif;
+  color: #BA7D67;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 1px 1px 1px #555555;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+a:link {}
+a:visited {}
+a:hover {
+
+ transform: scaleX(1.1);
+}
+
+a:active {}
