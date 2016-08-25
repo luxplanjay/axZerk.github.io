@@ -4,51 +4,96 @@ body {
   background: url(http://html5book.ru/wp-content/uploads/2015/06/background311.png);
   color: #555;
   margin: 0;
+  font-family: "Tahoma";
+  color: #e6e6e6;
 }
 
-p {
-  border: 2px dashed grey;
-  padding: 10px;
-  font: 1.2em/1.4em "Times New Roman", serif;
-  text-align: justify;
+img {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  background: #fff url("../images/body-bckgrnd.jpg") 0 0 no-repeat;
+  box-sizing: border-box;
+  width: 960px;
+  margin: auto;
+  height: 883px;
+  padding: 0 60px 0 60px;
 }
 
-p::first-letter {
-  font: bold 2em "Times New Roman", serif;
-  padding: 3px 10px;
-  margin-right: 5px;
-  background: #EE9966;
-  color: #FAF4F4;
-  float: left;
-  text-shadow: -1px -1px 1px white, 1px 1px 1px #9E9D99;
-  box-shadow: -1px -1px 1px white, 1px 1px 1px #9E9D99;
+.mast-header {
+  height: 207px;
+  position: relative;
 }
 
-nav {
-    text-align: center;
+.logo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0) url("../images/main-logo.png") 0 0 no-repeat;
+  height: 147px;
+  width: 266px;
 }
 
-nav a {
+.contact-info {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  text-align: left;
+  -moz-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -webkit-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -ms-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+}
+
+.contact-header {
+  font-size: 12px;
+}
+
+.phone, .email {
+  line-height: 0.3em;
+}
+
+.destinations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  font-size:0;
+  line-height:0;
+  letter-spacing:-1px;
+}
+
+.destinations li {
   display: inline-block;
-  text-decoration: none;
-  margin-right: 10px;
-  padding: 5px 10px;
-  letter-spacing: 1px;
-  font: bold 2em "Times New Roman", serif;
-  color: #BA7D67;
-  transition: all 0.3s ease-in-out;
-  text-shadow: 1px 1px 1px #555555;
+  width: 270px;
+  margin-right: 11px;
+  margin-bottom: 72px;
+  line-height: normal;
+  letter-spacing:normal;
+  text-align: center;
+  display: -moz-inline-stack!important;
+  background: rgba(0, 0, 0, 0);
+
 }
 
-nav a:last-child {
+.destinations li:nth-child(3n) {
   margin-right: 0;
 }
 
-a:link {}
-a:visited {}
-a:hover {
-
- transform: scaleX(1.1);
+.destinations li span {
+  font-size: 18px;
+  -moz-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -webkit-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -ms-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
 }
 
-a:active {}
+.copyright {
+  text-align: center;
+  font-size: 12px;
+  -moz-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -webkit-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  -ms-transform: matrix( 0.84656084656085,0,0,0.84659635666347,0,0);
+  margin-top: 60px;
+}
