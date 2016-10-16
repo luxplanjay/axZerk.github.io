@@ -1,2 +1,85 @@
 @import "normalize.css";
+body {
+    background: #f5f6f2 url(../images/body-background.png);
+}
 
+.wrapper {
+    width: 1024px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 0 263px;
+}
+
+
+/*----- Revision 3. Added these common rules instead of <span class="separator">-----*/
+
+.about, .reasons, .contacts {
+    border-bottom: 1px solid #c7c4c8;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*----- Common h2 element rule -----*/
+
+h2 {
+    font: bold 18px "Myriad Pro", sans-serif;
+    color: #1f1f1f;
+}
+
+
+/*----- About Block -----*/
+
+.about {
+    padding-top: 50px;
+}
+
+h1 {
+    font: bold 36px Arial, sans-serif;
+    color: #010101;
+    text-align: center;
+    margin: 0;
+    padding: 0 3px;
+    text-transform: uppercase;
+}
+
+.about img {
+    display: block;
+    width: 202px;
+    height: 202px;
+    margin: 24px auto;
+    border: 1px solid #8f8f8f;
+    background: #0056d3;
+}
+
+.about p {
+    font: 14px Arial, sans-serif;
+    color: #1f1f1f;
+    margin: 0;
+}
+
+
+/*----- Reasons Block -----*/
+
+.reasons ul {
+    font: 14px/18px "Myriad Pro", sans-serif;
+    color: #1f1f1f;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.reasons li {
+    padding-left: 10px;
+}
+
+
+/*----- Contacts and Feedback Blocks / They have similar elements that we can combine in 1 rule -----*/
+
+.contacts p, .contacts a, .feedback p {
+    font: 14px "Myriad Pro", sans-serif;
+    margin-left: 35px;
+}
+
+.contacts p, .feedback p {
+    color: #3a3a3a;
+}
