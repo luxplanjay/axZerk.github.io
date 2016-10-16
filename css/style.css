@@ -11,7 +11,7 @@ body {
 }
 
 
-/*----- Revision 3. Added these common rules instead of <span class="separator">-----*/
+/*----- Revision #3. Added these common rules instead of <span class="separator"> -----*/
 
 .about, .reasons, .contacts {
     border-bottom: 1px solid #c7c4c8;
