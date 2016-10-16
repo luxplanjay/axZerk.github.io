@@ -3,43 +3,29 @@ body {
     background: #f5f6f2 url(../img/body-background.png);
 }
 
+
+/*--- WRAPPER ---*/
+
 .wrapper {
     width: 1024px;
-    margin: auto;
     box-sizing: border-box;
     padding: 0 263px;
+    margin: auto;
 }
 
 
-/*----- Revision #3. Added common rules instead of <span class="separator"> -----*/
-
-.about, .reasons, .contacts {
-    border-bottom: 1px solid #c7c4c8;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-
-/*----- Common h2 element rule -----*/
-
-h2 {
-    font: bold 18px "Myriad Pro", sans-serif;
-    color: #1f1f1f;
-}
-
-
-/*----- About Block -----*/
+/*--- ABOUT ---*/
 
 .about {
     padding-top: 50px;
 }
 
 h1 {
+    margin: 0;
+    padding: 0 3px;
     font: bold 36px Arial, sans-serif;
     color: #010101;
     text-align: center;
-    margin: 0;
-    padding: 0 3px;
     text-transform: uppercase;
 }
 
@@ -53,19 +39,24 @@ h1 {
 }
 
 .about p {
+    margin: 0;
     font: 14px Arial, sans-serif;
     color: #1f1f1f;
-    margin: 0;
 }
 
 
-/*----- Reasons Block -----*/
+/*--- REASONS ---*/
+
+h2 {
+    font: bold 18px "Myriad Pro", sans-serif;
+    color: #1f1f1f;
+}
 
 .reasons ul {
-    font: 14px/18px "Myriad Pro", sans-serif;
-    color: #1f1f1f;
     padding-left: 30px;
     margin: 0;
+    font: 14px/18px "Myriad Pro", sans-serif;
+    color: #1f1f1f;
 }
 
 .reasons li {
@@ -73,13 +64,19 @@ h1 {
 }
 
 
-/*----- Contacts and Feedback Blocks / They have similar elements that we can combine in 1 rule -----*/
+/*--- CONTACTS and FEEDBACK ---*/
 
 .contacts p, .contacts a, .feedback p {
-    font: 14px "Myriad Pro", sans-serif;
     margin-left: 35px;
+    font: 14px "Myriad Pro", sans-serif;
 }
 
 .contacts p, .feedback p {
     color: #3a3a3a;
+}
+
+.about, .reasons, .contacts {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c7c4c8;
 }
