@@ -1,1 +1,1 @@
-// dummy js placeholder
+// dummy .js placeholder

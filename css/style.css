@@ -1,82 +1,69 @@
-@import "normalize.css";
+@import "reset.css";
 body {
-    background: #f5f6f2 url(../img/body-background.png);
+    background: #f9f9f9;
 }
 
-
-/*--- WRAPPER ---*/
-
+/*-- WRAPPER --*/
 .wrapper {
-    width: 1024px;
-    box-sizing: border-box;
-    padding: 0 263px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 50px 48px 60px 46px;
+    width: 966px;
+    height: 840px;
+    background: #ffffff;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 
-/*--- ABOUT ---*/
+/*-- HEADER --*/
 
-.about {
-    padding-top: 50px;
+.header {
+    outline: 1px solid green;
+    margin-bottom: 40px;
 }
 
-h1 {
-    margin: 0;
-    padding: 0 3px;
-    font: bold 36px Arial, sans-serif;
-    color: #010101;
-    text-align: center;
-    text-transform: uppercase;
+.header__nav {
+  outline: 3px solid orange;
 }
 
-.about img {
+.header__logo {
+  display: block;
+    height: 40px;
+    width: 145px;
+    margin-bottom: 40px;
+    background: #fff url(../img/header-logo.png) 0 0 no-repeat;
+}
+
+.header__list {
+    outline: 3px solid red;
+    height: 40px;
+    background: #444343;
+    background: -moz-linear-gradient(top, #444343 0%, #5e5e5e 100%);
+    background: -webkit-linear-gradient(top, #444343 0%, #5e5e5e 100%);
+    background: linear-gradient(to bottom, #444343 0%, #5e5e5e 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#444343', endColorstr='#5e5e5e', GradientType=0);
+}
+
+.header__list-item {
+    display: inline-block;
+}
+
+.header__list a {
     display: block;
-    width: 202px;
-    height: 202px;
-    margin: 24px auto;
-    border: 1px solid #8f8f8f;
-    background: #0056d3;
+    padding: 0 25px;
+    height: 40px;
+    color: #ffffff;
+    font: 14.667px/40px "OpenSans", sans-serif;
+    text-align: justifyAll;
+    text-decoration: none;
+    text-shadow: 0.5px 0.866px 1px rgba(0, 0, 0, 0.5);
 }
 
-.about p {
-    margin: 0;
-    font: 14px Arial, sans-serif;
-    color: #1f1f1f;
-}
-
-
-/*--- REASONS ---*/
-
-h2 {
-    font: bold 18px "Myriad Pro", sans-serif;
-    color: #1f1f1f;
-}
-
-.reasons ul {
-    padding-left: 30px;
-    margin: 0;
-    font: 14px/18px "Myriad Pro", sans-serif;
-    color: #1f1f1f;
-}
-
-.reasons li {
-    padding-left: 10px;
-}
-
-
-/*--- CONTACTS and FEEDBACK ---*/
-
-.contacts p, .contacts a, .feedback p {
-    margin-left: 35px;
-    font: 14px "Myriad Pro", sans-serif;
-}
-
-.contacts p, .feedback p {
-    color: #3a3a3a;
-}
-
-.about, .reasons, .contacts {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #c7c4c8;
+.header__list a:hover {
+    background: #2e2e2e;
+    background: -moz-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
+    background: -webkit-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
+    background: linear-gradient(to bottom, #2e2e2e 0%, #4a4a4a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2e2e2e', endColorstr='#4a4a4a', GradientType=0);
+    border-left: 1px solid #838383;
+    border-right: 1px solid #838383;
 }
