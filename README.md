@@ -2,9 +2,7 @@ GoIT-FE homework #3
 
 Student: Alexander Repeta
 
-Урок 3
-
-Домашнее задание:
+задание:
 
 Сверстать [макет Fitness](http://i.imgur.com/aJIeMhO.jpg)
 
