@@ -15,6 +15,6 @@ Student: Alexander Repeta
 
 
 Использовал как гайд по BEM:
-https://en.bem.info/methodology/quick-start/
-https://anadea.info/ru/blog/bem-methodology
-http://nicothin.pro/page/bem
+  * https://en.bem.info/methodology/quick-start/
+  * https://anadea.info/ru/blog/bem-methodology
+  * http://nicothin.pro/page/bem

@@ -143,9 +143,7 @@ body {
 .page-footer {
     flex: 0 0 auto;
     padding: 0 25px;
-
-background-color: #e1e1e1;
-
+    background-color: #e1e1e1;
 }
 
 .page-footer__nav {
