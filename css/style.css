@@ -120,17 +120,17 @@ body {
 
 /*--- CONTENT ---*/
 
-.content {
+.product-info {
     float: right;
     width: 678px;
 }
 
-.content__img {
+.product-info__img {
     padding: 47px 89px;
     border: 1px solid #c8c8c8;
 }
 
-.content__text {
+.product-info__text {
     margin-top: 39px;
     padding: 0 25px;
     font: 13.333px 'Open Sans', sans-serif;
