@@ -2,7 +2,7 @@ GoIT-FE homework #3
 
 Student: Alexander Repeta
 
-задание:
+Задание:
 
 Сверстать [макет Fitness](http://i.imgur.com/aJIeMhO.jpg)
 
