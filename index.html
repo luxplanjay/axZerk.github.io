@@ -12,50 +12,61 @@
 <body>
     <div class="wrapper">
 
-        <div class="header">
-            <div class="header__logo">
-                <a href="#"><img class="header__logo-img" src="img/header-logo.png" alt="Logo" target="_blank"></a>
+        <div class="page-header">
+            <div class="page-header__logo">
+                <div class="site-logo">
+                    <a href="#"><img class="site-logo__img" src="img/site-logo.png" alt="Logo" target="_blank"></a>
+                </div>
             </div>
 
-            <ul class="header__nav">
-                <li class="header__nav-list-item"><a href="#">Главная</a></li>
-                <li class="header__nav-list-item"><a href="#">Товары</a></li>
-                <li class="header__nav-list-item"><a href="#">О нас</a></li>
-                <li class="header__nav-list-item"><a href="#">Контакты</a></li>
-            </ul>
-        </div>
-
-        <div class="content">
-            <div class="content__left">
-                <ul class="content__nav">
-                    <li class="content__nav-list-item"><a href="">Ноутбуки</a></li>
-                    <li class="content__nav-list-item"><a href="">Планшеты</a></li>
-                    <li class="content__nav-list-item"><a href="">Телефоны</a></li>
-                    <li class="content__nav-list-item"><a href="">Телевизоры</a></li>
-                    <li class="content__nav-list-item"><a href="">Бытовая</a></li>
-                    <li class="content__nav-list-item"><a href="">Техника</a></li>
-                    <li class="content__nav-list-item"><a href="">Автотовар</a></li>
+            <div class="page-header__nav">
+                <ul class="main-nav">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Товары</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
                 </ul>
             </div>
 
-            <div class="content__right">
-                <img class="content__right-img" src="img\content-right-img.jpg" alt="Product">
-                <p class="content__right-text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не
-                    тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з
-                    Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.</p>
+        </div>
+
+        <div class="content">
+            <div class="content__sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Ноутбуки</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Планшеты</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Телефоны</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Телевизоры</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Бытовая</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Техника</a></li>
+                    <li class="side-nav__item"><a class="side-nav__link" href="">Автотовар</a></li>
+                </ul>
+            </div>
+
+            <div class="content__product">
+                <div class="product">
+                    <img class="product__img" src="img\product-img.jpg" alt="Product">
+                    <p class="product__text">Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба"
+                        не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки
+                        з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.</p>
+                </div>
             </div>
         </div>
 
-        <div class="footer">
-            <ul class="footer__nav">
-                <li class="footer__list-item"><a href="#">Главная</a></li>
-                <li class="footer__list-item"><a href="#">Товары</a></li>
-                <li class="footer__list-item"><a href="#">О_нас</a></li>
-                <li class="footer__list-item"><a href="#">Контакты</a></li>
-            </ul>
+        <div class="page-footer">
+            <div class="page-footer__nav">
+                <ul class="bot-nav">
+                    <li class="bot-nav__item"><a class="bot-nav__link" href="#">Главная</a></li>
+                    <li class="bot-nav__item"><a class="bot-nav__link" href="#">Товары</a></li>
+                    <li class="bot-nav__item"><a class="bot-nav__link" href="#">О_нас</a></li>
+                    <li class="bot-nav__item"><a class="bot-nav__link" href="#">Контакты</a></li>
+                </ul>
+            </div>
 
-            <div class="footer__legal">
-                <p>2014 &copy; All rights reserved</p>
+            <div class="page-footer__legal">
+                <div class="legal-info">
+                    <p class="legal-info__text">2014 &copy; All rights reserved</p>
+                </div>
             </div>
         </div>
 
