@@ -55,14 +55,12 @@
     margin-right: 0;
 }
 
-
 /*using border-box so our link won't change it's size after adding border on hover*/
 .menu__link {
     box-sizing: border-box;
     font-size: 14px;
     text-align: center;
 }
-
 
 /*Gradient, need some explaining here. W3C Validator lists commented part as error. Not sure why, used http://www.colorzilla.com/gradient-editor/ to generate gradient*/
 .header__menu {
@@ -163,7 +161,8 @@ align-items: center; aligns it on Y axis*/
 
 /*--- PAGE-FOOTER ---*/
 
-/*Again using Flex instead Float*/
+/*Again using Flex instead Float.
+Also flex-grow: 0; by default so Content will push Footer to bottom*/
 .footer {
     display: flex;
     flex-direction: row;
