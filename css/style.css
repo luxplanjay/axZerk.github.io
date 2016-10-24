@@ -4,6 +4,7 @@
 .page {
     background: #f9f9f9;
     font-family: "Open Sans", sans-serif;
+    padding: 10px 0;
 }
 
 
@@ -13,7 +14,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 50px 48px 60px;
     width: 966px;
     height: 840px;
