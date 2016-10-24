@@ -174,7 +174,7 @@ Also flex-grow: 0; by default so Content will push Footer to bottom*/
 }
 
 .footer__link {
-    font-size: 13.333px;
+    font-size: 13px;
     color: #2c2c2c;
 }
 
