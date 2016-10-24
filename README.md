@@ -13,6 +13,7 @@ Student: Alexander Repeta
 
 
 Использовал материалы:
+
 -BEM:
   * https://en.bem.info/methodology/quick-start/
   * https://anadea.info/ru/blog/bem-methodology
