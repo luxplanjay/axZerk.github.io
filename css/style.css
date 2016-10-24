@@ -1,97 +1,114 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body {
+
+.page {
     background: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
 }
 
 
 /*-- WRAPPER --*/
 
+/*Using Flex to assign content layout on Y axis(top to bottom), this is needed to position Footer in the future*/
 .wrapper {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 50px 48px 60px 46px;
+    padding: 50px 48px 60px;
     width: 966px;
     height: 840px;
     background: #ffffff;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+.link {
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+}
 
-/*-- PAGE-HEADER --*/
 
-.page-header__logo {
+/*-- HEADER --*/
+
+.header__logo {
     margin-bottom: 40px;
 }
 
-.main-nav {
-    background: #444343;
-    background: -moz-linear-gradient(top, #444343 0%, #5e5e5e 100%);
-    background: -webkit-linear-gradient(top, #444343 0%, #5e5e5e 100%);
-    background: linear-gradient(to bottom, #444343 0%, #5e5e5e 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#444343', endColorstr='#5e5e5e', GradientType=0);
-    font-size: 0;
-    line-height: 0;
+.logo__img {
+    width: 145px;
+    height: 40px;
 }
 
-.main-nav__item {
-    display: inline-block;
+/*Using display: flex to eliminate the need to use inline-block for li elements*/
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.menu__item {
+    width: 100px;
     margin-right: 44px;
-    line-height: normal;
-    letter-spacing: normal;
 }
 
-.main-nav__item:last-child {
+.menu__item:last-child {
     margin-right: 0;
 }
 
-.main-nav__link {
-    display: block;
+
+/*using border-box so our link won't change it's size after adding border on hover*/
+.menu__link {
     box-sizing: border-box;
-    width: 100px;
-    font: 14.667px/40px 'Open Sans', sans-serif;
-    color: #ffffff;
+    font-size: 14px;
     text-align: center;
-    text-decoration: none;
+}
+
+
+/*Gradient, need some explaining here. W3C Validator lists commented part as error. Not sure why, used http://www.colorzilla.com/gradient-editor/ to generate gradient*/
+.header__menu {
+    background: #444343;
+    background: linear-gradient(to bottom, #444343 0%, #5e5e5e 100%);
+    /*background: -moz-linear-gradient(top, #444343 0%, #5e5e5e 100%);
+    background: -webkit-linear-gradient(top, #444343 0%, #5e5e5e 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#444343', endColorstr='#5e5e5e', GradientType=0);*/
+}
+
+.header__link {
+    color: #ffffff;
     text-shadow: 0.5px 0.866px 1px rgba(0, 0, 0, 0.5);
 }
 
-.main-nav__link:hover {
+.header__link:hover {
     background: #2e2e2e;
-    background: -moz-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
-    background: -webkit-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
     background: linear-gradient(to bottom, #2e2e2e 0%, #4a4a4a 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2e2e2e', endColorstr='#4a4a4a', GradientType=0);
     border-left: 1px solid #838383;
     border-right: 1px solid #838383;
+    /*background: -moz-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
+    background: -webkit-linear-gradient(top, #2e2e2e 0%, #4a4a4a 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2e2e2e', endColorstr='#4a4a4a', GradientType=0);*/
 }
 
 
-/*--- CONTENT-WRAPPER ---*/
+/*--- CONTENT ---*/
 
-.content-wrapper {
-    flex: 1 0 auto;
-    margin-top: 40px;
-}
-
-.content-wrapper::after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+/*Using Flex instead of Float left\Right, thus no need for additional layout specific blocks.
+justify-content: space-between; pins our content inside parent container to left and right side of it.
+Flex-grow: 1; is used to make .content block take all available vertical space,
+this is used to push Footer to the bottom of the page no matter how much content we put before it, it will be always pinned to the bottom, very cool technique*/
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding-top: 40px;
 }
 
 
 /*--- SIDEBAR ---*/
 
-.sidebar {
-    float: left;
-    border: 1px solid #c8c8c8;
-}
-
 .side-nav {
+    border: 1px solid #c8c8c8;
     width: 238px;
 }
 
@@ -104,11 +121,9 @@ body {
 }
 
 .side-nav__link {
-    display: block;
     padding-left: 20px;
     color: #656363;
-    font: 13.333px/40px 'Open Sans', sans-serif;
-    text-decoration: none;
+    font-size: 13.333px;
 }
 
 .side-nav__link:hover {
@@ -118,77 +133,57 @@ body {
 }
 
 
-/*--- PRODUCT-INFO ---*/
+/*--- PRODUCT ---*/
 
-.product-info {
-    float: right;
-    width: 678px;
+.product {
+    width: 680px;
 }
 
-.product-info__img {
-    padding: 47px 89px;
+
+/*using Flex to center our image inside Parent container.
+It will always be centered no matter container or image size.
+justify-content: center; aligns it on X axis
+align-items: center; aligns it on Y axis*/
+.product__img-wrap {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
     border: 1px solid #c8c8c8;
 }
 
-.product-info__text {
-    margin-top: 39px;
+.product__text {
+    margin-top: 40px;
     padding: 0 25px;
-    font: 13.333px 'Open Sans', sans-serif;
+    font: 13.333px "Open Sans", sans-serif;
     color: #2c2c2c;
 }
 
 
 /*--- PAGE-FOOTER ---*/
 
-.page-footer {
-    flex: 0 0 auto;
-    padding: 0 25px;
+/*Again using Flex instead Float*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 25px;
     background-color: #e1e1e1;
 }
 
-.page-footer__nav {
-    float: left;
-}
-
-.bot-nav {
-    font-size: 0;
-    line-height: 0;
-}
-
-.bot-nav__item {
-    display: inline-block;
-    margin-right: 90px;
-    line-height: normal;
-    letter-spacing: normal;
-}
-
-.bot-nav__item:last-child {
-    margin-right: 0;
-}
-
-.bot-nav__link {
-    font: 13.333px/40px 'OpenSans', sans-serif;
-    text-decoration: none;
+.footer__link {
+    font-size: 13.333px;
     color: #2c2c2c;
 }
 
-.bot-nav__link:hover {
+.footer__link:hover {
     text-decoration: underline;
 }
 
-.page-footer__legal {
-    float: right;
-}
-
-.legal-info__text {
-    font: 13.333px/40px 'OpenSans', sans-serif;
+.legal__text {
+    font-size: 13.333px;
+    line-height: 40px;
     color: #2c2c2c;
-}
-
-.page-footer::after {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
 }

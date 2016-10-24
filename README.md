@@ -12,7 +12,13 @@ Student: Alexander Repeta
 3. Верхнее меню можно сделать через `display: inline-block;`, в ссылках есть описание данного свойства.
 
 
-Использовал как гайд по BEM:
+Использовал материалы:
+-BEM:
   * https://en.bem.info/methodology/quick-start/
   * https://anadea.info/ru/blog/bem-methodology
   * http://nicothin.pro/page/bem
+  * https://events.yandex.ru/lib/talks/2857/
+
+-Flex:
+  * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  * http://html5.by/blog/flexbox/
