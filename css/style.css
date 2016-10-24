@@ -13,7 +13,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 50px 48px 60px;
     width: 966px;
     height: 840px;
@@ -182,7 +182,7 @@ Also flex-grow: 0; by default so Content will push Footer to bottom*/
 }
 
 .legal__text {
-    font-size: 13.333px;
+    font-size: 13px;
     line-height: 40px;
     color: #2c2c2c;
 }
