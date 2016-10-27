@@ -1,9 +1,11 @@
 @import "reset.css";
-
 .page {
-    height: 100%;
-    background: #fff url(../img/page-background.png) 0 0 repeat;
     font-family: 'Tahoma', sans-serif;
+    background: #1289a7;
+    background: -webkit-linear-gradient(#1289a7 0%, #118aa7 3%, #60efff 3%, #12cde0 3%, #1acfe2 4%, #4edae9 7%, #6ee0eb 9%, #79e3f0 9%, #8ae6f1 10%, #8ae7ef 10%, #9be9f3 11%, #abeef6 12%, #b9f0f5 12%, #c9f5f8 13%, #cdf4f9 13%, #e4f9fc 15%, #ffffff 17%, #fffeff 17%, #3ec6d2 17%, #40c6d2 18%, #38bbcd 21%, #1b9cb9 28%, #1091b0 32%, #1291b2 33%, #0f90b0 35%, #0f8cac 50%, #1086aa 60%, #0e84a8 60%, #0f81a6 69%, #0d7fa4 71%, #0d7ea6 75%, #0d7da3 75%, #0d7da5 77%, #0c7ca2 78%, #0e7ba4 81%, #0b76a0 88%, #0b74a1 95%, #0c739e 95%, #0d74a1 95%, #0c739e 96%, #0c739e 100%);
+    background: -o-linear-gradient(#1289a7 0%, #118aa7 3%, #60efff 3%, #12cde0 3%, #1acfe2 4%, #4edae9 7%, #6ee0eb 9%, #79e3f0 9%, #8ae6f1 10%, #8ae7ef 10%, #9be9f3 11%, #abeef6 12%, #b9f0f5 12%, #c9f5f8 13%, #cdf4f9 13%, #e4f9fc 15%, #ffffff 17%, #fffeff 17%, #3ec6d2 17%, #40c6d2 18%, #38bbcd 21%, #1b9cb9 28%, #1091b0 32%, #1291b2 33%, #0f90b0 35%, #0f8cac 50%, #1086aa 60%, #0e84a8 60%, #0f81a6 69%, #0d7fa4 71%, #0d7ea6 75%, #0d7da3 75%, #0d7da5 77%, #0c7ca2 78%, #0e7ba4 81%, #0b76a0 88%, #0b74a1 95%, #0c739e 95%, #0d74a1 95%, #0c739e 96%, #0c739e 100%);
+    background: linear-gradient(#1289a7 0%, #118aa7 3%, #60efff 3%, #12cde0 3%, #1acfe2 4%, #4edae9 7%, #6ee0eb 9%, #79e3f0 9%, #8ae6f1 10%, #8ae7ef 10%, #9be9f3 11%, #abeef6 12%, #b9f0f5 12%, #c9f5f8 13%, #cdf4f9 13%, #e4f9fc 15%, #ffffff 17%, #fffeff 17%, #3ec6d2 17%, #40c6d2 18%, #38bbcd 21%, #1b9cb9 28%, #1091b0 32%, #1291b2 33%, #0f90b0 35%, #0f8cac 50%, #1086aa 60%, #0e84a8 60%, #0f81a6 69%, #0d7fa4 71%, #0d7ea6 75%, #0d7da3 75%, #0d7da5 77%, #0c7ca2 78%, #0e7ba4 81%, #0b76a0 88%, #0b74a1 95%, #0c739e 95%, #0d74a1 95%, #0c739e 96%, #0c739e 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#1289a7', endColorstr='#0c739e', GradientType=0);
 }
 
 
@@ -22,7 +24,9 @@
 
 /*-- HEADER --*/
 
+
 /* Aligning items in header using Flex, so no matter content size or anount it will have same layout, pushing two rows to the sides and then bottom */
+
 .header {
     display: flex;
     flex-flow: column wrap;
@@ -30,13 +34,14 @@
     justify-content: space-between;
     align-content: space-between;
     box-sizing: border-box;
-    height: 175px;
+    height: 174px;
     padding: 9px 40px 0px;
     color: #128aa7;
 }
 
 
 /* Position:relative so we can position Slogan inside using position: absolute */
+
 .logo__link {
     display: block;
     position: relative;
@@ -80,7 +85,9 @@
 
 /*--- COUNTRIES-LIST ---*/
 
+
 /* Using flex instead of Float or inline-block */
+
 .countries-list {
     display: flex;
 }
@@ -95,6 +102,7 @@
 
 
 /* Using flex to position img and span inside the link in a column and also centered on Y axis */
+
 .countries-list__link {
     display: flex;
     flex-direction: column;
@@ -122,7 +130,9 @@
 
 /*--- MAIN-NAV ---*/
 
+
 /* z-index=100 so that block shadow is above underlying sidebar\content blocks */
+
 .navigation {
     z-index: 100;
 }
@@ -133,12 +143,17 @@
     border-bottom: 1px solid #000;
     background-color: #333333;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    padding: 0 30px;
 }
 
 .main-nav__item {
     height: 28px;
-    margin: 0 30px;
+    margin-right: 60px;
     position: relative;
+}
+
+.main-nav__item:last-child {
+    margin-right: 0;
 }
 
 .main-nav__link, .main-nav__sublink {
@@ -156,6 +171,7 @@
 
 
 /* Hiding submenu and giving it position absolute so it will display in a proper place relative to li on hover */
+
 .main-nav__submenu {
     display: none;
     position: absolute;
@@ -168,6 +184,7 @@
 
 
 /* Using > so only the apparent child of .main-nav__item will have display: block */
+
 .main-nav__item:hover>.main-nav__submenu {
     display: block;
 }
@@ -175,7 +192,9 @@
 
 /*--- CONTENT ---*/
 
+
 /* Using this container for 2 sidebars and content block in order to be able to use Flex to create equal height blocks inside this parrent, align-items: stretch is a default value */
+
 .content-container {
     display: flex;
     flex-grow: 1;
@@ -200,9 +219,11 @@
 
 
 /* Not using BEM for p inside sidebar because this will most likely be some data coming from CMS, so we specify styles for it using tag selector */
+
 .sidebar p {
+    text-align: center;
     font-size: 14px;
-    line-height: 28px;
+    line-height: 24px;
     color: #424c43;
 }
 
