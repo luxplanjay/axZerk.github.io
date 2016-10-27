@@ -4,7 +4,7 @@ Student: Alexander Repeta
 
 Задание:
 
-Сверстать [макет](http://tinyurl.com/hcjlwh5)
+Сверстать [макет](https://github.com/goit-fe/markup_fe2o/blob/master/html_04/homework4.psd)
 
 1) Верстка должна выглядеть практически как на макете, но пиксельную точность пока не делаем.
 2) В макете есть выпадающее меню, его нужно сделать с помощью position: absolute, как описано в ссылке (8)
