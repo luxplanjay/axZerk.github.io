@@ -2,6 +2,8 @@ GoIT-FE homework #4
 
 Student: Alexander Repeta
 
+Ссылка на готовую страницу: https://axzerk.github.io/
+
 Задание:
 
 Сверстать [макет](https://github.com/goit-fe/markup_fe2o/blob/master/html_04/homework4.psd)
