@@ -132,16 +132,19 @@
     z-index: 100;
 }
 
+/* font-size: 0; line-height: 0; to remove line breaks between li*/
 .main-nav {
-    display: flex;
     border-top: 1px solid #cacbcb;
     border-bottom: 1px solid #000;
     background-color: #333333;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.75);
     padding-left: 55px;
+    font-size: 0;
+    line-height: 0;
 }
 
 .main-nav__item {
+    display: inline-block;
     height: 28px;
     margin-right: 45px;
     position: relative;
@@ -151,7 +154,6 @@
     margin-right: 0;
 }
 
-/* White-space: nowrap to prevent text collapsing to new line */
 .main-nav__link, .main-nav__sublink {
     display: block;
     font-size: 14px;
@@ -159,7 +161,6 @@
     color: #fff;
     padding-left: 11px;
     text-decoration: none;
-    white-space: nowrap;
 }
 
 .main-nav__bullet {
