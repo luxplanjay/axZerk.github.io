@@ -26,7 +26,6 @@
 
 
 /* Aligning items in header using Flex, so no matter content size or anount it will have same layout, pushing two rows to the sides and then bottom */
-
 .header {
     display: flex;
     flex-flow: column wrap;
@@ -41,7 +40,6 @@
 
 
 /* Position:relative so we can position Slogan inside using position: absolute */
-
 .logo__link {
     display: block;
     position: relative;
@@ -87,7 +85,6 @@
 
 
 /* Using flex instead of Float or inline-block */
-
 .countries-list {
     display: flex;
 }
@@ -102,7 +99,6 @@
 
 
 /* Using flex to position img and span inside the link in a column and also centered on Y axis */
-
 .countries-list__link {
     display: flex;
     flex-direction: column;
@@ -132,7 +128,6 @@
 
 
 /* z-index=100 so that block shadow is above underlying sidebar\content blocks */
-
 .navigation {
     z-index: 100;
 }
@@ -156,6 +151,7 @@
     margin-right: 0;
 }
 
+/* White-space: nowrap to prevent text collapsing to new line */
 .main-nav__link, .main-nav__sublink {
     display: block;
     font-size: 14px;
@@ -167,12 +163,11 @@
 }
 
 .main-nav__bullet {
-    padding-left: 3px;
+    padding-left: 5px;
 }
 
 
 /* Hiding submenu and giving it position absolute so it will display in a proper place relative to li on hover */
-
 .main-nav__submenu {
     display: none;
     position: absolute;
@@ -185,7 +180,6 @@
 
 
 /* Using > so only the apparent child of .main-nav__item will have display: block */
-
 .main-nav__item:hover>.main-nav__submenu {
     display: block;
 }
@@ -195,7 +189,6 @@
 
 
 /* Using this container for 2 sidebars and content block in order to be able to use Flex to create equal height blocks inside this parrent, align-items: stretch is a default value */
-
 .content-container {
     display: flex;
     flex-grow: 1;
@@ -220,7 +213,6 @@
 
 
 /* Not using BEM for p inside sidebar because this will most likely be some data coming from CMS, so we specify styles for it using tag selector */
-
 .sidebar p {
     text-align: center;
     font-size: 14px;
