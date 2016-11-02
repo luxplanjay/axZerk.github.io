@@ -118,6 +118,7 @@
 
 .form-block-wrap {
     position: absolute;
+    margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
 }
