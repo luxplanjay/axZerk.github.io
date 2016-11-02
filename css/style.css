@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background: transparent url(../img/page-bg.jpg) 0 36px no-repeat;
+    background: transparent url('../img/page-bg.jpg') 0 36px no-repeat;
     background-size: cover;
     font-family: 'Helvetica Neue Cyrlight', Tahoma, sans-serif;
     cursor: default;
@@ -21,7 +21,7 @@
     height: 36px;
     width: 100%;
     padding: 0 20px;
-    background: #fff url(../img/header-bg.jpg) 0 0 repeat-x;
+    background: #fff url('../img/header-bg.jpg') 0 0 repeat-x;
 }
 
 
@@ -151,7 +151,7 @@
     border: 0;
     outline: 0;
     cursor: pointer;
-    background: transparent url(../img/facebook-btn.png) 0 0 no-repeat;
+    background: transparent url('../img/facebook-btn.png') 0 0 no-repeat;
 }
 
 
@@ -247,7 +247,7 @@
     margin-top: 23px;
     font-size: 14px;
     color: #fff;
-    background: transparent url(../img/submit-btn.png) 0 0 no-repeat;
+    background: transparent url('../img/submit-btn.png') 0 0 no-repeat;
 }
 
 .reg-form__terms {
