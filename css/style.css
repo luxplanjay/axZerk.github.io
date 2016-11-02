@@ -28,7 +28,7 @@
 /* Highligt for current page on Header element */
 .active-page {
     border: 1px solid #5ba4df;
-    border-top: none;
+    border-top: 0;
     background: rgb(81, 177, 220);
     background: -moz-linear-gradient(top, rgba(81, 177, 220, 1) 0%, rgba(53, 132, 201, 1) 68%, rgba(46, 122, 196, 1) 91%, rgba(46, 122, 196, 1) 100%);
     background: -webkit-linear-gradient(top, rgba(81, 177, 220, 1) 0%, rgba(53, 132, 201, 1) 68%, rgba(46, 122, 196, 1) 91%, rgba(46, 122, 196, 1) 100%);
@@ -70,7 +70,7 @@
     content: "";
     width: 1px;
     height: 31px;
-    margin-left: 5px;
+    margin-left: 10px;
     background-color: #56a2dc;
 }
 
@@ -78,7 +78,7 @@
 /* OFFERS */
 
 .offers {
-    margin-left: 15px;
+    margin-left: 10px;
     white-space: nowrap;
 }
 
@@ -147,8 +147,8 @@
     height: 35px;
     width: 276px;
     margin-bottom: 35px;
-    border: none;
-    outline: none;
+    border: 0;
+    outline: 0;
     cursor: pointer;
     background: transparent url(../img/facebook-btn.png) 0 0 no-repeat;
 }
@@ -190,8 +190,8 @@
     height: 36px;
     margin-bottom: 17px;
     padding: 0 20px;
-    border: none;
-    outline: none;
+    border: 0;
+    outline: 0;
     font-size: 14px;
     color: #ccc;
     background: #111111;
@@ -235,8 +235,8 @@
 }
 
 .reg-form__button {
-    border: none;
-    outline: none;
+    border: 0;
+    outline: 0;
     cursor: pointer;
 }
 
