@@ -8,6 +8,7 @@
     min-height: 100vh;
     background: transparent url('../img/page-bg.jpg') 0 36px no-repeat;
     background-size: cover;
+    background-position: center;
     font-family: 'Helvetica Neue Cyrlight', Tahoma, sans-serif;
     cursor: default;
 }
