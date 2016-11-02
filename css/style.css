@@ -67,7 +67,7 @@
 /* Separator after menu */
 .menu::after {
     display: block;
-    content: "";
+    content: '';
     width: 1px;
     height: 31px;
     margin-left: 10px;
@@ -166,7 +166,7 @@
     display: inline-block;
     width: 123px;
     height: 1px;
-    content: "";
+    content: '';
     vertical-align: middle;
     box-shadow: 0px -1px 0px 0px rgba(102, 102, 102, 1), inset 0px 1px 0px 0px rgba(0, 0, 0, 1);
 }
