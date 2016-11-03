@@ -1,6 +1,5 @@
 @import "reset.css";
 @import "fonts.css";
-
 .page {
     display: flex;
     flex-direction: column;
@@ -28,6 +27,7 @@
 
 
 /* Highligt for current page on Header element */
+
 .active-page {
     border: 1px solid #5ba4df;
     border-top: 0;
@@ -66,6 +66,7 @@
 
 
 /* Separator after menu */
+
 .menu::after {
     display: block;
     content: '';
@@ -98,6 +99,10 @@
     margin-right: 10px;
 }
 
+.offers__link:hover {
+    color: #60b5ed;
+}
+
 
 /* LOGIN */
 
@@ -112,6 +117,10 @@
 .login__link {
     font-size: 14px;
     color: #fff;
+}
+
+.login__link:hover {
+    color: #60b5ed;
 }
 
 
@@ -146,15 +155,16 @@
 
 
 /* Facebook button */
+
 .facebook-btn {
-  display: flex;
-  align-items: center;
-  height: 36px;
-  width: 276px;
-  margin-bottom: 35px;
-  background-color: transparent;
-  color: #fff;
-  line-height: 36px;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 276px;
+    margin-bottom: 35px;
+    background-color: transparent;
+    color: #fff;
+    line-height: 36px;
 }
 
 .facebook-btn__span {
@@ -170,8 +180,8 @@
 
 .facebook-btn__link {
     display: flex;
-    justify-content: space-between;
     width: 238px;
+    height: 36px;
     padding: 0 25px;
     font-size: 16px;
     font-weight: bold;
@@ -189,15 +199,17 @@
 }
 
 .facebook-btn__link-span {
-  line-height: 36px !important;
+    margin-left: 20px;
+    line-height: 36px !important;
 }
 
 .facebook-btn__link:hover {
-    background-image: linear-gradient(to top,  #3b5894, #304272);
+    background-image: linear-gradient(to top, #3b5894, #304272);
 }
 
 
 /* Separator. Used box-shadow to recreate it! */
+
 .separator {
     margin-bottom: 30px;
     font-size: 14px;
@@ -214,9 +226,13 @@
     box-shadow: 0px -1px 0px 0px rgba(102, 102, 102, 1), inset 0px 1px 0px 0px rgba(0, 0, 0, 1);
 }
 
-.separator::before { margin-right: 6px; }
+.separator::before {
+    margin-right: 6px;
+}
 
-.separator::after { margin-left: 6px; }
+.separator::after {
+    margin-left: 6px;
+}
 
 
 /* FORM */
@@ -275,6 +291,10 @@
 .reg-form__label {
     font-size: 14px;
     color: #ccc;
+}
+
+.reg-form__label:hover {
+    cursor: pointer;
 }
 
 .reg-form__button {
