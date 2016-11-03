@@ -6,10 +6,11 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    width: 100vw;
     background: transparent url('../img/page-bg.jpg') 0 36px no-repeat;
     background-size: cover;
     background-position: center;
-    font-family: 'Helvetica Neue Cyrlight', Tahoma, sans-serif;
+    font-family: 'Helvetica Neue', Tahoma, sans-serif;
     cursor: default;
 }
 
@@ -61,7 +62,6 @@
 .menu__link:hover {
     background-color: #4eabda;
     color: #fff;
-    font-weight: bold;
 }
 
 
@@ -144,15 +144,56 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+
+/* Facebook button */
 .facebook-btn {
-    display: block;
-    height: 35px;
-    width: 276px;
-    margin-bottom: 35px;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    background: transparent url('../img/facebook-btn.png') 0 0 no-repeat;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 276px;
+  margin-bottom: 35px;
+  background-color: transparent;
+  color: #fff;
+  line-height: 36px;
+}
+
+.facebook-btn__span {
+    width: 37px;
+    line-height: 36px !important;
+    text-align: center;
+    background-image: linear-gradient(to top, #304272, #3b5894);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #758ab9;
+    border-right: 1px solid #203c6e;
+}
+
+.facebook-btn__link {
+    display: flex;
+    justify-content: space-between;
+    width: 238px;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(to top, #304272, #3b5894);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #758ab9;
+    border-left: 1px solid #4c66a3;
+}
+
+.facebook-btn__span_view_normal {
+    font-weight: normal;
+}
+
+.facebook-btn__link-span {
+  line-height: 36px !important;
+}
+
+.facebook-btn__link:hover {
+    background-image: linear-gradient(to top,  #3b5894, #304272);
 }
 
 
