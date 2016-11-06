@@ -1,0 +1,83 @@
+@import "reset.css";
+
+.page {
+  font-family: Arial, sans-serif;;
+}
+.wrapper {
+  outline: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 909px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  height: 54px;
+}
+
+.contacts,
+.login-form,
+.hot-navigation,
+.login-block {
+  outline: 1px solid blue;
+}
+
+.contacts {
+  display: flex;
+  height: 21px;
+  margin-top: 22px;
+  padding-left: 7px;
+}
+
+.contacts__icon {
+  display: block;
+  width: 22px;
+  margin-right: 3px;
+  background: transparent url('../img/phone-icon.png') 0 0 no-repeat;
+
+}
+
+.contacts__phone {
+
+    font-size: 18px;
+    color: #5e696d;
+}
+
+.contacts__phone_pos_left {
+  padding-top: 3px;
+  letter-spacing: 0.4px;
+}
+
+.contacts__phone_pos_right {
+  margin-left: 6px;
+  padding-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+
+
+/*.login-block {
+  height: 27px;
+  background: rgb(32,105,136);
+background: -moz-linear-gradient(top,  rgba(32,105,136,1) 0%, rgba(17,65,101,1) 59%, rgba(12,50,86,1) 100%);
+background: -webkit-linear-gradient(top,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
+background: linear-gradient(to bottom,  rgba(32,105,136,1) 0%,rgba(17,65,101,1) 59%,rgba(12,50,86,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#0c3256',GradientType=0 );
+}
+
+.login-form__input {
+  width: 115px;
+  height: 18px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  text-decoration: underline;
+}
+
+.hot-navigation {
+}*/
