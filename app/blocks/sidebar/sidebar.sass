@@ -1,0 +1,30 @@
+@import '../tools/tools'
+
+.sidebar
+    display: flex
+    flex-direction: column
+    font-family: $secondary-fonts
+
+    &__header
+        display: flex
+        align-items: center
+        width: 183px
+        height: 27px
+        padding-left: 2px
+        background-color: #fff
+        border: 1px solid #79878d
+        box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75)
+        border-radius: 15px
+
+    &__icon
+        display: block
+        width: 22px
+        height: 21px
+        margin-right: 5px
+        background: transparent url('../img/list-icon.png') 0 0 no-repeat
+
+    &__caption
+        color: #114165
+        font-size: 13px
+        // line-height: 25px
+        text-transform: uppercase

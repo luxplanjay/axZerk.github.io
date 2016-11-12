@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+
+<body class="page">
+
+    <div class="wrapper">
+        <!-- Page header -->
+        <header class="page-header">
+            <div class="contacts">
+                <i class="contacts__icon"></i>
+                <p class="contacts__phone">(044)123-45-67</p>
+                <p class="contacts__phone">(044)567-89-10</p>
+            </div>
+            <!-- Login block -->
+            <div class="b-login">
+                <form action="#" class="login-form" id="login-form" method="post">
+                    <i class="login-form__icon"></i>
+                    <input type="text" name="login" id="" class="login-form__input" required placeholder="логин">
+                    <input type="password" name="password" class="login-form__input" id="" required placeholder="пароль">
+                    <input type="submit" value="вход" class="login-form__submit" form="login-form">
+                </form>
+
+                <a href="" class="b-login__register">регистрация</a>
+                <a href="" class="b-login__recover">забыли пароль?</a>
+            </div>
+            <!-- Hot navigation -->
+            <nav class="hot-nav">
+                <a href="" class="hot-nav__link hot-nav__link_view_home"></a>
+                <a href="" class="hot-nav__link hot-nav__link_view_map"></a>
+                <a href="" class="hot-nav__link hot-nav__link_view_mail"></a>
+            </nav>
+        </header>
+
+        <!-- Slider -->
+        <div class="b-slider">
+            <img class="slider__item" src="img/headline.jpg" alt="slider-item">
+        </div>
+
+        <!-- Main navigation -->
+        <nav class="b-navigation">
+            <ul class="main-nav">
+                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover link">о компании</a></li>
+                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover link">оплата</a></li>
+                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover link">доставка</a></li>
+                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover link">статьи</a></li>
+                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover link">контакты</a></li>
+            </ul>
+
+            <div class="cart">
+                <i class="cart__icon"><a href="" class="cart__link"></a></i>
+                <p class="cart__text">товаров: <span class="cart__quantity">0</span></p>
+                <p class="cart__text">на сумму: <span class="cart__total">0,00 грн.</span></p>
+            </div>
+        </nav>
+
+        <!-- Search block -->
+        <section class="b-search">
+            <form class="search-form" action="#" method="post"></form>
+            <form class="search-form" action="#" method="post"></form>
+            <form class="search-form" action="#" method="post"></form>
+        </section>
+
+        <!-- Main content section -->
+        <section class="b-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar__header">
+                    <i class="sidebar__icon"></i>
+                    <h1 class="sidebar__caption">каталог продукции:</h1>
+                </div>
+
+                <section class="sidebar__item">
+                    <h2 class="sidebar__caption">шины</h2>
+                    <ul class="list sidebar__list">
+                        <li class="list__item"><a href="" class="list__link">Наименование 1</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 2</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 3</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 4</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar__item">
+                    <h2 class="sidebar__caption">диски</h2>
+                    <ul class="list sidebar__list">
+                        <li class="list__item"><a href="" class="list__link">Наименование 1</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 2</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 3</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 4</a></li>
+                    </ul>
+                </section>
+
+                <section class="sidebar__item">
+                    <h2 class="sidebar__caption">болты</h2>
+                    <ul class="list sidebar__list">
+                        <li class="list__item"><a href="" class="list__link">Наименование 1</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 2</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 3</a></li>
+                        <li class="list__item"><a href="" class="list__link">Наименование 4</a></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Center content -->
+            <div class="center-content"></div>
+
+            <!-- Right sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar__header">
+                    <i class="sidebar__icon"></i>
+                    <h1 class="sidebar__caption">бренды:</h1>
+                </div>
+                <!-- Sidebar form -->
+                <form class="form sidebar__form" action="#" method="post">
+                    <h2>шины</h2>
+                    <label><input type="checkbox" name="tires" id="">Бренд 1</label>
+                    <label><input type="checkbox" name="tires" id="">Бренд 2</label>
+                    <label><input type="checkbox" name="tires" id="">Бренд 3</label>
+
+                    <h2>диски</h2>
+                    <label><input type="checkbox" name="tires" id="">Бренд 1</label>
+                    <label><input type="checkbox" name="tires" id="">Бренд 2</label>
+                    <label><input type="checkbox" name="tires" id="">Бренд 3</label>
+
+                    <input type="submit" value="Выбрать">
+                </form>
+            </aside>
+        </section>
+
+    <!-- Bottom slider -->
+    <div class="slider">
+    </div>
+
+    <!-- Page footer -->
+    <footer class="page-footer">
+      <nav class="page--footer__nav">
+        <ul class="main-nav">
+          <li class="main-nav__item"><a class="main-nav__link"href="#">О компании</a></li>
+          <li class="main-nav__item"><a class="main-nav__link"href="#">Доставка</a></li>
+          <li class="main-nav__item"><a class="main-nav__link"href="#">Статьи</a></li>
+          <li class="main-nav__item"><a class="main-nav__link"href="#">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <p class="legal">Создание сайта &copy; Global Vision</p>
+    </footer>
+
+    </div>
+
+</body>
+
+</html>
