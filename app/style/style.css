@@ -79,9 +79,9 @@
   margin-top: 6px;
   padding-left: 124px;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#000), to(#576068));
-  background-image: -webkit-linear-gradient(bottom, #000 0%, #576068 100%);
-  background-image: linear-gradient(to top, #000 0%, #576068 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#4d5663), to(#020202));
+  background: -webkit-linear-gradient(top, #4d5663 0%, #020202 100%);
+  background: linear-gradient(to bottom, #4d5663 0%, #020202 100%);
   border: 1px solid #0d1642;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -104,9 +104,9 @@
   padding-left: 23px;
   width: 526px;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(35, 75, 93, 0.24)), to(rgba(201, 207, 209, 0.24)));
-  background-image: -webkit-linear-gradient(bottom, rgba(35, 75, 93, 0.24) 0%, rgba(201, 207, 209, 0.24) 100%);
-  background-image: linear-gradient(to top, rgba(35, 75, 93, 0.24) 0%, rgba(201, 207, 209, 0.24) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e4e7e8), to(#93a7b0));
+  background: -webkit-linear-gradient(top, #e4e7e8 0%, #93a7b0 100%);
+  background: linear-gradient(to bottom, #e4e7e8 0%, #93a7b0 100%);
   -webkit-border-radius: 3px;
           border-radius: 3px;
   font-family: "Lucida Sans Unicode", sans-serif;
@@ -422,7 +422,6 @@ ul {
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: -0.2px;
 }
 
 .main-nav__link_first {
@@ -435,6 +434,10 @@ ul {
   padding-left: 11px;
   padding-right: 15px;
   letter-spacing: -0.3px;
+}
+
+.main-nav__link_top {
+  letter-spacing: -0.2px;
 }
 
 .main-nav__link_hover:hover {
@@ -543,7 +546,7 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
+  margin-left: 308px;
   margin-top: 11px;
 }
 
@@ -559,21 +562,25 @@ ul {
 }
 
 .page-footer__item:nth-child(1) {
-  padding-right: 7px;
+  padding-right: 12px;
+  letter-spacing: -0.4px;
 }
 
 .page-footer__item:nth-child(2) {
   padding-right: 12px;
   padding-left: 11px;
+  letter-spacing: -0.1px;
 }
 
 .page-footer__item:nth-child(3) {
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 11px;
+  padding-left: 11px;
+  letter-spacing: 0.3px;
 }
 
 .page-footer__item:nth-child(4) {
-  padding-left: 16px;
+  padding-left: 15px;
+  letter-spacing: -0.2px;
 }
 
 .page-footer__link {
@@ -589,10 +596,15 @@ ul {
 }
 
 .legal {
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-left: 376px;
   color: #7f4740;
   font-size: 10px;
   line-height: 18px;
+}
+
+.legal-span {
+  letter-spacing: 0.3px;
 }
 
 .page-header {
