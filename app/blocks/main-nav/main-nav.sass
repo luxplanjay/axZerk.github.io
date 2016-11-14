@@ -2,20 +2,34 @@
 
 .main-nav
     display: flex
-    align-items: center
-    margin-left: 125px
-    line-height: 26px
     font-family: $secondary-fonts
+
+    &__item
+        padding-top: 3px
+        line-height: 27px
 
     &__link
         display: block
         padding:
-            left: 21px
-            right: 19px
+            left: 15px
+            right: 15px
         color: #b1bcc0
         font-size: 14px
         text-transform: uppercase
         text-decoration: none
+        letter-spacing: -0.2px
+
+        &_first
+            padding:
+                left: 21px
+                right: 19px
+            letter-spacing: -0.2px
+
+        &_last
+            padding:
+                left: 11px
+                right: 15px
+            letter-spacing: -0.3px
 
         &_hover:hover
             color: #fff

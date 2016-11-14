@@ -10,21 +10,22 @@
 </head>
 
 <body class="page">
-
+    <!-- Wrapper block -->
     <div class="b-wrapper">
         <!-- Page header -->
         <header class="page-header">
             <div class="contacts">
                 <i class="contacts__icon"></i>
-                <p class="contacts__phone">(044)123-45-67</p>
-                <p class="contacts__phone">(044)567-89-10</p>
+                <p class="contacts__phone contacts__phone_left">(044)123-45-67</p>
+                <p class="contacts__phone contacts__phone_right">(044)567-89-10</p>
             </div>
             <!-- Login block -->
             <div class="b-login">
+                <!-- Login form -->
                 <form action="#" class="login-form" id="login-form" method="post">
                     <i class="login-form__icon"></i>
-                    <input type="text" name="login" id="" class="login-form__input" required placeholder="логин">
-                    <input type="password" name="password" class="login-form__input" id="" required placeholder="пароль">
+                    <input type="text" name="login" id="login" class="login-form__input" required placeholder="логин">
+                    <input type="password" name="password" class="login-form__input" id="password" required placeholder="пароль">
                     <input type="submit" value="вход" class="login-form__submit" form="login-form">
                 </form>
 
@@ -41,245 +42,285 @@
 
         <!-- Slider -->
         <div class="b-slider">
-            <img class="slider__item" src="img/headline.jpg" alt="slider-item">
+            <img class="slider__item" src="img/headline.jpg" alt="slider-img">
         </div>
 
         <!-- Main navigation -->
         <nav class="b-navigation">
             <ul class="main-nav">
-                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover">о компани</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover">оплата</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover">доставка</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover">статьи</a></li>
-                <li class="main-nav__item"><a href="" class="main-nav__link main-nav__link_hover">контакты</a></li>
+                <li class="main-nav__item">
+                    <a href="" class="main-nav__link main-nav__link_hover main-nav__link_first">о компани</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="" class="main-nav__link main-nav__link_hover">оплата</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="" class="main-nav__link main-nav__link_hover">доставка</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="" class="main-nav__link main-nav__link_hover">статьи</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="" class="main-nav__link main-nav__link_hover main-nav__link_last">контакты</a>
+                </li>
             </ul>
 
             <div class="cart">
                 <i class="cart__icon"><a href="" class="cart__link"></a></i>
-                <p class="cart__text">товаров: <span class="cart__quantity">0</span></p>
-                <p class="cart__text">на сумму: <span class="cart__total">0,00 грн.</span></p>
+                <p class="cart__text">товаров:</p>
+                <span class="cart__quantity">0</span>
+                <p class="cart__text cart__text_thin_spacing">на сумму:</p>
+                <span class="cart__total">0,00 грн.</span>
             </div>
         </nav>
 
         <!-- Search block -->
-        <section class="b-search">
-            <form class="search-form" action="#" method="post"></form>
-            <form class="search-form" action="#" method="post"></form>
-            <form class="search-form" action="#" method="post"></form>
-        </section>
+        <div class="b-search">
+            <form class="search-form sf-cars" action="#" method="post"></form>
+            <form class="search-form sf-tires" action="#" method="post"></form>
+            <form class="search-form sf-wheels" action="#" method="post"></form>
+        </div>
 
         <!-- Main content section -->
-        <section class="b-content">
+        <div class="b-content">
             <!-- Sidebar -->
-            <aside class="b-sidebar">
-                <div class="b-sidebar__heading">
-                    <i class="b-sidebar__icon"></i>
-                    <h1 class="b-sidebar__header">каталог продукции:</h1>
-                </div>
+            <aside class="b-sidebar b-sidebar_left">
+                <!-- Sidebar header -->
+                <h2 class="b-sidebar__header b-sidebar__header_left">каталог продукции:</h2>
 
-                <section class="sidebar-section">
-                    <div class="sidebar-section__heading">
-                        <i class="sidebar-section__icon"></i>
-                        <h2 class="sidebar-section__header">шины</h2>
-                    </div>
-                    <ul class="sidebar-section__list">
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 1</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 2</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 3</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 4</a></li>
+                <!-- Sidebar section -->
+                <section class="sb-section">
+                    <!-- Sidebar section header -->
+                    <h2 class="sb-section__header sb-section__header_first">шины</h2>
+
+                    <!-- Section options list -->
+                    <ul class="sb-section__list">
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 1</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 2</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 3</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 4</a>
+                        </li>
                     </ul>
                 </section>
 
-                <section class="sidebar-section">
-                    <div class="sidebar-section__heading">
-                        <i class="sidebar-section__icon"></i>
-                        <h2 class="sidebar-section__header">диски</h2>
-                    </div>
-                    <ul class="sidebar-section__list">
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 1</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 2</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 3</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 4</a></li>
+                <!-- Sidebar section -->
+                <section class="sb-section">
+                    <!-- Sidebar section header -->
+                        <h2 class="sb-section__header sb-section__header_second">диски</h2>
+
+                    <!-- Section options list -->
+                    <ul class="sb-section__list">
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 1</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 2</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 3</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 4</a>
+                        </li>
                     </ul>
                 </section>
 
-                <section class="sidebar-section">
-                    <div class="sidebar-section__heading">
-                        <i class="sidebar-section__icon"></i>
-                        <h2 class="sidebar-section__header">болты</h2>
-                    </div>
-                    <ul class="sidebar-section__list">
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 1</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 2</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 3</a></li>
-                        <li class="sidebar-section__item"><a href="" class="sidebar-section__link sidebar-section__link_hover">Наименование 4</a></li>
+                <!-- Sidebar section -->
+                <section class="sb-section">
+                    <!-- Sidebar section header -->
+                        <h2 class="sb-section__header sb-section__header_third">болты</h2>
+
+                    <!-- Section options list -->
+                    <ul class="sb-section__list">
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 1</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 2</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 3</a>
+                        </li>
+                        <li class="sb-section__item">
+                            <a href="" class="sb-section__link sb-section__link_hover sb-section__link_view_bullet">Наименование 4</a>
+                        </li>
                     </ul>
                 </section>
             </aside>
 
-            <!-- Center content -->
+            <!-- Center part of b-content -->
             <div class="b-products">
-                <div class="b-products__item">
-                    <h1 class="b-products__brand">goodyear</h1>
-                    <figure class="b-products__figure">
-                        <figcaption class="b-products__model">ultra grip extreme</figcaption>
-                        <a href="" class="b-products__link">
-                            <img src="img/goodyear-tire.png" alt="" class="b-products__img">
-                        </a>
-                    </figure>
-                    <p class="b-products__price">90.00 <span class="b-products__currency">грн.</span></p>
+                <!-- Product block -->
+                <div class="product">
+                    <h3 class="product__brand product__brand_goodyear">goodyear</h3>
+                    <p class="product__model product__model_goodyear">ultra grip extreme</p>
+                    <a href="" class="product__link product__link_goodyear">
+                        <img src="img/goodyear-tire.png" alt="" class="product__img">
+                    </a>
+                    <p class="product__price product__price_goodyear">90.00 <span class="product__currency product__currency_goodyear">грн.</span></p>
                 </div>
 
+                <!-- Product block -->
                 <div class="product">
-                    <h1 class="product__brand">nokian</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">hakkapeliitta r</figcaption>
+                    <h1 class="product__brand product__brand_nokian">nokian</h1>
+                    <p class="product__model product__model_nokian">hakkapeliitta r</p>
+                    <a href="" class="product__link product__link_nokian">
                         <img src="img/nokian-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">115.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_nokian">115.00 <span class="product__currency product__currency_nokian">грн.</span></p>
                 </div>
 
+                <!-- Product block -->
                 <div class="product">
-                    <h1 class="product__brand">hankook</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">k 708 155/65 r14</figcaption>
+                    <h1 class="product__brand product__brand_hankook">hankook</h1>
+                    <p class="product__model product__model_hankook">k 708 155/65 r14</p>
+                    <a href="" class="product__link product__link_hankook">
                         <img src="img/hankook-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">393.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_hankook">393.00 <span class="product__currency product__currency_hankook">грн.</span></p>
                 </div>
 
-                <div class="b-products__item">
-                    <h1 class="b-products__brand">goodyear</h1>
-                    <figure class="b-products__figure">
-                        <figcaption class="b-products__model">ultra grip extreme</figcaption>
-                        <a href="" class="b-products__link">
-                            <img src="img/goodyear-tire.png" alt="" class="b-products__img">
-                        </a>
-                    </figure>
-                    <p class="b-products__price">90.00 <span class="b-products__currency">грн.</span></p>
+                <!-- Product block -->
+                <div class="product mt-26 mr-27">
+                    <h3 class="product__brand product__brand_goodyear">goodyear</h3>
+                    <p class="product__model product__model_goodyear">ultra grip extreme</p>
+                    <a href="" class="product__link product__link_goodyear product__link_middle-row">
+                        <img src="img/goodyear-tire.png" alt="" class="product__img">
+                    </a>
+                    <p class="product__price product__price_goodyear">90.00 <span class="product__currency product__currency_goodyear">грн.</span></p>
                 </div>
 
-                <div class="product">
-                    <h1 class="product__brand">nokian</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">hakkapeliitta r</figcaption>
+                <!-- Product block -->
+                <div class="product mt-25 mr-29">
+                    <h1 class="product__brand product__brand_nokian">nokian</h1>
+                    <p class="product__model product__model_nokian">hakkapeliitta r</p>
+                    <a href="" class="product__link product__link_nokian product__link_middle-row">
                         <img src="img/nokian-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">115.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_nokian pl-35">115.00 <span class="product__currency product__currency_nokian">грн.</span></p>
                 </div>
 
-                <div class="product">
-                    <h1 class="product__brand">hankook</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">k 708 155/65 r14</figcaption>
+                <!-- Product block -->
+                <div class="product  mt-25">
+                    <h1 class="product__brand product__brand_hankook">hankook</h1>
+                    <p class="product__model product__model_hankook">k 708 155/65 r14</p>
+                    <a href="" class="product__link product__link_hankook product__link_middle-row">
                         <img src="img/hankook-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">393.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_hankook mt-8">393.00 <span class="product__currency product__currency_hankook">грн.</span></p>
                 </div>
 
-                <div class="b-products__item">
-                    <h1 class="b-products__brand">goodyear</h1>
-                    <figure class="b-products__figure">
-                        <figcaption class="b-products__model">ultra grip extreme</figcaption>
-                        <a href="" class="b-products__link">
-                            <img src="img/goodyear-tire.png" alt="" class="b-products__img">
-                        </a>
-                    </figure>
-                    <p class="b-products__price">90.00 <span class="b-products__currency">грн.</span></p>
+                <!-- Product block -->
+                <div class="product  mt-28">
+                    <h3 class="product__brand product__brand_goodyear pl-33">goodyear</h3>
+                    <p class="product__model product__model_goodyear pl-13">ultra grip extreme</p>
+                    <a href="" class="product__link product__link_goodyear pt-6">
+                        <img src="img/goodyear-tire.png" alt="" class="product__img">
+                    </a>
+                    <p class="product__price product__price_goodyear mt-8">90.00 <span class="product__currency product__currency_goodyear">грн.</span></p>
                 </div>
 
-                <div class="product">
-                    <h1 class="product__brand">nokian</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">hakkapeliitta r</figcaption>
+                <!-- Product block -->
+                <div class="product mt-29">
+                    <h1 class="product__brand product__brand_nokian">nokian</h1>
+                    <p class="product__model product__model_nokian">hakkapeliitta r</p>
+                    <a href="" class="product__link product__link_nokian">
                         <img src="img/nokian-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">115.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_nokian pl-34 mt-8">115.00 <span class="product__currency product__currency_nokian">грн.</span></p>
                 </div>
 
-                <div class="product">
-                    <h1 class="product__brand">hankook</h1>
-                    <figure class="product__figure">
-                        <figcaption class="product__model">k 708 155/65 r14</figcaption>
+                <!-- Product block -->
+                <div class="product  mt-29">
+                    <h1 class="product__brand product__brand_hankook">hankook</h1>
+                    <p class="product__model product__model_hankook">k 708 155/65 r14</p>
+                    <a href="" class="product__link product__link_hankook">
                         <img src="img/hankook-tire.png" alt="" class="product__img">
-                    </figure>
-                    <p class="product__price">393.00 грн.</p>
+                    </a>
+                    <p class="product__price product__price_hankook">393.00 <span class="product__currency product__currency_hankook">грн.</span></p>
                 </div>
             </div>
 
             <!-- Right sidebar -->
-            <aside class="b-sidebar">
-                <div class="b-sidebar__heading">
-                    <i class="b-sidebar__icon"></i>
-                    <h1 class="b-sidebar__header">бренды:</h1>
-                </div>
+            <aside class="b-sidebar b-sidebar_right">
+                <!-- Sidebar header -->
+                    <h2 class="b-sidebar__header b-sidebar__header__right">бренды:</h2>
+
                 <!-- Sidebar form -->
-                <form class="options-form sidebar-section" action="#" method="post">
-
+                <form class="options-form sb-section" action="#" method="post">
+                    <!-- Form section -->
                     <fieldset class="options-form__section">
-                        <div class="sidebar-section__heading">
-                            <i class="sidebar-section__icon"></i>
-                            <h2 class="sidebar-section__header">шины</h2>
-                        </div>
+                        <!-- Fotm section header -->
+                        <h2 class="sb-section__header sb-section__header_first options-form__header sb-section__header_form">шины</h2>
 
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox">
-                            Бренд 1
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b1" class="options-form__checkbox">
+                            <span class="options-form__text">Бренд 1</span>
                         </label>
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox sidebar-section__link">Бренд 2
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b2" class="options-form__checkbox sb-section__link">
+                            <span class="options-form__text">Бренд 2</span>
                         </label>
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox sidebar-section__link">Бренд 3
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b3" class="options-form__checkbox sb-section__link">
+                            <span class="options-form__text">Бренд 3</span>
                         </label>
                     </fieldset>
 
-
+                    <!-- Form section -->
                     <fieldset class="options-form__section">
-                        <div class="sidebar-section__heading">
-                            <i class="sidebar-section__icon"></i>
-                            <h2 class="sidebar-section__header">диски</h2>
-                        </div>
+                        <!-- Fotm section header -->
+                        <h2 class="sb-section__header sb-section__header_second options-form__header sb-section__header_form sb-section__header_form_second">диски</h2>
 
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox">Бренд 1
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b1" class="options-form__checkbox">
+                            <span class="options-form__text">Бренд 1</span>
                         </label>
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox">Бренд 2
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b2" class="options-form__checkbox sb-section__link">
+                            <span class="options-form__text">Бренд 2</span>
                         </label>
-                        <label class="sidebar-section__link">
-                            <input type="checkbox" name="tires" id="" class="options-form__checkbox">Бренд 3
+                        <label class="sb-section__link sb-section__link_form">
+                            <input type="checkbox" name="tires" id="b3" class="options-form__checkbox sb-section__link">
+                            <span class="options-form__text">Бренд 3</span>
                         </label>
                     </fieldset>
 
-                    <input type="submit" value="выбрать" class="options-form__submit" form="options-form">
+                    <input type="submit" value="выбрать" class="options-form__submit">
                 </form>
             </aside>
-        </section>
+        </div>
 
-    <!-- Company logos block -->
-    <div class="b-logos"></div>
+        <!-- Company logos block -->
+        <div class="b-logos"></div>
 
-    <!-- Page footer -->
-    <footer class="page-footer">
-        <ul class="main-nav page-footer__main-nav">
-          <li class="main-nav__item page-footer__item">
-              <a class="main-nav__link page-footer__link" href="#">о компании</a>
-          </li>
-          <li class="main-nav__item page-footer__item">
-              <a class="main-nav__link page-footer__link" href="#">доставка</a>
-          </li>
-          <li class="main-nav__item page-footer__item">
-              <a class="main-nav__link page-footer__link" href="#">статьи</a>
-          </li>
-          <li class="main-nav__item page-footer__item">
-              <a class="main-nav__link page-footer__link" href="#">контакты</a>
-          </li>
-        </ul>
+        <!-- Page footer -->
+        <footer class="page-footer">
+            <!-- Page footer navigation -->
+            <ul class="main-nav page-footer__main-nav">
+              <li class="main-nav__item page-footer__item">
+                  <a class="main-nav__link page-footer__link" href="#">O компании</a>
+              </li>
+              <li class="main-nav__item page-footer__item">
+                  <a class="main-nav__link page-footer__link" href="#">Доставка</a>
+              </li>
+              <li class="main-nav__item page-footer__item">
+                  <a class="main-nav__link page-footer__link" href="#">Статьи</a>
+              </li>
+              <li class="main-nav__item page-footer__item">
+                  <a class="main-nav__link page-footer__link" href="#">Контакты</a>
+              </li>
+            </ul>
 
-      <p class="legal">Создание сайта &copy; Global Vision</p>
-    </footer>
-
+          <p class="legal">Создание сайта &copy; Global Vision</p>
+        </footer>
     </div>
 
 </body>

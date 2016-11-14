@@ -2,41 +2,37 @@
 
 .login-form
     display: flex
-    align-items: center
     padding-left: 7px
     font-size: 11px
 
     &__icon
-        margin-right: 3px
+        margin:
+            right: 3px
+            top: 5px
         height: 18px
         width: 14px
         background: transparent url(../img/form-icon.png) 0 0 no-repeat
 
     &__input
         width: 115px
-        height: 18px
-        margin-right: 6px
+        height: 17px
+        margin:
+            top: 4px
+            right: 6px
         padding-left: 4px
         background-color: #fff
         border: 1px solid #9ba1a3
 
         &::-webkit-input-placeholder
+            letter-spacing: -0.3px
             color: #97a2a6
 
     &__submit
+        margin-left: 1px
+        letter-spacing: -0.3px
         color: $accent
         background-color: transparent
         padding: 0
         border: 0
         outline: 0
         cursor: pointer
-
-    &::after
-        display: block
-        content: ''
-        background-color: #fff
-        width: 1px
-        height: 11px
-        margin:
-            right: 5px
-            left: 4px
