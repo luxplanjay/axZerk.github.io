@@ -2,7 +2,9 @@ GoIT-FE homework #6
 
 Student: Alexander Repeta
 
-Ссылка на готовую страницу: https://axzerk.github.io/
+Ссылка на готовую страницу: https://axzerk.github.io/app
+
+В репозитории лежат два скриншота с моего экрана при наложеном png, пиксель в пиксель
 
 Сверстать макет Zazor:
 

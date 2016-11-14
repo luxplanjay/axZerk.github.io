@@ -219,7 +219,7 @@
   margin-top: 10px;
   color: #929b9f;
   font-size: 11px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
 }
 
 .cart__text_thin_spacing {
@@ -587,8 +587,8 @@ ul {
   padding: 0;
   font-size: 12px;
   line-height: 100%;
-  color: #bec6c9;
   text-transform: none;
+  color: #bec6c9;
 }
 
 .page-footer__link:hover {
@@ -896,6 +896,7 @@ ul {
   line-height: 100%;
   font-size: 14px;
   font-weight: 700;
+  letter-spacing: normal;
   font-style: italic;
   text-decoration: underline;
 }
