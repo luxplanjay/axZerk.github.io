@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axZerk/gulp-project-template.git"
+    "url": "git+https://github.com/axZerk/axZerk.github.io.git"
   },
   "author": "ax.Zerk",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/axZerk/gulp-project-template/issues"
+    "url": "https://github.com/axZerk/axZerk.github.io/issues"
   },
-  "homepage": "https://github.com/axZerk/gulp-project-template#readme",
+  "homepage": "https://github.com/axZerk/axZerk.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "del": "^2.2.2",
