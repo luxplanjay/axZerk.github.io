@@ -1,1 +1,100 @@
 @import '../tools/tools'
+
+$desktop: "(min-width: 1024px)"
+$tablet: "(min-width: 768px) and (max-width: 1023px)"
+$mobile: "(max-width: 767px)"
+
+.page
+    min-width: 320px
+
+.page-header
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100px
+    background-color: grey
+
+.logo
+    display: flex
+    align-items: center
+    background: yellow
+    height: 40%
+    padding: 10px
+    font-size: 30px
+    border: 3px solid black
+    border-radius: 10px
+
+.wrap
+    @media #{$mobile}
+        flex-direction: column
+
+    display: flex
+
+.sidebar
+    @media #{$mobile}
+        width: 100%
+
+    border: 1px solid blue
+    width: 18%
+    margin-right: 2%
+    background: red
+
+.menu
+    @media #{$mobile}
+        display: flex
+
+    list-style: none
+    padding: 0
+    margin: 0
+
+    &__item
+        @media #{$mobile}
+            margin: 0
+
+        border: 2px solid black
+        margin-bottom: 5px
+        width: 100%
+
+        &:last-child
+            margin: 0
+
+    &__link
+        display: block
+        padding: 5px
+        text-decoration: none
+        font-size: 20px
+        background: teal
+        color: #fff
+
+.content
+    @media #{$mobile}
+        width: 100%
+
+    display: flex
+    flex-flow: row wrap
+    border: 1px solid black
+    width: 80%
+    background: orange
+
+.box
+    @media #{$tablet}
+        width: 46%
+
+    @media #{$mobile}
+        width: 96%
+
+    border: 2px solid black
+    width: 29%
+    height: 100px
+    background: green
+    margin: 20px 2%
+    text-align: center
+    line-height: 100px
+
+.page-footer
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100px
+    background: black
+    color: #fff
