@@ -1,7 +1,7 @@
 {
-  "name": "gulp-project-template",
+  "name": "regular project",
   "version": "1.0.0",
-  "description": "Gulp Project Template",
+  "description": "regular project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

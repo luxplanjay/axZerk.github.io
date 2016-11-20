@@ -1,12 +1,12 @@
 var gulp 					= require('gulp'),
-		sass 					= require('gulp-sass'),
+		sass 				= require('gulp-sass'),
 		concat 				= require('gulp-concat'),
-		browserSync		= require('browser-sync'),
-		del 					= require('del'),
+		browserSync			= require('browser-sync'),
+		del 				= require('del'),
 		imagemin			= require('gulp-imagemin'),
 		pngquant 			= require('imagemin-pngquant'),
 		cache 				= require('gulp-cache'),
-		autoprefixer 	= require('gulp-autoprefixer'),
+		autoprefixer 		= require('gulp-autoprefixer'),
 		plugins 			= require('gulp-load-plugins')();
 
 var paths = {
