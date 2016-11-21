@@ -1,0 +1,50 @@
+@import '../../tools/tools'
+
+.article
+    margin-bottom: 1.875rem
+    display: flex
+
+    &:last-child
+        margin-bottom: 0
+
+    &__icon
+        margin-right: 1.625rem
+        width: 30px
+        height: 31px
+        background: url('../img/wrench-i.png') 0 0 no-repeat
+
+    &__body
+        display: flex
+        flex-direction: column
+        flex: 1 0 80%
+
+    &__title
+        color: $primary
+        font-size: $base-font-size*1.5
+        line-height: 1
+        font-family: $title-font
+        text-transform: uppercase
+        text-shadow: 0.5px 0.9px 0 rgb(15, 21, 24)
+
+    &__text
+        font-size: $base-font-size
+        font-family: $base-font
+        color: $primary
+        text-shadow: 0.5px 0.9px 0 rgb(15, 21, 24)
+        overflow: hidden
+        word-wrap: break-word
+        line-height: 1.5rem
+        max-height: 4.5rem
+
+    &__link
+        margin-top: 1.5rem
+        align-self: flex-end
+        font-family: $link-font
+        font-size: $base-font-size*1.125
+        text-decoration: none
+        text-transform: uppercase
+        text-shadow: 0.5px 0.9px 0 rgb(15, 21, 24)
+        color: $primary
+
+        &:hover
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8)

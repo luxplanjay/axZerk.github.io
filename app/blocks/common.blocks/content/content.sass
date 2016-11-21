@@ -1,0 +1,63 @@
+@import '../../tools/tools'
+
+.content
+    padding:
+        top: 4.375rem
+        bottom: 5.625rem
+    max-width: 960px
+    width: 100%
+
+    &__slider
+        display: flex
+        flex-direction: column
+
+        .slider-item
+            position: relative
+            padding:
+                top: 1.5rem
+                right: 2.5rem
+                bottom: 0
+                left: 2.5rem
+            width: 256px
+            background: #fff
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
+
+            &__body
+                display: flex
+                flex-direction: column
+
+            &__title
+                font-size: $base-font-size*1.5
+                color: #454545
+                line-height: 1
+                text-transform: uppercase
+                text-shadow: 0.5px 0.9px 0 #fff
+
+                &_sub
+                    font-size: $base-font-size*1.5
+                    line-height: 1
+                    color: $accent
+                    text-transform: uppercase
+
+            &__text
+                display: block
+                font-size: $base-font-size
+                line-height: 1.5
+                overflow: hidden
+                hyphens: auto
+                word-wrap: break-word
+                max-height: 10.5rem
+
+            &__img
+                display: block
+                width: 49px
+                height: 51px
+                position: absolute
+                top: 1rem
+                left: -1.5rem
+                border: 0
+                outline: 0
+                background: url('../img/author-i.png') 0 0 no-repeat
+
+    &__slider-nav
+        margin-top: 1.5rem !important

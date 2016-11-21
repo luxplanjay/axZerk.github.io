@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style/style.css">
   <title>HTML/CSS 7-8</title>
 </head>
+
 <body class="page">
     <!-- Header substrate -->
     <div class="substrate substrate_header">
+        <!-- Page header -->
         <header class="page-header">
-            <a href="" class="logo">pingbull<span class="accent-color">er</span></a>
+            <!-- Logo -->
+            <a href="" class="site-logo">pingbull<span class="site-logo_color_purple">er</span></a>
+            <!-- Header menu -->
             <ul class="nav">
                 <li class="nav__item"><a href="" class="nav__link">home</a></li>
                 <li class="nav__item"><a href="" class="nav__link">about</a></li>
@@ -22,104 +26,152 @@
             </ul>
         </header>
         <!-- Slider substrate -->
-        <div class="substrate substrate_slider">
+        <div class="substrate substrate_opacity">
             <!-- Slider -->
             <div class="slider">
-                <span class="slider__arrow"></span>
-                <article class="slider__item">
-                    <h1 class="slider__title">123</h1>
-                    <h2 class="slider__title_sub">123</h2>
-                    <p class="slider__text"></p>
-                    <img src="" alt="" class="slider__img">
+                <a href="" class="slider__button slider__button_left"></a>
+                <article class="slider-item">
+                    <div class="slider-item__body">
+                        <h1 class="slider-item__title">lorem ipsum dolor</h1>
+                        <h2 class="slider-item__title_sub">it will make all of your dreams come true</h2>
+                        <p class="slider-item__text">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet eget aliquam quis, euismod id</p>
+                    </div>
+                    <img src="../img/Iphone.png" alt="" class="slider-item__img">
                 </article>
-                <span class="slider__arrow"></span>
+                <a href="" class="slider__button slider__button_right"></a>
             </div>
         </div>
-        <!-- Slider controlls -->
-        <div class="controls">
-            <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-            <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-            <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-            <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-        </div>
+        <!-- Slider controls -->
+        <nav class="slider-nav">
+            <a href="#slide-0" class="slider-nav__item slider-nav__item_active"></a>
+            <a href="#slide-1" class="slider-nav__item"></a>
+            <a href="#slide-2" class="slider-nav__item"></a>
+            <a href="#slide-3" class="slider-nav__item"></a>
+        </nav>
     </div>
     <!-- Gradient substrate -->
-    <div class="substrate substrate_gradient">
-        <div class="wrap">
-            <article class="about">
-                <i class="about__icon"></i>
-                <h2 class="about__title">about our company</h2>
-                <p class="about__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                <a href="" class="about__link">read more</a>
+    <div class="substrate substrate_color_gradient">
+        <div class="about">
+            <article class="article">
+                <i class="article__icon"></i>
+                <div class="article__body">
+                    <h2 class="article__title">about our company</h2>
+                    <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    <a href="" class="article__link">read more</a>
+                </div>
             </article>
 
-            <article class="about">
-                <i class="about__icon"></i>
-                <h2 class="about__title">about our company</h2>
-                <p class="about__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                <a href="" class="about__link">read more</a>
+            <article class="article">
+                <i class="article__icon"></i>
+                <div class="article__body">
+                    <h2 class="article__title">about our company</h2>
+                    <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    <a href="" class="article__link">read more</a>
+                </div>
             </article>
 
-            <article class="about">
-                <i class="about__icon"></i>
-                <h2 class="about__title">about our company</h2>
-                <p class="about__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                <a href="" class="about__link">read more</a>
+            <article class="article">
+                <i class="article__icon"></i>
+                <div class="article__body">
+                    <h2 class="article__title">about our company</h2>
+                    <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    <a href="" class="article__link">read more</a>
+                </div>
             </article>
         </div>
     </div>
     <!-- White substrate -->
-    <div class="substrate substrate_white">
+    <div class="substrate substrate_color_white">
         <!-- Post block -->
-        <div class="wrap">
-            <article class="post">
-                <i class="post__icon"></i>
-                <h2 class="post__title">pingbuller <span class="post__title_accent">starts here</span></h2>
-                <p class="post__text">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
-                     Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.
-                </p>
-            </article>
-            <!-- Post controlls -->
-            <div class="controls">
-                <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-                <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-                <input type="radio" name="slider-radio" id="" class="slider-controls__item">
-                <input type="radio" name="slider-radio" id="" class="slider-controls__item">
+        <div class="content">
+            <!-- Post Slider -->
+            <div class="slider content__slider">
+                <article class="slider-item">
+                    <div class="slider-item__body">
+                        <h1 class="slider-item__title">pingbuller</h1>
+                        <h2 class="slider-item__title_sub">starts here</h2>
+                        <p class="slider-item__text">“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
+                             Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
+                    </div>
+                    <img src="" alt="" class="slider-item__img">
+                </article>
+
+                <!-- Post slider controlls -->
+                <nav class="slider-nav content__slider-nav">
+                    <a href="#post-0" class="slider-nav__item slider-nav__item_active"></a>
+                    <a href="#post-1" class="slider-nav__item"></a>
+                    <a href="#post-2" class="slider-nav__item"></a>
+                    <a href="#post-3" class="slider-nav__item"></a>
+                </nav>
             </div>
 
-            <!-- Updates block -->
-            <section class="updates">
-                <h1 class="updates__title">recent updates</h1>
-                <article class="">
-                    <i class=""></i>
-                    <h1 class="">Nunc turpis neque feugiat eget</h1>
-                    <p class="">Posted by Admin on March 13 2012 in Category</p>
+            <!-- Blog block -->
+            <section class="blog">
+                <h1 class="blog__title">recent updates</h1>
+                <article class="post">
+                    <img src="../img/post1-i.png" alt="" class="post__img">
+                    <div class="post__body">
+                        <h1 class="post__title">
+                            <a href="" class="post__link">Nunc turpis neque feugiat eget</a>
+                        </h1>
+                        <p class="post__text">Posted by Admin on March 13 2012 in Recent News</p>
+                    </div>
                 </article>
-                <a href="" class="updates__link"></a>
+                <article class="post">
+                    <img src="../img/post2-i.png" alt="" class="post__img">
+                    <div class="post__body">
+                        <h1 class="post__title">
+                            <a href="" class="post__link">Nunc turpis neque feugiat eget</a>
+                        </h1>
+                        <p class="post__text">Posted by Admin on March 13 2012 in Category</p>
+                    </div>
+                </article>
+                <article class="post">
+                    <img src="../img/post3-i.png" alt="" class="post__img">
+                    <div class="post__body">
+                        <h1 class="post__title">
+                            <a href="" class="post__link">Nunc turpis neque feugiat eget</a>
+                        </h1>
+                        <p class="post__text">Posted by Admin on March 13 2012 in Blog Updates</p>
+                    </div>
+                </article>
+                <a href="" class="blog__link">more blog posts</a>
             </section>
         </div>
     </div>
     <!-- Logos substrate -->
-    <div class="substrate substrate_logos">
-        <div class="wrap">
-            <a href="" class="icon"></a>
-            <a href="" class="icon"></a>
-            <a href="" class="icon"></a>
-            <a href="" class="icon"></a>
-            <a href="" class="icon"></a>
-            <a href="" class="icon"></a>
+    <div class="substrate substrate_color_white">
+        <div class="logos">
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_bllabong"></a>
+            </div>
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_gc"></a>
+            </div>
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_tree"></a>
+            </div>
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_awsm"></a>
+            </div>
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_raca"></a>
+            </div>
+            <div class="logos__item">
+                <a href="" class="logos__link logos__link_vonzipper"></a>
+            </div>
         </div>
     </div>
     <!-- Grey substrate -->
-    <div class="substrate substrate_grey">
-        <div class="wrap">
+    <div class="substrate substrate_color_light-grey">
+        <div class="wrapper">
 
         </div>
     </div>
     <!-- Footer substrate -->
     <div class="substrate substrate_footer">
         <footer class="page-footer">
-            <ul class="nav">
+            <ul class="nav page-footer__nav">
                 <li class="nav__item"><a href="" class="nav__link">home</a></li>
                 <li class="nav__item"><a href="" class="nav__link">about</a></li>
                 <li class="nav__item"><a href="" class="nav__link">blog</a></li>
@@ -127,7 +179,7 @@
                 <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
                 <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
             </ul>
-            <p class="legal">designed by <span class="legal__accent">pingbull as</span></p>
+            <p class="page-footer__legal">Designed by <span class="page-footer__legal_accent">Pingbull AS</span></p>
         </footer>
     </div>
 </body>

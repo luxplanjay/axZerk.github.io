@@ -1,0 +1,48 @@
+@import '../../tools/tools'
+
+.post
+    display: flex
+    margin-bottom: 1rem
+
+    &:last-child
+        margin-bottom: 0
+
+    &__img
+        width: 49px
+        height: 49px
+        margin-right: 1rem
+
+    &__body
+        display: flex
+        flex-direction: column
+
+    &__title
+        color: #454545
+        text-shadow: 0.5px 0.9px 0 #fff
+        font-family: $base-font
+        font-size: 1rem
+        font-weight: 700
+        line-height: 1.5
+
+    &__link
+        color: #454545
+        text-shadow: 0.5px 0.9px 0 #fff
+        font-family: $base-font
+        font-size: 1rem
+        font-weight: 700
+        line-height: 1.5
+        text-decoration: none
+
+        &:hover
+            color: #edbfff
+
+    &__text
+        color: #454545
+        text-shadow: 0.5px 0.9px 0 #fff
+        font-family: $base-font
+        font-size: 1rem
+        line-height: 1.5
+        font-weight: 300
+        overflow: hidden
+        word-wrap: break-word
+        max-height: 1.5rem

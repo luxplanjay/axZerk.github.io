@@ -1,26 +1,30 @@
 @import '../../tools/tools'
 
 .substrate
-    outline: 1px solid black
+    display: flex
+    align-items: center
+    flex-direction: column
     width: 100%
+    min-width: 320px
 
     &_header
-        background: #fff url('../img/header-back.jpg') 0 0 no-repeat
+        padding: 4.375rem 0
+        background: url('../img/header-back.jpg') no-repeat center center fixed
+        background-size: cover
 
-    &_slider
-        opacity: 0.2
-        background-color: #000
+    &_opacity
+        background: transparent
 
-    &_gradient
+    &_color_gradient
+        border-top: 1px solid #33253a
         background-image: linear-gradient(to top, #322539 0%, #745083 100%)
 
-    &_white
+    &_color_white
+        border-bottom: 1px solid #e6e6e6
         background-color: #f9f9f9
 
-    &_logos
-        background-color: #f9f9f9
-
-    &_grey
+    &_color_light-grey
+        display: none
         background-color: #ececec
 
     &_footer
