@@ -1,0 +1,24 @@
+@import '../../tools/tools'
+
+@media #{$mobile}
+    .slider-item
+        display: flex
+
+        &__body
+            width: 50%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+
+            &_sub
+                outline: 1px solid black
+                color: $accent
+                font-family: $title-font
+                font-size: $base-font-size*1.125
+                text-transform: uppercase
+                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
+
+        &__img
+            display: block
+            height: 304px

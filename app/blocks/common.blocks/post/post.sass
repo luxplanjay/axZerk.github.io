@@ -2,19 +2,17 @@
 
 .post
     display: flex
+    align-items: center
+    justify-content: space-between
     margin-bottom: 1rem
 
-    &:last-child
-        margin-bottom: 0
-
     &__img
-        width: 49px
-        height: 49px
-        margin-right: 1rem
+        width: 3rem
 
     &__body
         display: flex
         flex-direction: column
+        flex: 0 0 80%
 
     &__title
         color: #454545
@@ -25,6 +23,7 @@
         line-height: 1.5
 
     &__link
+        display: block
         color: #454545
         text-shadow: 0.5px 0.9px 0 #fff
         font-family: $base-font
@@ -32,6 +31,8 @@
         font-weight: 700
         line-height: 1.5
         text-decoration: none
+        overflow: hidden
+        max-height: 1.5rem
 
         &:hover
             color: #edbfff

@@ -1,11 +1,13 @@
 @import '../../tools/tools'
 
-.content
+.b-content
     padding:
         top: 4.375rem
         bottom: 5.625rem
     max-width: 960px
-    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
 
     &__slider
         display: flex
@@ -15,20 +17,21 @@
             position: relative
             padding:
                 top: 1.5rem
-                right: 2.5rem
-                bottom: 0
-                left: 2.5rem
-            width: 256px
-            background: #fff
+                bottom: 1.875rem
+                right: 2rem
+                left: 2rem
+            width: 80%
+            background: $primary
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
 
             &__body
                 display: flex
                 flex-direction: column
+                align-items: flex-start
 
             &__title
-                font-size: $base-font-size*1.5
                 color: #454545
+                font-size: $base-font-size*1.5
                 line-height: 1
                 text-transform: uppercase
                 text-shadow: 0.5px 0.9px 0 #fff
@@ -41,12 +44,12 @@
 
             &__text
                 display: block
+                margin-top: .5rem
                 font-size: $base-font-size
                 line-height: 1.5
                 overflow: hidden
-                hyphens: auto
                 word-wrap: break-word
-                max-height: 10.5rem
+                max-height: $base-font-size*10.5
 
             &__img
                 display: block
@@ -55,9 +58,16 @@
                 position: absolute
                 top: 1rem
                 left: -1.5rem
-                border: 0
-                outline: 0
-                background: url('../img/author-i.png') 0 0 no-repeat
 
     &__slider-nav
         margin-top: 1.5rem !important
+        margin-bottom: 0 !important
+
+        .slider-nav__item
+            border: 1px solid #e6e6e6
+            background: linear-gradient(to top, #d4d4d4 0%, #fff 100%)
+            box-shadow: 1px 1.7px 0 #fff
+
+            &_active
+                background: linear-gradient(to top, #454545 0%, #6a6a6a 100%)
+                border: 1px solid #454545
