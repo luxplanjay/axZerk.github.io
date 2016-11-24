@@ -1,16 +1,21 @@
 @import '../../tools/tools'
 
 .page-header
+    position: relative
     display: flex
     flex-direction: column
     align-items: center
-    position: relative
     padding:
         top: 4.375rem
-        bottom: 1rem
-    margin-bottom: 10rem
+        bottom: 2.5rem
     max-width: 960px
 
     &__nav
+        z-index: 100
         position: absolute
+        width: 100%
         top: 100%
+        visibility: hidden
+
+        &:hover
+            visibility: visible

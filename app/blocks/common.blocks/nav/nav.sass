@@ -1,12 +1,19 @@
 @import '../../tools/tools'
 
 .nav
-    &__item
-        &_hidden
-            display: none
+    display: flex
+    z-index: 100
 
-    &_vertical
-        display: flex
+    &__link
+        color: $primary
+        font-family: $link-font
+        text-transform: uppercase
+        text-decoration: none
+
+        &_visible
+            visibility: visible
+
+    &_view_vertical
         flex-direction: column
         align-items: center
 
@@ -35,18 +42,13 @@
                 display: block
 
         .nav__item
+            width: 15.25rem
             text-align: center
-            width: 244px
-
 
         .nav__link
-            color: $primary
-            font-family: $title-font
             font-size: $base-font-size*1.5
             line-height: $base-font-size*2.625
             text-align: center
-            text-transform: uppercase
-            text-decoration: none
 
             &_accent
                 text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
@@ -59,20 +61,15 @@
                 text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
                 border-bottom: 2px solid rgb(237, 191, 255)
 
-    &_horizontal
-        display: flex
+    &_view_horizontal
         flex-direction: row
         justify-content: space-between
 
         .nav__link
-            text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4)
-            color: $primary
-            font-family: $link-font
             font-size: $base-font-size*1.25
             font-weight: 400
             line-height: $base-font-size*2.125
-            text-transform: uppercase
-            text-decoration: none
+            text-shadow: 1px 1.7px 2px rgba(0, 0, 0, 0.4)
 
             &:hover
                 color: $accent

@@ -3,17 +3,21 @@
 @media #{$mobile}
 
     .b-content
-
         &__slider
+            position: relative
+            padding-right: 1.5rem
+            margin-bottom: 3.125rem
+            display: flex
+            align-items: flex-end
 
             .slider-item
                 padding:
                     right: 0
                     left: 0
-                width: 87.5%
+                width: 90%
 
                 &__body
-                    width: 85%
+                    width: 80%
                     display: flex
                     flex-flow: row wrap
                     justify-content: flex-start
@@ -32,3 +36,9 @@
                     position: absolute
                     top: 1rem
                     left: -1.5rem
+
+            .slider__nav
+                position: absolute
+                bottom: -2.5rem
+                left: 50%
+                transform: translateX(-50%)

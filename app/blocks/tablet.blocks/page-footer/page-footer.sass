@@ -1,17 +1,20 @@
 @import '../../tools/tools'
 
-@media #{$mobile}
+@media #{$tablet}
     .page-footer
         display: flex
         flex-direction: column
-        justify-content: flex-start
-        align-items: center
+        width: 90%
         padding-top: 3rem
 
         &__nav
             display: block
-            width: 90%
+            width: 70%
             margin-bottom: 2.625rem
+            align-self: flex-start
 
             .nav_view_horizontal
                 width: 100%
+
+        &__copyright
+            align-self: flex-end

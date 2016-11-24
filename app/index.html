@@ -17,20 +17,22 @@
             <!-- Logo -->
             <a href="" class="site-logo">pingbull<span class="site-logo_color_purple">er</span></a>
             <!-- Header menu -->
-            <ul class="nav nav_vertical page-header__nav">
-                <li class="nav__item"><a href="" class="nav__link nav__link_accent">home</a></li>
-                <li class="nav__item nav__item_hidden"><a href="" class="nav__link">about</a></li>
-                <li class="nav__item nav__item_hidden"><a href="" class="nav__link">blog</a></li>
-                <li class="nav__item nav__item_hidden"><a href="" class="nav__link">products</a></li>
-                <li class="nav__item nav__item_hidden"><a href="" class="nav__link">lorem ipsum</a></li>
-                <li class="nav__item nav__item_hidden"><a href="" class="nav__link">dolor sit amet</a></li>
-            </ul>
+            <nav class="page-header__nav">
+                <ul class="nav nav_view_vertical">
+                    <li class="nav__item"><a href="" class="nav__link nav__link_accent nav__link_visible">home</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">about</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">blog</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">products</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
+                </ul>
+            </nav>
         </header>
 
         <!-- Slider substrate -->
-        <div class="substrate substrate_opacity">
+        <div class="substrate substrate_slider">
             <!-- Slider -->
-            <div class="slider">
+            <div class="slider slider_role_main">
                 <a href="" class="slider__button slider__button_left"></a>
                 <div class="slider__body">
                     <article class="slider-item">
@@ -40,25 +42,28 @@
                             <p class="slider-item__text">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc, imperdiet
                                 eget aliquam quis, euismod id</p>
                         </div>
-                        <img src="../img/iphone.png" alt="" class="slider-item__img">
+                        <div class="slider-item__img-wrap">
+                            <img src="../img/iphone.png" alt="" class="slider-item__img">
+                        </div>
                     </article>
                 </div>
                 <a href="" class="slider__button slider__button_right"></a>
+
+                <!-- Slider controls -->
+                <nav class="slider__nav">
+                    <a href="#slide-0" class="slider__control slider__control_active"></a>
+                    <a href="#slide-1" class="slider__control"></a>
+                    <a href="#slide-2" class="slider__control"></a>
+                    <a href="#slide-3" class="slider__control"></a>
+                </nav>
             </div>
         </div>
-        <!-- Slider controls -->
-        <nav class="slider-nav">
-            <a href="#slide-0" class="slider-nav__item slider-nav__item_active"></a>
-            <a href="#slide-1" class="slider-nav__item"></a>
-            <a href="#slide-2" class="slider-nav__item"></a>
-            <a href="#slide-3" class="slider-nav__item"></a>
-        </nav>
     </div>
 
     <!-- Gradient substrate -->
     <div class="substrate substrate_color_gradient">
         <!-- About articles block -->
-        <div class="b-about">
+        <section class="b-about">
             <article class="article">
                 <i class="article__icon"></i>
                 <div class="article__body">
@@ -91,13 +96,13 @@
                     <a href="" class="article__link">read more</a>
                 </div>
             </article>
-        </div>
+        </section>
     </div>
 
-    <!-- White substrate -->
+    <!-- Content substrate -->
     <div class="substrate substrate_color_white">
         <!-- Content block -->
-        <div class="b-content">
+        <main class="b-content">
             <!-- Post Slider -->
             <div class="slider b-content__slider">
                 <article class="slider-item">
@@ -110,17 +115,16 @@
                     </div>
                     <img src="../img/author-i.png" alt="" class="slider-item__img">
                 </article>
-
                 <!-- Post slider controlls -->
-                <nav class="slider-nav b-content__slider-nav">
-                    <a href="#post-0" class="slider-nav__item"></a>
-                    <a href="#post-1" class="slider-nav__item slider-nav__item_active"></a>
-                    <a href="#post-2" class="slider-nav__item"></a>
-                    <a href="#post-3" class="slider-nav__item"></a>
+                <nav class="slider__nav">
+                    <a href="#post-0" class="slider__control"></a>
+                    <a href="#post-1" class="slider__control slider__control_active"></a>
+                    <a href="#post-2" class="slider__control"></a>
+                    <a href="#post-3" class="slider__control"></a>
                 </nav>
             </div>
 
-            <!-- Blog posts block -->
+            <!-- Blog posts section -->
             <section class="blog-posts">
                 <h1 class="blog-posts__title">recent updates</h1>
                 <article class="post">
@@ -152,7 +156,7 @@
                 </article>
                 <a href="" class="blog-posts__link">more blog posts</a>
             </section>
-        </div>
+        </main>
     </div>
 
     <!-- Logos substrate -->
@@ -179,10 +183,11 @@
             </div>
         </div>
     </div>
+
     <!-- Grey substrate -->
     <div class="substrate substrate_color_light-grey">
         <!-- News block -->
-        <div class="b-news">
+        <section class="b-news">
             <article class="b-news__item">
                 <h2 class="b-news__title">news categories</h2>
                 <p class="b-news__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
@@ -203,20 +208,23 @@
                     bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu quis
                     odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
             </article>
-        </div>
+        </section>
     </div>
+
     <!-- Footer substrate -->
     <div class="substrate substrate_footer">
         <footer class="page-footer">
-            <ul class="nav nav_horizontal page-footer__nav">
-                <li class="nav__item"><a href="" class="nav__link">home</a></li>
-                <li class="nav__item"><a href="" class="nav__link">about</a></li>
-                <li class="nav__item"><a href="" class="nav__link">blog</a></li>
-                <li class="nav__item"><a href="" class="nav__link">products</a></li>
-                <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
-                <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
-            </ul>
-            <p class="page-footer__legal">Designed by <span class="page-footer__legal_accent">Pingbull AS</span></p>
+            <nav class="page-footer__nav">
+                <ul class="nav nav_view_horizontal">
+                    <li class="nav__item"><a href="" class="nav__link">home</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">about</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">blog</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">products</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
+                </ul>
+            </nav>
+            <p class="page-footer__copyright">Designed by <span class="page-footer__copyright_accent">Pingbull AS</span></p>
         </footer>
     </div>
 </body>

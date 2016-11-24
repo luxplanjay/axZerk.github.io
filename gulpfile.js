@@ -37,7 +37,7 @@ gulp.task('bundleJs', function() {
 
 
 gulp.task('watch', function(){
-	gulp.watch(paths.srcSass, ['bundleCss'])
+	gulp.watch(paths.srcSass, {cwd: './'}, ['bundleCss'])
 	gulp.watch(paths.srcHtml, browserSync.reload);
 	gulp.watch(paths.srcJs, browserSync.reload);
 });
