@@ -16,9 +16,11 @@
 
         &_left
             background: url('../img/slider-arrow_left.png') 0 0 no-repeat
+            background-size: cover
 
         &_right
             background: url('../img/slider-arrow_right.png') 0 0 no-repeat
+            background-size: cover
 
 
     &_role_main
@@ -32,7 +34,7 @@
 
         .slider__nav
             position: absolute
-            bottom: -4.25rem
+            bottom: -5rem
             left: 50%
             transform: translateX(-50%)
 
@@ -62,7 +64,6 @@
         display: inline-block
         background: rgba(0, 0, 0, 0.3)
         overflow: hidden
-        text-indent: -9999px
         border-radius: 50%
 
         &_active

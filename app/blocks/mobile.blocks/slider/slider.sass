@@ -2,14 +2,9 @@
 
 @media #{$mobile}
     .slider
-        &__button
-            display: block
-            height: 2.625rem
-            width: 2rem
-
         &_role_main
             .slider__body
-                flex: 0 0 87.5%
+                flex: 0 0 85%
 
             .slider__nav
                 position: absolute
@@ -19,19 +14,23 @@
 
             .slider-item
                 display: flex
-                justify-content: space-between
 
                 &__body
                     display: flex
                     flex-direction: column
                     align-items: flex-start
                     justify-content: center
-                    width: 55%
+                    flex: 1 0 50%
+
+                &__title_sub
+                    overflow: hidden
+                    font-size: $base-font-size
+                    max-height: $base-font-size
 
                 &__img-wrap
                     position: relative
                     display: block
-                    width: 45%
+                    flex: 1 0 45%
 
                 &__img
                     position: absolute

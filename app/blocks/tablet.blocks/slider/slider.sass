@@ -1,0 +1,47 @@
+@import '../../tools/tools'
+
+@media #{$tablet}
+    .slider
+        &_role_main
+            .slider__body
+                flex: 0 0 90%
+
+            .slider__nav
+                position: absolute
+                bottom: -3.275rem
+                right: 9rem
+                left: auto
+                transform: translateX(0)
+
+            .slider-item
+                display: flex
+                justify-content: space-between
+
+                &__body
+                    padding-left: 1.5rem
+                    flex: 0 0 45%
+
+                &__title
+                    font-size: $base-font-size*3
+
+                    &_sub
+                        margin-top: .5rem
+                        font-size: $base-font-size*1.5
+                        line-height: 1
+                        max-height: $base-font-size*1.5
+
+                &__text
+                    display: block
+                    margin-top: .5rem
+                    color: $primary
+                    line-height: 1.5
+                    overflow: hidden
+                    word-wrap: break-word
+                    max-height: $base-font-size*6
+
+                &__img-wrap
+                    flex: 0 0 45%
+
+                &__img
+                    top: -1.5rem
+                    width: 17.125rem

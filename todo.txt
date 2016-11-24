@@ -1,1 +1,7 @@
--разобраться с nav на мобиле
+-разобраться с footer background
+
+slider.sass button rem vs px подумать
+
+пересчитать Rem для b-logos
+
+768px slider-item body width in main slider
