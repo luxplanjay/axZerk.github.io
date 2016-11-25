@@ -1,0 +1,31 @@
+@import '../../tools/tools'
+
+@media #{$desktop}
+    .b-content
+        padding:
+            top: 6.25rem
+            bottom: 4.625rem !important
+        width: 100% !important
+
+        &__slider
+            .slider-item
+                &__body
+                    width: 100%
+                    display: flex
+                    flex-flow: row wrap !important
+                    align-items: flex-start
+
+                &__title
+                    font-size: $base-font-size*1.875 !important
+
+                    &_sub
+                        font-size: $base-font-size*1.875 !important
+
+                &__text
+                    margin-top: .5rem !important
+                    max-height: $base-font-size*10.5 !important
+
+                &__img
+                    position: absolute
+                    top: 1.25rem
+                    left: -1.4rem

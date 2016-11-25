@@ -1,0 +1,41 @@
+@import '../../tools/tools'
+
+@media #{$desktop}
+    .b-news
+        display: flex
+        justify-content: space-between !important
+
+        &__item
+            width: 30% !important
+
+            &_view_accent
+
+                .b-news__title
+                    display: none
+
+                .b-news__text
+                    max-height: $base-font-size*7.5
+
+        &__site-logo
+            display: block
+            text-shadow: 0 1px 0 #fff
+            color: #454545
+            font-size: $base-font-size*3
+            line-height: 1
+
+            .site-logo_view_accent
+                text-shadow: 0 1px 0 #fff
+                color: #b9b9b9 !important
+                font-size: 3rem
+                line-height: 1
+                -webkit-text-fill-color: #b9b9b9 !important
+
+        &__copyright
+            margin-top: .5rem
+            display: block
+            text-shadow: 0.5px 0.9px 0 #fff
+            color: #c5c5c5
+            font-family: Georgia
+            font-size: 1rem
+            font-style: italic
+            line-height: 1.5

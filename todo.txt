@@ -1,7 +1,7 @@
--разобраться с footer background
-
-slider.sass button rem vs px подумать
-
 пересчитать Rem для b-logos
 
-768px slider-item body width in main slider
+Сделать функционал slider__nav
+
+переключить класс верхней навигации
+
+разобраться почему перекрываться стили 768 и 960
