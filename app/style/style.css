@@ -983,23 +983,8 @@ ul {
 }
 
 @media screen and (min-width: 480px) {
-  .b-news {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 480px) {
   .blog-posts {
     width: 70%;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .post {
-    margin-bottom: 1.25rem;
   }
 }
 
@@ -1031,6 +1016,21 @@ ul {
   }
   .page-footer__nav .nav_view_horizontal {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .b-news {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .post {
+    margin-bottom: 1.25rem;
   }
 }
 
