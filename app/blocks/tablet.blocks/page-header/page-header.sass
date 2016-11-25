@@ -1,0 +1,28 @@
+@import '../../tools/tools'
+
+@media #{$tablet}
+    .page-header
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: flex-start
+        width: 95%
+        padding:
+            top: 4.25rem
+            bottom: 5rem
+        max-width: 960px
+
+        &__nav
+            position: relative
+            visibility: visible
+            margin-top: 2rem
+            width: 85%
+
+            &:hover
+                color: $accent
+
+            .nav__link
+                font-size: $base-font-size*1.5
+
+        .site-logo
+            margin-left: 5px

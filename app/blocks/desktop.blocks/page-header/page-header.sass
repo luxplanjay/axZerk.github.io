@@ -1,0 +1,32 @@
+@import '../../tools/tools'
+
+@media #{$desktop}
+    .page-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: baseline
+        width: 100%
+        padding:
+            top: 4.25rem
+            bottom: 10.75rem
+        max-width: 960px
+
+        &__nav
+            position: relative
+            width: 65%
+            visibility: visible
+
+            &:hover
+                color: $accent
+
+            .nav__link
+                font-size: $base-font-size*1.5
+                padding: 0 5px
+
+                &:hover
+                    border-bottom: 2px solid rgb(237, 191, 255)
+                    color: $primary
+
+        .site-logo
+            margin-left: 2rem
