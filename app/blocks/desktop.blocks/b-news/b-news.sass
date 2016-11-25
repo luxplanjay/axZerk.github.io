@@ -3,18 +3,23 @@
 @media #{$desktop}
     .b-news
         display: flex
-        justify-content: space-between !important
+        flex-direction: row
+        justify-content: space-between
+        padding: 6.25rem 0
 
         &__item
-            width: 30% !important
+            width: 30%
+            margin-bottom: 0
 
             &_view_accent
-
                 .b-news__title
                     display: none
 
                 .b-news__text
                     max-height: $base-font-size*7.5
+
+        &__text
+            max-height: $base-font-size*10.5
 
         &__site-logo
             display: block
@@ -25,10 +30,10 @@
 
             .site-logo_view_accent
                 text-shadow: 0 1px 0 #fff
-                color: #b9b9b9 !important
+                color: #b9b9b9
                 font-size: 3rem
                 line-height: 1
-                -webkit-text-fill-color: #b9b9b9 !important
+                -webkit-text-fill-color: #b9b9b9
 
         &__copyright
             margin-top: .5rem

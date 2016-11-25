@@ -4,35 +4,56 @@
     .slider
         &_role_main
             .slider__body
-                flex: 0 0 92.5% !important
+                flex: 0 0 92.5%
                 padding-left: 1rem
                 padding-right: 1rem
+
             .slider__nav
                 position: absolute
-                bottom: -5.625rem !important
-                right: 12.5% !important
+                bottom: -5.625rem
+                right: 12.5%
                 left: auto
                 transform: translateX(0)
 
             .slider-item
+                display: flex
+                justify-content: space-between
+
                 &__body
-                    padding-left: 1rem !important
-                    flex: 0 0 65% !important
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    justify-content: center
+                    padding-left: 1rem
+                    flex: 0 0 65%
 
                 &__title
-                    font-size: $base-font-size*3.75 !important
+                    font-size: $base-font-size*3.75
 
                     &_sub
-                        margin-top: 0 !important
-                        font-size: $base-font-size*2 !important
-                        max-height: $base-font-size*2 !important
+                        margin-top: 0
+                        font-size: $base-font-size*2
+                        line-height: 1
+                        max-height: $base-font-size*2
 
                 &__text
                     display: block
                     margin-top: .5rem
+                    color: $primary
                     font-size: $base-font-size*1.125
                     line-height: 1.5
-                    max-height: 100% !important
+                    overflow: hidden
+                    word-wrap: break-word
+                    max-height: 100%
 
                 &__img-wrap
-                    flex: 0 0 32.5% !important
+                    position: relative
+                    display: block
+                    flex: 0 0 32.5%
+
+                &__img
+                    position: absolute
+                    top: -1.5rem
+                    width: 17.125rem
+                    left: 50%
+                    transform: translateX(-50%)

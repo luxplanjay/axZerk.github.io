@@ -2,30 +2,57 @@
 
 @media #{$desktop}
     .b-content
+        display: flex
+        flex-direction: row
+        justify-content: space-between
         padding:
             top: 6.25rem
-            bottom: 4.625rem !important
-        width: 100% !important
+            bottom: 4.625rem
+        width: 100%
 
         &__slider
+            display: flex
+            align-items: center
+            flex: 0 0 45%
+            padding: 0
+            margin-bottom: 0
+
             .slider-item
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                padding:
+                    top: 1.875rem
+                    right: 0
+                    bottom: 2.875rem
+                    left: 2.2rem
+                width: 90%
+
                 &__body
-                    width: 100%
                     display: flex
-                    flex-flow: row wrap !important
+                    flex-flow: row wrap
                     align-items: flex-start
+                    width: 100%
 
                 &__title
-                    font-size: $base-font-size*1.875 !important
+                    font-size: $base-font-size*1.875
 
                     &_sub
-                        font-size: $base-font-size*1.875 !important
+                        font-size: $base-font-size*1.875
 
                 &__text
-                    margin-top: .5rem !important
-                    max-height: $base-font-size*10.5 !important
+                    margin-top: .5rem
+                    max-height: $base-font-size*10.5
 
                 &__img
                     position: absolute
                     top: 1.25rem
                     left: -1.4rem
+
+            .slider__nav
+                position: relative
+                margin-bottom: 0
+                margin-top: 1.5rem
+                bottom: auto
+                left: auto
+                transform: translateX(0)

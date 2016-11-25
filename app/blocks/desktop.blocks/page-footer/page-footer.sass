@@ -3,16 +3,17 @@
 @media #{$desktop}
     .page-footer
         display: flex
-        flex-direction: row !important
-        justify-content: space-between !important
-        width: 100% !important
-        padding: 3rem 0 !important
+        flex-direction: row
+        justify-content: space-between
+        align-items: baseline
+        width: 100%
+        padding: 2.875rem 0
         height: auto
 
         &__nav
-            max-width: 80%
-            margin-bottom: 0 !important
-            align-self: auto !important
+            display: block
+            width: 60%
+            margin-bottom: 0
 
-        &__copyright
-            align-self: auto !important
+            .nav_view_horizontal
+                width: 100%
