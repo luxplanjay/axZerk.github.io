@@ -998,6 +998,12 @@ ul {
 }
 
 @media screen and (min-width: 480px) {
+  .post {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
   .page-footer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1025,12 +1031,6 @@ ul {
   }
   .page-footer__nav .nav_view_horizontal {
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .post {
-    margin-bottom: 1.25rem;
   }
 }
 
@@ -1344,7 +1344,7 @@ ul {
   .slider_role_main .slider__nav {
     position: absolute;
     bottom: -3.275rem;
-    right: 9rem;
+    right: 17.5%;
     left: auto;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
