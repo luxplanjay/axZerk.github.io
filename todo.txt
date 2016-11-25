@@ -1,1 +1,1 @@
-пересчитать Rem для b-logos
+Mostly done, flash iphone is questionable, rem for icons as well, rest is acceptable.

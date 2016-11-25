@@ -1,6 +1,7 @@
 var gulp 					= require('gulp'),
 		sass 				= require('gulp-sass'),
 		concat 				= require('gulp-concat'),
+		uncss 				= require('gulp-uncss');
 		browserSync			= require('browser-sync'),
 		del 				= require('del'),
 		imagemin			= require('gulp-imagemin'),
@@ -10,18 +11,18 @@ var gulp 					= require('gulp'),
 		plugins 			= require('gulp-load-plugins')();
 
 var paths = {
-  	srcSass    : ['./app/blocks/**/*.sass'],
-  	srcJs      : ['./app/blocks/**/*.js'],
-  	srcHtml    : './app/index.html',
-  	destCss    : './app/style',
-  	destJs     : './app/js'
+  	srcSass    : ['app/blocks/**/*.sass'],
+  	srcJs      : ['app/blocks/**/*.js'],
+  	srcHtml    : 'app/index.html',
+  	destCss    : 'app/style',
+  	destJs     : 'app/js'
 };
 
 gulp.task('bundleCss' , function(){
 	gulp.src(paths.srcSass)
 	.pipe(plugins.sass({outputStyle: 'expanded'}).on('error', plugins.sass.logError))
 	.pipe(plugins.concat('style.css'))
-	.pipe(plugins.uncss({html: [paths.srcHtml]}))
+	// .pipe(plugins.uncss({html: [paths.srcHtml]}))
 	.pipe(autoprefixer(['last 15 versions', '> 1%']))
 	.pipe(gulp.dest(paths.destCss))
 	.pipe(browserSync.reload({
@@ -36,7 +37,7 @@ gulp.task('bundleJs', function() {
 });
 
 gulp.task('watch', function(){
-	gulp.watch(paths.srcSass, {cwd: './'}, ['bundleCss'])
+	gulp.watch(paths.srcSass, ['bundleCss'])
 	gulp.watch(paths.srcHtml, browserSync.reload);
 	gulp.watch(paths.srcJs, browserSync.reload);
 });
