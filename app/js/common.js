@@ -63,16 +63,26 @@ testimonialsSlider.init();
 // Adding\removing nav class modifier on window resize
 function jqUpdateSize() {
     var wSize = $(window).width();
+    var src = ($(".slider-item__img").attr("src") === "img/iphone.png");
         if ($(this).width() >= 768) {
             $('#main-nav')
                 .removeClass('nav_view_vertical')
                 .addClass('nav_view_horizontal');
+            $(".slider-item__img").attr("src", "img/iphone-flash.png");
         } else {
             $('#main-nav')
                 .removeClass('nav_view_horizontal')
                 .addClass('nav_view_vertical');
+            $(".slider-item__img").attr("src", "img/iphone.png");
         }
 };
+
+// $(".slider-item__img").bind("click", function() {
+//       var src = ($(this).attr("src") === "img/iphone.png")
+//                     ? "img/iphone-flash.png"
+//                     : "img/iphone.png";
+//       $(this).attr("src", src);
+// });
 
 $(document).ready(jqUpdateSize);
 $(window).resize(jqUpdateSize);
