@@ -60,7 +60,8 @@ var testimonialsSlider = {
 
 testimonialsSlider.init();
 
-// Adding\removing nav class modifier on window resize
+// Adding/removing nav class modifier on window resize
+// Adding/removing slider-img src on breakpoints
 function jqUpdateSize() {
     var wSize = $(window).width();
     var src = ($('#slider-img').attr("src") === "img/iphone.png");
@@ -76,13 +77,6 @@ function jqUpdateSize() {
             $('#slider-img').attr("src", "img/iphone.png");
         }
 };
-
-// $(".slider-item__img").bind("click", function() {
-//       var src = ($(this).attr("src") === "img/iphone.png")
-//                     ? "img/iphone-flash.png"
-//                     : "img/iphone.png";
-//       $(this).attr("src", src);
-// });
 
 $(document).ready(jqUpdateSize);
 $(window).resize(jqUpdateSize);
