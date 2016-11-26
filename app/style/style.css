@@ -105,17 +105,11 @@ table {
 }
 
 .article__icon {
-  display: block;
   fill: #fff;
-  margin-top: -2.75rem;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 1.875rem;
-      -ms-flex: 0 0 1.875rem;
-          flex: 0 0 1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin-top: 1rem;
   margin-right: 1.5rem;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
 }
 
 .article__body {
