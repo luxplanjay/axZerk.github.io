@@ -2,16 +2,25 @@
 
 @media #{$desktop}
     .slider
+        &__button
+            position: absolute
+
+            &_left
+                left: -15%
+
+            &_right
+                right: -15%
+
         &_role_main
             .slider__body
-                flex: 0 0 92.5%
+                flex: 0 0 100%
                 padding-left: 1rem
                 padding-right: 1rem
 
             .slider__nav
                 position: absolute
                 bottom: -5.625rem
-                right: 12.5%
+                right: 10.5%
                 left: auto
                 transform: translateX(0)
 

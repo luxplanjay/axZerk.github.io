@@ -1257,18 +1257,27 @@ table {
 }
 
 @media screen and (min-width: 960px) {
+  .slider__button {
+    position: absolute;
+  }
+  .slider__button_left {
+    left: -15%;
+  }
+  .slider__button_right {
+    right: -15%;
+  }
   .slider_role_main .slider__body {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 92.5%;
-        -ms-flex: 0 0 92.5%;
-            flex: 0 0 92.5%;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     padding-left: 1rem;
     padding-right: 1rem;
   }
   .slider_role_main .slider__nav {
     position: absolute;
     bottom: -5.625rem;
-    right: 12.5%;
+    right: 10.5%;
     left: auto;
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
