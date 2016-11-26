@@ -63,7 +63,7 @@ testimonialsSlider.init();
 // Adding\removing nav class modifier on window resize
 function jqUpdateSize() {
     var wSize = $(window).width();
-    var src = ($("#phone-img").attr("src") === "img/iphone.png");
+    var src = ($('#slider-img').attr("src") === "img/iphone.png");
         if ($(this).width() >= 768) {
             $('#main-nav')
                 .removeClass('nav_view_vertical')
