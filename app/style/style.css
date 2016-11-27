@@ -1401,7 +1401,6 @@ table {
   }
   .b-content__slider .slider-item {
     padding-right: 0;
-    outline: 1px solid red;
     width: 90%;
   }
   .b-content__slider .slider-item__body {
