@@ -489,14 +489,6 @@ table {
   font-weight: 700;
 }
 
-.nav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 100;
-}
-
 .nav__link {
   color: #fff;
   font-family: "League Gothic", Arial, sans-serif;
@@ -510,6 +502,10 @@ table {
 }
 
 .nav_view_vertical {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -571,6 +567,10 @@ table {
 }
 
 .nav_view_horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -765,6 +765,10 @@ table {
 
 .slider__body {
   width: 90%;
+}
+
+.slider__nav {
+  cursor: pointer;
 }
 
 .slider__button {

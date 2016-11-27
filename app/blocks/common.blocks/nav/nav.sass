@@ -1,9 +1,6 @@
 @import '../../tools/tools'
 
 .nav
-    display: flex
-    z-index: 100
-
     &__link
         color: $primary
         font-family: $link-font
@@ -15,6 +12,7 @@
             padding: 0 5px
 
     &_view_vertical
+        display: flex
         flex-direction: column
         align-items: center
         border: 1px solid rgba(5, 17, 22, 0.9)
@@ -60,6 +58,7 @@
                 border-bottom: 2px solid rgb(237, 191, 255)
 
     &_view_horizontal
+        display: flex
         flex-direction: row
         justify-content: space-between
 
