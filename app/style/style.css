@@ -1061,6 +1061,7 @@ table {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
+    padding-right: 1rem;
   }
   .b-content__slider .slider-item__title {
     margin-right: .2rem;
@@ -1400,6 +1401,7 @@ table {
   }
   .b-content__slider .slider-item {
     padding-right: 0;
+    outline: 1px solid red;
     width: 90%;
   }
   .b-content__slider .slider-item__body {
@@ -1410,10 +1412,8 @@ table {
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 80%;
-        -ms-flex: 1 0 80%;
-            flex: 1 0 80%;
+    width: 100%;
+    padding-right: 1rem;
   }
   .b-content__slider .slider-item__title {
     margin-right: .2rem;
@@ -1689,6 +1689,7 @@ table {
         -ms-flex-align: start;
             align-items: flex-start;
     width: 100%;
+    padding-right: .75rem;
   }
   .b-content__slider .slider-item__title {
     font-size: 1.5rem;
