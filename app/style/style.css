@@ -550,7 +550,7 @@ table {
   font-size: 1.5rem;
   line-height: 2.625rem;
   text-align: center;
-  height: 2.875rem;
+  height: 2.75rem;
 }
 
 .nav_view_vertical .nav__link_initial {
@@ -635,7 +635,7 @@ table {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 4.375rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
   max-width: 960px;
 }
 
