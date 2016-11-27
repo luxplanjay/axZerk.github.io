@@ -887,6 +887,7 @@ table {
 .slider-item__text {
   font-family: "Open Sans Light", Tahoma, sans-serif;
   font-size: 1rem;
+  min-width: 100%;
 }
 
 .substrate {
