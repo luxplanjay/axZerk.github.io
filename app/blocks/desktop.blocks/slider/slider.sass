@@ -3,13 +3,7 @@
 @media #{$desktop}
     .slider
         &__button
-            position: absolute
-
-            &_left
-                left: -15%
-
-            &_right
-                right: -15%
+            display: none
 
         &_role_main
             .slider__body
@@ -66,3 +60,15 @@
                     width: 17.125rem
                     left: 50%
                     transform: translateX(-50%)
+
+@media #{$desktop-large}
+    .slider
+        &__button
+            display: block
+            position: absolute
+
+            &_left
+                left: -15%
+
+            &_right
+                right: -15%

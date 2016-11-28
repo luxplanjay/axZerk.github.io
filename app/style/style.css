@@ -1263,13 +1263,7 @@ table {
 
 @media screen and (min-width: 960px) {
   .slider__button {
-    position: absolute;
-  }
-  .slider__button_left {
-    left: -15%;
-  }
-  .slider__button_right {
-    right: -15%;
+    display: none;
   }
   .slider_role_main .slider__body {
     -webkit-box-flex: 0;
@@ -1357,6 +1351,19 @@ table {
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .slider__button {
+    display: block;
+    position: absolute;
+  }
+  .slider__button_left {
+    left: -15%;
+  }
+  .slider__button_right {
+    right: -15%;
   }
 }
 
