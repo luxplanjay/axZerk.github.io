@@ -6,24 +6,32 @@
             transform: translateX(0)
 
     .page-header
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: baseline
         width: 100%
         padding:
             top: 4.25rem
             bottom: 10.75rem
         max-width: 960px
+        @include clearfix
+
+        .site-logo
+            float: left
 
         &__nav
             position: relative
-            width: 65%
-            visibility: visible
             top: 0
+            left: auto
+            transform: translateX(0)
+            width: 70%
+            visibility: visible
+            float: right
+            text-align: right
+            padding-right: 1rem
 
             &:hover
                 color: $accent
+
+            .nav__item
+                margin-left: 4%
 
             .nav__link
                 font-size: $base-font-size*1.5
@@ -35,4 +43,4 @@
                     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
 
         .site-logo
-            margin-left: 2rem
+            margin-left: 1rem

@@ -2,18 +2,29 @@
 
 @media #{$desktop}
     .page-footer
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: baseline
-        width: 100%
+        width: 97.5%
         padding: 2.875rem 0
         height: auto
+        @include clearfix
 
         &__nav
+            float: left
             display: block
-            width: 60%
+            width: 70%
             margin-bottom: 0
 
-            .nav_view_horizontal
-                width: 100%
+            .nav__item
+                text-align: center
+                width: auto
+                margin-right: 7%
+                white-space: nowrap
+
+                &:last-child
+                    margin-right: 0
+
+            .nav__link
+                line-height: 100%
+
+        &__copyright
+            float: right
+            line-height: 100%

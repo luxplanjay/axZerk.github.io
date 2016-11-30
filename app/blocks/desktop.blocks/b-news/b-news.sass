@@ -2,14 +2,19 @@
 
 @media #{$desktop}
     .b-news
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+        display: block
+        width: 97.5%
         padding: 6.25rem 0
+        @include clearfix
 
         &__item
+            float: left
             width: 30%
             margin-bottom: 0
+            margin-right: 5%
+
+            &:last-child
+                margin-right: 0
 
             &_view_accent
                 .b-news__title
@@ -37,6 +42,7 @@
 
         &__copyright
             display: block
+            text-align: left
             text-shadow: 0.5px 0.9px 0 #fff
             color: #c5c5c5
             font-family: Georgia

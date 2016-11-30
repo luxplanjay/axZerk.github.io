@@ -2,25 +2,19 @@
 
 @media #{$desktop}
     .b-content
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+        width: 100%
         padding:
             top: 6.25rem
             bottom: 4.625rem
-        width: 100%
+        @include clearfix
 
         &__slider
-            display: flex
-            align-items: center
-            flex: 0 0 45%
+            float: left
+            max-width: 47.5%
             padding: 0
             margin-bottom: 0
 
             .slider-item
-                display: flex
-                flex-direction: column
-                align-items: flex-end
                 padding:
                     top: 1.875rem
                     right: 0
@@ -29,17 +23,17 @@
                 width: 90%
 
                 &__body
-                    display: flex
-                    flex-flow: row wrap
-                    align-items: flex-start
                     width: 100%
                     padding-right: 1rem
+                    @include clearfix
 
                 &__title
+                    float: left
                     margin-right: .2rem
                     font-size: $base-font-size*1.875
 
                     &_sub
+                        float: left
                         font-size: $base-font-size*1.875
 
                 &__text

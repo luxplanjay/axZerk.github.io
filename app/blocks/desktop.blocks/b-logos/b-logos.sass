@@ -2,11 +2,10 @@
 
 @media #{$desktop}
     .b-logos
-        display: flex
-        flex-flow: row
-        justify-content: space-between
         padding: 1.75rem 0
+        @include clearfix
 
         &__item
-            width: 15%
+            float: left
+            width: 16.666%
             margin-bottom: 0
