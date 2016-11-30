@@ -19,3 +19,12 @@ $tablet: "screen and (min-width: 768px) and (max-width: 959px)"
 $desktop: "screen and (min-width: 960px)"
 // Для очень широких екранов
 $desktop-large: "screen and (min-width: 1200px)"
+
+@mixin clearfix
+    &::after
+        content: ''
+        display: block
+        clear: both
+
+    // top: 50%
+    // transform: translateY(-50%)

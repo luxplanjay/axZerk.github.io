@@ -1,26 +1,26 @@
 @import '../../tools/tools'
 
 .b-logos
-    display: flex
-    flex-flow: row wrap
+    margin: 0 auto
     max-width: 960px
     width: 100%
     padding:
         top: 3.125rem
         bottom: 4.5rem
+    @include clearfix
 
     &__item
-        display: flex
-        justify-content: center
-        align-items: center
+        float: left
+        text-align: center
         width: 50%
         margin-bottom: 2.5rem
+        height: 65px
 
         &:nth-child(n+5)
             margin-bottom: 0
 
     &__link
-        display: block
+        display: inline-block
 
         &_bllabong
             background: url('../img/logos.png') no-repeat 0 -1px
@@ -35,7 +35,7 @@
         &_tree
             background: url('../img/logos.png') no-repeat -145px 0
             width: 65px
-            height: 65px
+            height: 63px
 
         &_awsm
             background: url('../img/logos.png') no-repeat -212px -2px
@@ -43,9 +43,9 @@
             height: 63px
 
         &_raca
-            background: url('../img/logos.png') no-repeat -264px -44px
+            background: url('../img/logos.png') no-repeat -264px -24px
             width: 103px
-            height: 21px
+            height: 61px
 
         &_vonzipper
             background: url('../img/logos.png') no-repeat -369px -5px

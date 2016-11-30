@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style/style.css">
     <title>HTML/CSS 7-8</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!--[if IE]>
+        <script src="js/html5shiv.js" type="text/javascript"></script>
+        <script src="js/rem.js" type="text/javascript"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
@@ -76,8 +77,8 @@
                     <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
                         bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
                         quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                    <a href="" class="article__link">read more</a>
                 </div>
+                <a href="" class="article__link">read more</a>
             </article>
 
             <article class="article">
@@ -89,8 +90,8 @@
                     <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
                         bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
                         quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                    <a href="" class="article__link">read more</a>
                 </div>
+                <a href="" class="article__link">read more</a>
             </article>
 
             <article class="article">
@@ -102,8 +103,8 @@
                     <p class="article__text">Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar
                         bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl. Quisque libero tellus, pharetra et eleifend id, interdum elementum arcu. Suspendisse quis mauris non ligula rutrum faucibus eu
                         quis odio. Phasellus eu lobortis odio. In hac habitasse platea dictumst. Proin vestibulum turpis at mauris aliquam non euismod lorem euismod. Aenean dapibus ultricies enim, eget vulputate leo feugiat non.</p>
-                    <a href="" class="article__link">read more</a>
                 </div>
+                <a href="" class="article__link">read more</a>
             </article>
         </section>
     </div>
@@ -225,19 +226,18 @@
     <!-- Footer substrate -->
     <div class="substrate substrate_footer">
         <footer class="page-footer">
-            <nav class="page-footer__nav">
-                <ul class="nav nav_view_horizontal">
-                    <li class="nav__item"><a href="" class="nav__link">home</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">about</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">blog</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">products</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
-                </ul>
-            </nav>
+            <ul class="nav nav_view_horizontal page-footer__nav">
+                <li class="nav__item"><a href="" class="nav__link">home</a></li>
+                <li class="nav__item"><a href="" class="nav__link">about</a></li>
+                <li class="nav__item"><a href="" class="nav__link">blog</a></li>
+                <li class="nav__item"><a href="" class="nav__link">products</a></li>
+                <li class="nav__item"><a href="" class="nav__link">lorem ipsum</a></li>
+                <li class="nav__item"><a href="" class="nav__link">dolor sit amet</a></li>
+            </ul>
             <p class="copyright page-footer__copyright">Designed by <span class="copyright_view_accent">Pingbull AS</span></p>
         </footer>
     </div>
+
 
     <script src="js/common.js" charset="utf-8"></script>
 </body>

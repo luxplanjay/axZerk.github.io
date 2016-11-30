@@ -2,16 +2,19 @@
 
 @media #{$mobile}
     .page-footer
-        display: flex
-        flex-direction: column
-        justify-content: flex-start
-        align-items: center
         padding-top: 3rem
 
         &__nav
             display: block
-            width: 90%
+            text-align: center
             margin-bottom: 2.625rem
+            font-size: 0
 
-            .nav_view_horizontal
-                width: 100%
+            .nav__item
+                text-align: center
+                width: auto
+                margin-right: 7%
+                white-space: nowrap
+
+                &:last-child
+                    margin-right: 0

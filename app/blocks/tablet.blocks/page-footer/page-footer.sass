@@ -2,19 +2,23 @@
 
 @media #{$tablet}
     .page-footer
-        display: flex
-        flex-direction: column
-        width: 90%
+        width: 95%
         padding-top: 3rem
+        @include clearfix
 
         &__nav
             display: block
             width: 70%
             margin-bottom: 2.625rem
-            align-self: flex-start
 
-            .nav_view_horizontal
-                width: 100%
+            .nav__item
+                text-align: center
+                width: auto
+                margin-right: 7%
+                white-space: nowrap
+
+                &:last-child
+                    margin-right: 0
 
         &__copyright
-            align-self: flex-end
+            float: right

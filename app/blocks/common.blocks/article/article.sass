@@ -1,27 +1,29 @@
 @import '../../tools/tools'
 
 .article
-    margin-bottom: 1.875rem
-    width: 85%
-    display: flex
+    margin:
+        top: 0
+        bottom: 1.875rem
+        left: auto
+        right: auto
+    max-width: 90%
+    @include clearfix
 
     &:last-child
         margin-bottom: 0
 
     &__icon
+        float: left
         fill: $primary
         width: 1.875rem
         height: 1.875rem
         margin:
             top: 1rem
             right: 1.5rem
-        // на будущее для ie8
-        // background: url('../img/wrench-i.png') 0 0 no-repeat
 
     &__body
-        display: flex
-        flex-direction: column
-        flex: 1 0 80%
+        float: left
+        max-width: 80%
 
     &__title
         color: $primary
@@ -42,6 +44,8 @@
         max-height: $base-font-size*4.5
 
     &__link
+        clear: right
+        float: right
         margin-top: 1rem
         align-self: flex-end
         color: $primary

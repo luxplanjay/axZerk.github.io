@@ -8,6 +8,7 @@ var gulp 					= require('gulp'),
 		pngquant 			= require('imagemin-pngquant'),
 		cache 				= require('gulp-cache'),
 		autoprefixer 		= require('gulp-autoprefixer'),
+		postcss    			= require('gulp-postcss'),
 		plugins 			= require('gulp-load-plugins')();
 
 var paths = {
@@ -23,6 +24,7 @@ gulp.task('bundleCss' , function(){
 	.pipe(plugins.sass({outputStyle: 'expanded'}).on('error', plugins.sass.logError))
 	.pipe(plugins.concat('style.css'))
 	// .pipe(plugins.uncss({html: [paths.srcHtml]}))
+	// .pipe(postcss([require('postcss-flexibility')]))
 	.pipe(autoprefixer(['last 15 versions', '> 2%', 'ie 8']))
 	.pipe(gulp.dest(paths.destCss))
 	.pipe(browserSync.reload({

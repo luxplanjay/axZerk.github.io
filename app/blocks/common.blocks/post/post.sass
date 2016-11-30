@@ -1,19 +1,18 @@
 @import '../../tools/tools'
 
 .post
-    display: flex
-    align-items: center
-    justify-content: space-between
     margin-bottom: 1rem
+    @include clearfix
 
     &__img
-        flex: 0 0 3rem
+        display: inline-block
+        float: left
+        width: 3rem
         margin-right: 1.125rem
 
     &__body
-        display: flex
-        flex-direction: column
-        flex: 1 0 75%
+        max-width: 75%
+        float: left
 
     &__title
         color: #454545

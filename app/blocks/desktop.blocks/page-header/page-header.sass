@@ -1,6 +1,10 @@
 @import '../../tools/tools'
 
 @media #{$desktop}
+    @-moz-document url-prefix()
+        .page-header__nav
+            transform: translateX(0)
+
     .page-header
         display: flex
         flex-direction: row
@@ -16,6 +20,7 @@
             position: relative
             width: 65%
             visibility: visible
+            top: 0
 
             &:hover
                 color: $accent

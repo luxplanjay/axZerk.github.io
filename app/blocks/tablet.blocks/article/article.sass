@@ -2,11 +2,16 @@
 
 @media #{$tablet}
     .article
-        width: 28%
+        float: left
+        width: 30%
         margin-bottom: 0
+        margin-right: 5%
+
+        &:last-child
+            margin-right: 0
 
         &__body
-            flex: 1 0 72.5%
+            max-width: 75%
 
         &__text
             max-height: $base-font-size*9

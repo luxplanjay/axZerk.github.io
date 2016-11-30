@@ -1,25 +1,37 @@
 @import '../../tools/tools'
 
 @media #{$tablet}
+    @-moz-document url-prefix()
+        .page-header__nav
+            transform: translateX(0)
+
     .page-header
-        display: flex
-        flex-direction: column
-        justify-content: flex-end
-        align-items: flex-start
         width: 95%
         padding:
             top: 4.25rem
             bottom: 5rem
         max-width: 960px
+        @include clearfix
+
+        .site-logo
+            float: left
 
         &__nav
+            float: right
             position: relative
             visibility: visible
             margin-top: 2rem
             width: 85%
+            top: 0
+            text-align: right
+            transform: translateX(0)
+            left: auto
 
             &:hover
                 color: $accent
+
+            .nav__item
+                margin-left: 3%
 
             .nav__link
                 font-size: $base-font-size*1.5
@@ -29,6 +41,3 @@
                     border-bottom: 2px solid rgb(237, 191, 255)
                     text-shadow: 0 0 10px rgba(255, 255, 255, 0.6)
                     color: $primary
-
-        .site-logo
-            margin-left: 5px

@@ -2,14 +2,19 @@
 
 @media #{$tablet}
     .b-news
-        display: flex
-        flex-direction: row
-        justify-content: space-around
+        display: block
+        width: 95%
         padding: 6.25rem 0
-        
+        @include clearfix
+
         &__item
-            width: 27.5%
+            float: left
+            width: 30%
             margin-bottom: 0
+            margin-right: 5%
+
+            &:last-child
+                margin-right: 0
 
         &__text
             max-height: $base-font-size*10.5

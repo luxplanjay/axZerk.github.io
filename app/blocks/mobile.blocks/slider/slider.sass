@@ -4,7 +4,10 @@
     .slider
         &_role_main
             .slider__body
-                flex: 0 0 85%
+                min-width: 85%
+
+            .slider__button
+                transform: translateY(-50%)
 
             .slider__nav
                 position: absolute
@@ -13,14 +16,17 @@
                 transform: translateX(-50%)
 
             .slider-item
-                display: flex
+                @include clearfix
 
                 &__body
-                    display: flex
-                    flex-direction: column
-                    align-items: flex-start
-                    justify-content: center
-                    flex: 1 0 50%
+                    position: relative
+                    top: 50%
+                    transform: translateY(-50%)
+                    float: left
+                    max-width: 50%
+                    height: auto
+                    padding-left: 1rem
+                    text-align: left
 
                 &__title_sub
                     overflow: hidden
@@ -28,9 +34,11 @@
                     max-height: $base-font-size
 
                 &__img-wrap
-                    position: relative
                     display: block
-                    flex: 1 0 45%
+                    float: right
+                    height: 100%
+                    position: relative
+                    min-width: 45%
 
                 &__img
                     position: absolute
