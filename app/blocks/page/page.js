@@ -47,7 +47,7 @@ function calcPow(base, exp) {
   }
 
   return result;
-};
+}
 
 // Tracking arr-btn button click
 document.getElementById('arr-btn').onclick = function() {
@@ -56,7 +56,14 @@ document.getElementById('arr-btn').onclick = function() {
       searchResult;
 
   namesList = getNames();
+
+  if (namesList === false) {
+    alert('Заполнение массива имен не закончено!');
+    return;
+  }
+
   console.log('Массив имен: ', namesList);
+
 
   userName = prompt('Введите имя пользователя:', '');
 
@@ -80,7 +87,15 @@ function getNames() {
   var namesArr = [];
 
   for (var i = 0; i < 5; i++) {
-    namesArr[i] = prompt('Введите имя', '');
+    do {
+      namesArr[i] = prompt('Введите имя', '');
+
+      if (namesArr[i] === '') {
+        alert('Пустая строка недопустима!');
+      } else if (namesArr[i] === null) {
+        return false;
+      }
+    } while (namesArr[i] === '');
   }
 
   return namesArr;
