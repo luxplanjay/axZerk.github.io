@@ -1,0 +1,23 @@
+//Font settings
+$base-font: Tahoma, sans-serif;
+$title-font: Arial, sans-serif;
+$link-font: Arial, sans-serif;
+$base-font-size: 1rem;
+
+// Directories
+// $img-dir: "../img";
+// $svg-dir: "../img/svg";
+
+//Color map
+// $primary:
+// $secondary:
+// $accent:
+// $background:
+// $link-color:
+// $link-color--hover: darken($link-color, 15%);
+
+// Media Queries
+$mobile: "screen and (min-width: 480px) and (max-width: 767px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 959px)";
+$desktop: "screen and (min-width: 960px)";
+$desktop-large: "screen and (min-width: 1260px)";
