@@ -1,65 +1,85 @@
 .page {
   min-height: 100vh;
-  padding: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: lighten(#999, 50%);
+  align-items: center;
+  background-color: lighten(#999, 33%);
   font-family: Roboto ,sans-serif;
   font-size: 1rem;
 }
 
-.test-form {
+.timer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 100px;
-  max-width: 960px;
-  min-width: 480px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 5px rgba(50, 50, 50, 0.3);
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-width: 960px;
+  width: 960px;
 
-  &__title {
-    margin-bottom: 30px;
-    font-size: 1.5rem;
-  }
-
-  &__submit {
-    padding: 15px;
-    font-size: 1.1rem;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
+  &__time {
+    position: relative;
     width: 100%;
-    margin-bottom: 30px;
-    padding: 15px 15px;
-    border: 1px solid black;
   }
 
-  &__item-title {
-    padding: 0 10px;
-    font-size: 1.1rem;
+  &__text {
+    display: block;
+    border: 10px solid black;
+    border-radius: 50px;
+    font-size: 12rem;
+    background: #ccf;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 35px;
   }
 
-  &__label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    margin-left: 20px;
+  &__mls {
+    position: absolute;
+    bottom: 6%;
+    right: 14%;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 60px;
+    text-align: center;
+  }
+}
 
-    &:last-child {
-      margin-bottom: 0;
+.btn {
+  appearance: none;
+  outline: 0;
+  width: 400px;
+  margin-top: 50px;
+  padding: 10px;
+  border: 10px solid black;
+  border-radius: 80px;
+  font-size: 5rem;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+
+  &_hidden {
+    display: none;
+  }
+
+  &_start, &_continue {
+    background: green;
+
+    &:hover {
+      background: lighten(green, 33%);
     }
   }
 
-  &__checkbox {
-    display: inline;
-    vertical-align: middle;
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
+  &_pause {
+    background: lighten(blue, 15%);
+
+    &:hover {
+      background: lighten(blue, 25%);
+    }
+  }
+
+  &_reset {
+    background: darken(red, 15%);
+
+    &:hover {
+      background: lighten(red, 15%);
+    }
   }
 }

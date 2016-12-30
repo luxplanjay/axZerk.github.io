@@ -1,141 +1,101 @@
 'use strict';
 
-// function isNumeric(n) {
-//   return !isNaN(parseFloat(n)) && isFinite(n)
-// }
+var timerText = document.querySelector('.timer__text'),
+    timerMls = document.querySelector('.timer__mls'),
+    startBtn = document.querySelector('.btn_start'),
+    pauseBtn = document.querySelector('.btn_pause'),
+    continueBtn = document.querySelector('.btn_continue'),
+    resetBtn = document.querySelector('.btn_reset');
 
-// elem.classList.contains("class") – возвращает true/false, в зависимости от того, есть ли у элемента класс class.
-// elem.classList.add/remove("class") – добавляет/удаляет класс class
-// elem.classList.toggle("class") – если класса class нет, добавляет его, если есть – удаляет.
+var timerId = 0,
+    timerValue = 0,
+    lastUpdateTime = new Date().getTime();
 
-// var cloneEl = el.cloneNode(true);
-// el.innerHTML = 'Clone wars!';
-// parentEl.append(cloneEl);
+// Adding event listeners
+startBtn.addEventListener('click', startTimer);
+pauseBtn.addEventListener('click', stopTimer);
+continueBtn.addEventListener('click', continueTimer);
+resetBtn.addEventListener('click', resetTimer);
 
-var questionsList = {
-    question1: {
-      topic: 'Вопрос #1',
-      option1: 'Вариант ответа #1',
-      option2: 'Вариант ответа #2',
-      option3: 'Вариант ответа #3',
-      option4: 'Вариант ответа #4',
-      correctAnswers: '2'
-    },
-    question2: {
-      topic: 'Вопрос #2',
-      option1: 'Вариант ответа #1',
-      option2: 'Вариант ответа #2',
-      option3: 'Вариант ответа #3',
-      correctAnswers: '1, 3'
-    },
-    question3: {
-      topic: 'Вопрос #3',
-      option1: 'Вариант ответа #1',
-      option2: 'Вариант ответа #2',
-      option3: 'Вариант ответа #3',
-      option4: 'Вариант ответа #4',
-      option5: 'Вариант ответа #5',
-      correctAnswers: '2, 3, 5'
-    }
-};
+resetTimerText();
 
-// calling initTest to create our main content
-initTest(questionsList);
+// Timer update function
+function updateTimer() {
+  var currentTime = new Date().getTime(),
+      deltaTime = currentTime - lastUpdateTime;
 
-function initTest(obj) {
-  var parentEl = document.body;
+  timerValue += deltaTime;
 
-  // Creating an empty form with h1 Title and Submit button
-  var form = createForm('Тест по программированию');
+  var time = new Date(timerValue);
 
-  // Declaring fragment to store all questions for later append into form as one
-  var fragment = document.createDocumentFragment(),
-      questionCounter = 1;
+  setTimerText(time);
 
-  for (var key in obj) {
-    var question = createQuestion(obj[key], questionCounter);
-    fragment.append(question);
-    questionCounter++;
-  }
-
-  // Inserting complete fragment before Submit button
-  form.insertBefore(fragment, form.lastChild);
-
-  // Inserting complete form as first child of body
-  parentEl.prepend(form);
+  lastUpdateTime = currentTime;
 }
 
-function createForm(str) {
-  var form = document.createElement('form');
-  form.action = '#';
-  form.method = 'post';
-  form.classList.add('test-form');
-
-  var formTitle = document.createElement('h1');
-  formTitle.classList.add('test-form__title');
-  formTitle.append(document.createTextNode(str));
-
-  var formSubmit = document.createElement('input');
-  formSubmit.type = 'submit';
-  formSubmit.value = 'Проверить результаты'
-  formSubmit.classList.add('test-form__submit');
-
-  form.prepend(formTitle);
-  form.append(formSubmit);
-
-  return form;
-}
-
-function createQuestion(obj, count) {
-  var fieldset = document.createElement('fieldset');
-  fieldset.classList.add('test-form__item');
-
-  var legend = document.createElement('legend');
-  legend.classList.add('test-form__item-title');
-
-  //Splitting correctAnswers key from string to array for later use
-  var correctArr = obj.correctAnswers.split(', ');
-  console.log('array of correct answers: ', correctArr);
-
-  //i - for array index, j - for comparing arr[i] to current answer's number
-  var i = 0,
-      j = 0;
-
-  for (var key in obj) {
-    var data = obj[key];
-    console.log('i: ', i);
-    console.log('j: ', j);
-    console.log('');
-
-    if (key === 'topic') {
-      legend.append(document.createTextNode(count + '. ' + data));
-    } else if (key !== 'correctAnswers') {
-      var label = document.createElement('label');
-      label.classList.add('test-form__label');
-
-      var checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.name = 'option';
-      checkbox.classList.add('test-form__checkbox');
-
-      if (correctArr[i] == j ) {
-        console.log('correctArr[i] = j, correct answer!\n ');
-        //adding 'data-correct' attribute to a checkbox with 'true' state if it's a correct answer, for later use with el.dataset
-        checkbox.setAttribute('data-correct', true);
-        // increasing array index counter if correct answer was found
-        i++;
-      }
-
-      label.append(checkbox);
-      label.append(document.createTextNode(data));
-
-      fieldset.prepend(legend);
-      fieldset.append(label);
-    }
-
-    // increasing current option number after each cycle iteration
-    j++;
+// Start timer function
+function startTimer() {
+  if (!timerId) {
+    lastUpdateTime = new Date().getTime();
+    timerId = setInterval(function () {
+      updateTimer();
+    }, 1);
   }
 
-  return fieldset;
+  startBtn.classList.add('btn_hidden');
+  pauseBtn.classList.remove('btn_hidden');
+}
+
+// Pause timer function
+function stopTimer() {
+  clearInterval(timerId);
+  timerId = 0;
+
+  pauseBtn.classList.add('btn_hidden');
+  continueBtn.classList.remove('btn_hidden');
+}
+
+// Reset timer function
+function resetTimer() {
+  stopTimer();
+  timerValue = 0;
+  resetTimerText();
+
+  startBtn.classList.remove('btn_hidden');
+  pauseBtn.classList.add('btn_hidden');
+  continueBtn.classList.add('btn_hidden');
+}
+
+
+// Continue timer function
+function continueTimer() {
+  continueBtn.classList.add('btn_hidden');
+  pauseBtn.classList.remove('btn_hidden');
+
+  if (!timerId) {
+    lastUpdateTime = new Date().getTime();
+    timerId = setInterval(function () {
+      updateTimer();
+    }, 1);
+  }
+}
+
+// Filling timer text fields with current 'time'
+function setTimerText(time) {
+  timerText.innerHTML = addDigits(time.getHours() - 2) +
+                      ':' + addDigits(time.getMinutes()) +
+                      ':' + addDigits(time.getSeconds());
+
+  timerMls.innerHTML = time.getMilliseconds();
+}
+
+// Timer text fields reset
+function resetTimerText() {
+  timerText.innerHTML = addDigits(0) + ':' + addDigits(0) + ':' + addDigits(0);
+  timerMls.innerHTML = '0';
+}
+
+// Adding digits to single digit numbers 0-9 etc
+function addDigits(num) {
+    return ('00' + num).substr(-2);
 }
