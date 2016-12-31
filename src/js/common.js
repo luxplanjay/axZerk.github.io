@@ -55,6 +55,14 @@ function stopTimer() {
   continueBtn.classList.remove('btn_hidden');
 }
 
+// Continue timer function
+function continueTimer() {
+  startTimer();
+  
+  continueBtn.classList.add('btn_hidden');
+  pauseBtn.classList.remove('btn_hidden');
+}
+
 // Reset timer function
 function resetTimer() {
   stopTimer();
@@ -66,19 +74,6 @@ function resetTimer() {
   continueBtn.classList.add('btn_hidden');
 }
 
-
-// Continue timer function
-function continueTimer() {
-  continueBtn.classList.add('btn_hidden');
-  pauseBtn.classList.remove('btn_hidden');
-
-  if (!timerId) {
-    lastUpdateTime = new Date().getTime();
-    timerId = setInterval(function () {
-      updateTimer();
-    }, 1);
-  }
-}
 
 // Filling timer text fields with current 'time'
 function setTimerText(time) {
