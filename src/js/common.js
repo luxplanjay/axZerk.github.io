@@ -9,7 +9,8 @@ var timerText = document.querySelector('.timer__text'),
 
 var timerId = 0,
     timerValue = 0,
-    lastUpdateTime = new Date().getTime();
+    lastUpdateTime = new Date(),
+    localTimeOffset = lastUpdateTime.getTimezoneOffset() / 60;
 
 // Adding event listeners
 startBtn.addEventListener('click', startTimer);
@@ -82,7 +83,7 @@ function continueTimer() {
 
 // Filling timer text fields with current 'time'
 function setTimerText(time) {
-  timerText.innerHTML = addDigits(time.getHours() - 2) +
+  timerText.innerHTML = addDigits(time.getHours() + localTimeOffset) +
                       ':' + addDigits(time.getMinutes()) +
                       ':' + addDigits(time.getSeconds());
 
