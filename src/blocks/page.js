@@ -82,9 +82,18 @@ function continueTimer() {
 
 // Filling timer text fields with current 'time'
 function setTimerText(time) {
-  timerText.innerHTML = addDigits(time.getMinutes() / 60) +
-                        ':' + addDigits(time.getMinutes()) +
-                        ':' + addDigits(time.getSeconds());
+  var offset = time.getTimezoneOffset() / 60;
+
+  if (offset <= 0) {
+    timerText.innerHTML = addDigits(time.getHours() + offset) +
+                          ':' + addDigits(time.getMinutes()) +
+                          ':' + addDigits(time.getSeconds());
+  } else {
+    timerText.innerHTML = addDigits((time.getHours() + offset) % 24) +
+                          ':' + addDigits(time.getMinutes()) +
+                          ':' + addDigits(time.getSeconds());
+  }
+
 
   timerMls.innerHTML = time.getMilliseconds();
 }
