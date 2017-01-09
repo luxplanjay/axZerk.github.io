@@ -7,22 +7,49 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="icon" href="favicon.ico">
     	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-      <title>JS is life #5-6</title>
+      <title>JS is life #7-8</title>
   </head>
 
   <body class="page">
 
-    <div class="timer">
-      <div class="timer__time">
-        <span class="timer__text"></span>
-        <span class="timer__mls"></span>
+    <!-- Tabs module -->
+    <div class="tabs">
+      <ul class="nav">
+        <li class="nav__item"><a href="#tab-1" class="nav__link">Tab link 1</a></li>
+        <li class="nav__item"><a href="#tab-2" class="nav__link">Tab link 2</a></li>
+        <li class="nav__item"><a href="#tab-3" class="nav__link">Tab link 3</a></li>
+      </ul>
+
+      <div id="tab-1" class="tabs__item">
+        <h1 class="tabs__item-title">Tab 1 title</h1>
+        <p class="tabs__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis animi possimus dolor adipisci debitis aut, nisi assumenda ipsam dolorum expedita impedit facere odio doloribus, eligendi labore voluptatum veniam tempora. Eveniet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, commodi! Officiis tempore cum soluta voluptate aliquam possimus molestias eaque assumenda nostrum, facilis natus dignissimos magnam, quo, voluptatum illum fugit atque.</p></div>
+      <div id="tab-2" class="tabs__item">
+        <h1 class="tabs__item-title">Tab 2 title</h1>
+        <p class="tabs__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad iste, facilis molestias qui nobis accusamus repellat error labore, animi voluptate et corporis recusandae eum eos illum adipisci molestiae aliquam doloremque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nostrum quaerat eligendi similique fuga quae, minima impedit voluptatum recusandae molestias quasi, pariatur laborum. Officiis suscipit incidunt ad perferendis qui eum.</p>
       </div>
-      <button class="btn btn_start">Start</button>
-      <button class="btn btn_pause btn_hidden">Pause</button>
-      <button class="btn btn_continue btn_hidden">Cont..</button>
-      <button class="btn btn_reset">Reset</button>
+      <div id="tab-3" class="tabs__item">
+        <h1 class="tabs__item-title">Tab 3 title</h1>
+        <p class="tabs__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint tenetur vero illum magnam provident fuga. Quaerat ex praesentium error repellat fugit iure culpa harum. Quisquam laborum quia magni veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. At tempore deserunt similique. Adipisci fugit eos rerum aut culpa praesentium, sint aspernatur, cupiditate saepe numquam optio temporibus inventore recusandae labore molestias.</p></div>
     </div>
 
+    <!-- Login form module -->
+    <form action = "" method = "post" class="login-form">
+      <label class="login-form__label">
+        Firstname
+        <input type="text" class="login-form__input" title = "Please provide your firstname.">
+      </label>
+      <label class="login-form__label">
+        Lastname
+        <input type="text" class="login-form__input" title="Please provide also your lastname.">
+      </label>
+      <label class="login-form__label">
+        Address
+        <input type="text" class="login-form__input" title="Your home or work address.">
+      </label>
+      <input type="button" class="login-form__btn" value = "Show help">
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

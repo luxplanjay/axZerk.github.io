@@ -1,9 +1,10 @@
 .page {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  background-color: lighten(#999, 33%);
+  padding: 50px 0;
+  background-color: lighten(#999, 35%);
   font-family: Roboto ,sans-serif;
-  font-size: 1rem;
 }
