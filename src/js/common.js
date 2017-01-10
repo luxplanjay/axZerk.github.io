@@ -2,6 +2,7 @@
   'use strict';
 })();
 
+// Login form
 $(function() {
     let $inputs = $('.login-form__input'),
         showBtn = $('.login-form__btn');
@@ -52,6 +53,7 @@ $(function() {
     }
 });
 
+// Tabs
 $(function () {
   let $links = $('.nav__link'),
       $tabs = $('.tabs__item');

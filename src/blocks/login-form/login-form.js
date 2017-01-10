@@ -1,3 +1,4 @@
+// Login form
 $(function() {
     let $inputs = $('.login-form__input'),
         showBtn = $('.login-form__btn');

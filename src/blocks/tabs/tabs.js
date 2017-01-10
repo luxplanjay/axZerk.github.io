@@ -1,3 +1,4 @@
+// Tabs
 $(function () {
   let $links = $('.nav__link'),
       $tabs = $('.tabs__item');
