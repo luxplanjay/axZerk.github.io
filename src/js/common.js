@@ -21,22 +21,24 @@ $(function() {
 
     // Show help btn click event
     showBtn.click(function() {
-        let length = tooltips.length;
-
-        for (let i = 0; i < length; i++) {
-            tooltips[i].fadeIn(200);
-        }
+        showTooltips(tooltips);
     });
+
+    // showTooltips foo
+    function showTooltips(list) {
+        $(list).each(function() {
+            $(this).fadeIn(200);
+        });
+    }
 
     // Creating tooltips for every input
     function createTooltips(inputs) {
-        let length = inputs.length,
-            tooltipsList = [];
+        let tooltipsList = [];
 
-        for (let i = 0; i < length; i++) {
+        inputs.each(function() {
             let tooltip = $(document.createElement('span')),
-                parentLabel = $(inputs[i]).parent(),
-                innerText = $(inputs[i]).attr('title');
+                parentLabel = $(this).parent(),
+                innerText = $(this).attr('title');
 
             tooltip.addClass('login-form__tooltip');
             tooltip.text(innerText);
@@ -46,8 +48,8 @@ $(function() {
             tooltipsList.push(tooltip);
 
             // Clearing default title attr behaviour
-            $(inputs[i]).removeAttr('title');
-        }
+            $(this).removeAttr('title');
+        });
 
         return tooltipsList;
     }
