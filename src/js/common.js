@@ -75,17 +75,17 @@ $(function () {
   });
 
   // On click event
-  $links.click(function (e) {
-    e.preventDefault();
+  // $links.click(function (e) {
+  //   e.preventDefault();
+  //
+  //   let currentLink = $(this),
+  //       tabId = currentLink.attr('href');
+  //
+  //   toggleActiveLink($links, currentLink);
+  //   toggleTabs($tabs, tabId);
+  // });
 
-    let currentLink = $(this),
-        tabId = currentLink.attr('href');
-
-    toggleActiveLink($links, currentLink);
-    toggleTabs($tabs, tabId);
-  });
-
-  // On hover event
+  // On focus event
   $links.focus(function () {
     let currentLink = $(this),
         tabId = currentLink.attr('href');
