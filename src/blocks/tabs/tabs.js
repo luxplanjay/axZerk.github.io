@@ -24,6 +24,15 @@ $(function () {
     toggleTabs($tabs, tabId);
   });
 
+  // On hover event
+  $links.focus(function () {
+    let currentLink = $(this),
+        tabId = currentLink.attr('href');
+
+    toggleActiveLink($links, currentLink);
+    toggleTabs($tabs, tabId);
+  });
+
   // Setting default gadget state
   function initGadget(links, tabs) {
     toggleActiveLink(links, links.first());

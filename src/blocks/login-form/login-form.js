@@ -15,6 +15,10 @@ $(function() {
         $(this).next().fadeOut(200);
     });
 
+    $inputs.focus(function () {
+      $(this).next().css('display', 'inline').fadeOut(5000);
+    });
+
     // Show help btn click event
     showBtn.click(function() {
         showTooltips(tooltips);

@@ -19,6 +19,10 @@ $(function() {
         $(this).next().fadeOut(200);
     });
 
+    $inputs.focus(function () {
+      $(this).next().css('display', 'inline').fadeOut(5000);
+    });
+
     // Show help btn click event
     showBtn.click(function() {
         showTooltips(tooltips);
@@ -74,6 +78,15 @@ $(function () {
   $links.click(function (e) {
     e.preventDefault();
 
+    let currentLink = $(this),
+        tabId = currentLink.attr('href');
+
+    toggleActiveLink($links, currentLink);
+    toggleTabs($tabs, tabId);
+  });
+
+  // On hover event
+  $links.focus(function () {
     let currentLink = $(this),
         tabId = currentLink.attr('href');
 
