@@ -1,0 +1,16 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin reset-btn {
+  border: none;
+  background: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}

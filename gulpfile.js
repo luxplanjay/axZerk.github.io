@@ -11,7 +11,7 @@ var gulp 								= require('gulp'),
 		plugins 						= require('gulp-load-plugins')();
 
 var paths = {
-		srcSass: ['./src/blocks/tools/*.scss', './src/blocks/components/*.scss', './src/blocks/**/*.scss'],
+		srcSass: ['./src/blocks/core/*.scss', './src/blocks/**/*.scss'],
   	srcJs: './src/blocks/**/*.js',
   	srcHtml: './src/index.html',
 		srcSvg: './src/**/*.svg',
@@ -24,13 +24,14 @@ var paths = {
 gulp.task('bundleCss' , function(){
 	gulp.src(paths.srcSass)
 		.pipe(plugins.concat('style.css'))
-		.pipe(plugins.sass({outputStyle: 'expanded'}).on('error', plugins.sass.logError))
+		.pipe(plugins.sass({
+				outputStyle: 'expanded',
+				includePaths: ['node_modules/susy/sass']
+		}).on('error', plugins.sass.logError))
 		.pipe(autoprefixer({browsers: ['last 5 versions', 'IE 8', 'IE 9'], cascade: true }))
-		// .pipe(plugins.cssnano())
+		.pipe(plugins.cssnano())
 		.pipe(gulp.dest(paths.destCss))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 // Assembling .js files
@@ -38,15 +39,13 @@ gulp.task('bundleJs', function() {
 	gulp.src(paths.srcJs)
 		.pipe(plugins.concat('common.js'))
 		.pipe(gulp.dest(paths.destJs))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 
 gulp.task('watch', function(){
 	gulp.watch(paths.srcHtml, browserSync.reload);
-	gulp.watch(paths.srcSass, {cwd: './'}, ['bundleCss'])
+	gulp.watch(paths.srcSass, {cwd: './'}, ['bundleCss']);
 	gulp.watch(paths.srcJs, {cwd: './'}, ['bundleJs']);
 });
 

@@ -1,0 +1,14 @@
+html, body, .wrapper {
+  height: 100%;
+}
+
+body > .wrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+body, input, button, textarea {
+  -webkit-appearence: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

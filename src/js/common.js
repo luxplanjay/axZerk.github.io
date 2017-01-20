@@ -1,114 +1,179 @@
-(function () {
-  'use strict';
-})();
+$(function () {
+  let $checkboxes = $('.check'),
+      $labels = $('.check-label');
 
-// Login form
-$(function() {
-    let $inputs = $('.login-form__input'),
-        showBtn = $('.login-form__btn');
+  $checkboxes.each(function () {
+    addSpanToCheckbox($(this));
+  });
 
-    // Creating all tooltips on page load
-    let tooltips = createTooltips($inputs);
+  $labels.hover(function () {
+    $(this).animate({
+      color: '#900'
+    }, 100);
+  }, function () {
+    $(this).animate({
+      color: '#000'
+    }, 100);
+  });
 
-    // Hover event
-    $inputs.hover(function(e) {
-        // in
-        $(this).next().fadeIn(200);
-    }, function() {
-        // out
-        $(this).next().fadeOut(200);
-    });
+  // Creating new span>input elements and removing old inputs
+  function addSpanToCheckbox(el) {
+      let newElName = el.attr('name'),
+          newElID = el.attr('id'),
+          newElClass = el.attr('class');
 
-    $inputs.focus(function () {
-      $(this).next().css('display', 'inline').fadeOut(5000);
-    });
+      // This is what goes after current input as new element
+      let string = '<span class = ' + '"' + newElClass + '"' + '>'
+                  + '<input type = "checkbox"' + ' '
+                  + 'name = ' + '"' + newElName + '"' + ' '
+                  + 'id = ' + '"' + newElID + '"' + '></span>';
 
-    // Show help btn click event
-    showBtn.click(function() {
-        showTooltips(tooltips);
-    });
+      // attaching 'string' after current input
+      el.after(string);
 
-    // showTooltips foo
-    function showTooltips(list) {
-        $(list).each(function() {
-            $(this).fadeIn(200);
-        });
+      // newEl equals new span with inner input
+      let newEl = el.next();
+
+      // hiding inner input with opacity 0 and w\h 0
+      newEl.find('input').addClass('check_hidden');
+
+      // binding click event to created element
+      newEl.bind('click', function(e) {
+        changeCheckbox($(this)) ;
+      });
+
+      // removing old input
+      el.remove();
+  }
+
+  // adding/removing checked attribute for input and class for span
+  function changeCheckbox(el) {
+    let input = el.find('input');
+
+    if ( el.hasClass('checked') ) {
+      input.attr('checked', false);
+      el.removeClass('checked');
+    } else {
+      input.attr('checked', true);
+      el.addClass('checked');
     }
+  }
 
-    // Creating tooltips for every input
-    function createTooltips(inputs) {
-        let tooltipsList = [];
-
-        inputs.each(function() {
-            let tooltip = $(document.createElement('span')),
-                parentLabel = $(this).parent(),
-                innerText = $(this).attr('title');
-
-            tooltip.addClass('login-form__tooltip');
-            tooltip.text(innerText);
-            tooltip.appendTo(parentLabel);
-            tooltip.hide();
-
-            tooltipsList.push(tooltip);
-
-            // Clearing default title attr behaviour
-            $(this).removeAttr('title');
-        });
-
-        return tooltipsList;
-    }
 });
 
-// Tabs
 $(function () {
-  let $links = $('.nav__link'),
-      $tabs = $('.tabs__item');
+  // init
+  $('.jcarousel').jcarousel({});
 
-  // Initializing default gadget state
-  initGadget($links, $tabs);
+  // Carousel prev\next controls
+  let controlPrev = $('.jcarousel-prev'),
+      controlNext = $('.jcarousel-next');
 
-  // On hover event
-  $links.hover(function (e) {
-    $(this).addClass('nav__link_hover');
-  }, function (e) {
-    $(this).removeClass('nav__link_hover');
+  controlPrev.jcarouselControl({
+      target: '-=1'
   });
 
-  // On click event
-  // $links.click(function (e) {
-  //   e.preventDefault();
-  //
-  //   let currentLink = $(this),
-  //       tabId = currentLink.attr('href');
-  //
-  //   toggleActiveLink($links, currentLink);
-  //   toggleTabs($tabs, tabId);
-  // });
-
-  // On focus event
-  $links.focus(function () {
-    let currentLink = $(this),
-        tabId = currentLink.attr('href');
-
-    toggleActiveLink($links, currentLink);
-    toggleTabs($tabs, tabId);
+  controlPrev.hover(function () { // in
+    $(this).animate({
+      backgroundColor: '#cc8400',
+      color: '#000'
+    }, 250);
+  }, function () { //out
+    $(this).animate({
+      backgroundColor: '#333',
+      color: '#fefefe'
+    }, 250);
   });
 
-  // Setting default gadget state
-  function initGadget(links, tabs) {
-    toggleActiveLink(links, links.first());
-    toggleTabs(tabs, tabs.first());
-  }
+  controlNext.jcarouselControl({
+      target: '+=1'
+  });
 
-  // Active link toggle
-  function toggleActiveLink(links, current) {
-    links.removeClass('nav__link_active');
-    current.addClass('nav__link_active');
-  }
+  controlNext.hover(function () { // in
+    $(this).animate({
+      backgroundColor: '#cc8400',
+      color: '#000'
+    }, 250);
+  }, function () { //out
+    $(this).animate({
+      backgroundColor: '#333',
+      color: '#fefefe'
+    }, 250);
+  });
 
-  // Active tab toggle
-  function toggleTabs(tabs, tabId) {
-    tabs.hide();
-    $(tabId).fadeIn(300);
-  }
+  // Carousel pagination
+  let pagination = $('.jcarousel-pagination');
+
+  pagination.jcarouselPagination({
+       item: function(page) {
+         return '<a href="#' + page + '">' + page + '</a>';
+       }
+   });
+
+   // making first link active on page load
+   $('.jcarousel-pagination a:first-child').animate({
+     backgroundColor: '#fefefe',
+     color: '#333'
+   }, 100);
+
+  pagination
+    .on('jcarouselpagination:active', 'a', function() {
+        $(this).animate({
+          backgroundColor: '#fefefe',
+          color: '#333'
+        }, 250);
+    })
+    .on('jcarouselpagination:inactive', 'a', function() {
+        $(this).animate({
+          backgroundColor: '#333',
+          color: '#fefefe'
+        }, 250);
+    });
+
+});
+
+$(function () {
+  let $links = $('.menu__link'),
+      $dropdown = $('.menu__item_dropdown'),
+      $sublinks = $('.sub-menu__link');
+
+  $links.hover(function () {  // in
+    $(this).animate({
+      backgroundColor: 'maroon'
+    }, 300);
+  }, function () {  // out
+    $(this).animate({
+      backgroundColor: '#333'
+    }, 300);
+  });
+
+  $dropdown.hover(function () { // in
+    $(this).children('.sub-menu').animate({
+      height: 'toggle'
+    }, 300);
+  }, function () {  // out
+    $(this).children('.sub-menu').animate({
+      height: 'toggle'
+    }, 300);
+  });
+  $sublinks.hover(function () { // in
+    $(this).animate({
+      backgroundColor: '#cc8400',
+      color: '#000',
+    }, 300);
+  }, function () {  // out
+    $(this).animate({
+      backgroundColor: '#333',
+      color: '#fefefe'
+    }, 300);
+  });
+
+});
+
+$(function () {
+  'use strict';
+});
+
+$(function() {
+  $('.custom-select').selectric();
 });
