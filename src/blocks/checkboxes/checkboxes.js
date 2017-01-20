@@ -8,7 +8,7 @@ $(function () {
 
   $labels.hover(function () {
     $(this).animate({
-      color: '#900'
+      color: '#cc8400'
     }, 100);
   }, function () {
     $(this).animate({
