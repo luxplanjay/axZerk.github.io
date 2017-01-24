@@ -11,12 +11,12 @@ $(function () {
   });
 
   controlPrev.hover(function () { // in
-    $(this).animate({
+    $(this).stop().animate({
       backgroundColor: '#cc8400',
       color: '#000'
     }, 250);
   }, function () { //out
-    $(this).animate({
+    $(this).stop().animate({
       backgroundColor: '#333',
       color: '#fefefe'
     }, 250);
@@ -27,12 +27,12 @@ $(function () {
   });
 
   controlNext.hover(function () { // in
-    $(this).animate({
+    $(this).stop().animate({
       backgroundColor: '#cc8400',
       color: '#000'
     }, 250);
   }, function () { //out
-    $(this).animate({
+    $(this).stop().animate({
       backgroundColor: '#333',
       color: '#fefefe'
     }, 250);
