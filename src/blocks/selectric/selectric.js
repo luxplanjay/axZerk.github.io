@@ -1,3 +1,0 @@
-$(function() {
-  $('.custom-select').selectric();
-});
