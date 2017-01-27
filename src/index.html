@@ -87,21 +87,6 @@
       <a href="" class="zCarousel__control zCarousel__control_next"></a>
     </div>
 
-    <script type="text/template" id="user-card-tmpl">
-      <% for(var i = 0; i < data.length; i++) { %>
-          <div class="user-card">
-            <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="user picture" class="user-card__img">
-            <div class="user-card__info">
-              <p class="user-card__text user-card__name"><span>Name: </span><%= data[i].name%></p>
-              <p class="user-card__text"><span>B.Day: </span><%= data[i].bday%></p>
-              <p class="user-card__text"><span>Phone: </span><%= data[i].phone%></p>
-              <p class="user-card__text"><span>Mail: </span><%= data[i].mail%></p>
-              <p class="user-card__text user-card__job"><span>Job: </span><%= data[i].job%></p>
-            </div>
-          </div>
-        <% } %>
-    </script>
-
     <div class="resig-tmpl">
       <h1>John Resig JS Templating</h1>
     </div>
@@ -110,6 +95,21 @@
       <h1>LoDash JS Templating</h1>
     </div>
   </div>
+
+  <script type="text/template" id="user-card-tmpl">
+    <% for(var i = 0; i < data.length; i++) { %>
+        <div class="user-card">
+          <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="user picture" class="user-card__img">
+          <div class="user-card__info">
+            <p class="user-card__text user-card__name"><span>Name: </span><%= data[i].name%></p>
+            <p class="user-card__text"><span>B.Day: </span><%= data[i].bday%></p>
+            <p class="user-card__text"><span>Phone: </span><%= data[i].phone%></p>
+            <p class="user-card__text"><span>Mail: </span><%= data[i].mail%></p>
+            <p class="user-card__text user-card__job"><span>Job: </span><%= data[i].job%></p>
+          </div>
+        </div>
+      <% } %>
+  </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
