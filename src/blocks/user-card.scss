@@ -20,7 +20,7 @@
   &__text {
     @include type-setting(strong);
     color: darken(#fefefe, 10%);
-    overflow: hidden;
+    text-transform: capitalize;
 
     & span {
       font-weight: bold;
