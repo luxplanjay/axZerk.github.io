@@ -1,0 +1,62 @@
+.zCarousel {
+  position: relative;
+  width: 750px;
+  padding: 25px 0 15px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 5px rgba(255, 255, 255, 0.3);
+
+  &__container {
+    width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    width: 10000rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    text-align: center;
+    margin-right: 25px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__img {
+    width: 100px;
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+
+  &__control {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &_prev {
+      left: 10px;
+      background: url('../img/carousel/arrow-left.png') no-repeat;
+      background-size: contain;
+    }
+
+    &_next {
+      right: 5px;
+      background: url('../img/carousel/arrow-right.png') no-repeat;
+      background-size: contain;
+    }
+  }
+}

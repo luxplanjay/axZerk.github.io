@@ -11,13 +11,123 @@
   <title>Placeholder</title>
 </head>
 
-<body>
-  <!-- //= header.html -->
-  <!-- //= footer.html -->
+<body class="page">
+  <div class="wrapper">
+    <div class="zCarousel">
+      <!-- List container -->
+      <div class="zCarousel__container">
+        <!-- List -->
+        <ul class="zCarousel__list">
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image1.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Science</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image2.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Location</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image3.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Books</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image4.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Weather</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image5.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Time</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image6.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Travel</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image7.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Study</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image8.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">To do</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image9.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Explore</p>
+            </a>
+          </li>
+          <li class="zCarousel__item">
+            <a href="" class="zCarousel__link">
+              <img src="img/carousel/image10.png" alt="" class="zCarousel__img">
+              <p class="zCarousel__text">Relax</p>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta et tempore tempora odit assumenda, officia molestias rerum, maiores iure cupiditate commodi tenetur quia autem voluptates. Reprehenderit totam reiciendis voluptatibus recusandae.</p>
+      <!-- prev\next controls -->
+      <a href="" class="zCarousel__control zCarousel__control_prev"></a>
+      <a href="" class="zCarousel__control zCarousel__control_next"></a>
+    </div>
+    <div class="resig-tmpl">
+      <h1>John Resig JS Templating</h1>
 
-  <script src="js/common.js"></script>
+      <script type="text/template" id="user-card-tmpl">
+        <% for(var i = 0; i < data.length; i++) { %>
+            <div class="user-card">
+              <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="user picture" class="user-card__img">
+              <div class="user-card__info">
+                <p class="user-card__text"><span>Name: </span><%= data[i].name%></p>
+                <p class="user-card__text"><span>B.Day: </span><%= data[i].bday%></p>
+                <p class="user-card__text"><span>Phone: </span><%= data[i].phone%></p>
+                <p class="user-card__text"><span>Mail: </span><%= data[i].mail%></p>
+                <p class="user-card__text"><span>Job: </span><%= data[i].job%></p>
+              </div>
+            </div>
+          <% } %>
+      </script>
+
+    </div>
+    <div class="lodash-tmpl">
+      <h1>LoDash JS Templating</h1>
+      <script type="text/template" id="lodash-tmpl">
+        <% for(var i = 0; i < data.length; i++) { %>
+            <div class="user-card">
+              <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="" class="user-card__img">
+              <div class="user-card__info">
+                <p class="user-card__text"><span>Name: </span><%= data[i].name%></p>
+                <p class="user-card__text"><span>B.Day: </span><%= data[i].bday%></p>
+                <p class="user-card__text"><span>Phone: </span><%= data[i].phone%></p>
+                <p class="user-card__text"><span>Mail: </span><%= data[i].mail%></p>
+                <p class="user-card__text"><span>Job: </span><%= data[i].job%></p>
+              </div>
+            </div>
+          <% } %>
+      </script>
+      <div>
+      </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+      <script src="js/jquery.zCarousel.js"></script>
+      <script src="js/tmpl.js"></script>
+      <script src="js/common.js"></script>
 </body>
 
 </html>
