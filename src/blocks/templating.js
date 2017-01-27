@@ -2,28 +2,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let userList = [
     {
-      name: '1suzy',
+      name: 'suzy',
       bday: '01.02.1980',
       phone: '964-52-34',
       mail: 'suzy@gmail.com',
       job: 'head HR'
     },
     {
-      name: '1alex',
+      name: 'alex',
       bday: '12.07.1990',
       phone: '435-42-76',
       mail: 'alex@gmail.com',
       job: 'senior web dev'
     },
     {
-      name: '1megan',
+      name: 'megan',
       bday: '09.11.1994',
       phone: '365-79-12',
       mail: 'megan@hotmail.com',
       job: 'sales manager'
     },
     {
-      name: '1greg',
+      name: 'greg',
       bday: '26.04.1987',
       phone: '328-91-73',
       mail: 'greg@gmail.com',
