@@ -49,6 +49,8 @@
           textDecoration : 'none',
           color: settings.color
         });
+      }).click(function (e) {
+        e.preventDefault();
       });
 
       $controlPrev.click(function (e) {
