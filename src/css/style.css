@@ -148,11 +148,18 @@ p, input[type="text"], textarea, label {
   font-size: 1.333rem;
   line-height: 1.875rem;
   color: #e5e5e5;
-  text-transform: capitalize;
 }
 
 .user-card__text span {
   font-weight: bold;
+}
+
+.user-card__name {
+  text-transform: capitalize;
+}
+
+.user-card__job {
+  text-transform: capitalize;
 }
 
 .zCarousel {

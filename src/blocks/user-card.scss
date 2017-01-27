@@ -20,10 +20,17 @@
   &__text {
     @include type-setting(strong);
     color: darken(#fefefe, 10%);
-    text-transform: capitalize;
 
     & span {
       font-weight: bold;
     }
+  }
+
+  &__name  {
+    text-transform: capitalize;
+  }
+
+  &__job {
+    text-transform: capitalize;
   }
 }
