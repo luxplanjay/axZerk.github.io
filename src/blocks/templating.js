@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  let userList = [
+  const userList = [
     {
       name: 'suzy',
       bday: '01.02.1980',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   // Variable to store template html code
-  let templateHTML = document.querySelector('#user-card-tmpl').innerHTML;
+  const templateHTML = document.querySelector('#user-card-tmpl').innerHTML;
 
   generateResigTmpl(templateHTML, {
     data: userList
