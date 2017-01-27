@@ -1,9 +1,10 @@
 <div class="lodash-tmpl">
   <h1>LoDash JS Templating</h1>
-  <script type="text/template" id="user-card-tmp">
+
+  <script type="text/template" id="user-card-tmpl">
     <% for(var i = 0; i < data.length; i++) { %>
       <div class="user-card">
-        <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="" class="user-card__img">
+        <img src= <%= "./img/user-pic/" + data[i].name + ".png"%> alt="user picture" class="user-card__img">
         <div class="user-card__info">
           <p class="user-card__text user-card__name"><span>Name: </span><%= data[i].name%></p>
           <p class="user-card__text"><span>B.Day: </span><%= data[i].bday%></p>
