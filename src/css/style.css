@@ -1,0 +1,191 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, input, button, textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input[type="button"], input[type="submit"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img, embed, object, video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_light-webfont.eot");
+  src: url("../fonts/gotham_pro_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_light-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_light-webfont.woff") format("woff"), url("../fonts/gotham_pro_light-webfont.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro-webfont.eot");
+  src: url("../fonts/gotham_pro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro-webfont.woff2") format("woff2"), url("../fonts/gotham_pro-webfont.woff") format("woff"), url("../fonts/gotham_pro-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_medium-webfont.eot");
+  src: url("../fonts/gotham_pro_medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_medium-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_medium-webfont.woff") format("woff"), url("../fonts/gotham_pro_medium-webfont.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_bold-webfont.eot");
+  src: url("../fonts/gotham_pro_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_bold-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_bold-webfont.woff") format("woff"), url("../fonts/gotham_pro_bold-webfont.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, input[type="button"], input[type="submit"], button {
+  font-family: "Gotham Pro", "Roboto", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham Pro", "Roboto", Arial, sans-serif;
+}
+
+p, input[type="text"], textarea, label {
+  font-family: "Gotham Pro", "Roboto", Tahoma, sans-serif;
+}
+
+.page {
+  padding: 50px 0;
+  background: url("../img/page-bg.png");
+  color: #fefefe;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+}
+
+.wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+head {
+  display: block;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 999;
+  color: #333;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+head:before {
+  content: "|||";
+  display: block;
+  padding: 5px 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+head:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: red;
+}
+
+head:hover ~ .wrapper,
+head:hover ~ body .wrapper {
+  position: relative;
+}
+
+head:hover ~ .wrapper:before,
+head:hover ~ body .wrapper:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  z-index: 998;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5)), linear-gradient(to bottom, #000 1px, transparent 1px);
+  background-size: 8.33333%, 100% 1.25rem;
+  background-origin: content-box, border-box;
+  background-clip: content-box, border-box;
+  background-position: left top;
+}
+
