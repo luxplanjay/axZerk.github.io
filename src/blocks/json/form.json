@@ -1,0 +1,18 @@
+{
+  "title" : "Form title",
+  "questions" : [
+    {
+      "answers" : ["Answer 1", "Answer 2", "Answer 3"],
+      "correctAnswer" : 1
+    },
+    {
+      "answers" : ["Answer 1", "Answer 2", "Answer 3"],
+      "correctAnswer" : 1
+    },
+    {
+      "answers" : ["Answer 1", "Answer 2", "Answer 3"],
+      "correctAnswer" : 3
+    }
+  ],
+  "buttonText" : "Submit button text"
+}
