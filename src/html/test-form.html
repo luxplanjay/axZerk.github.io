@@ -1,0 +1,24 @@
+<script id="test-form" type="html\template">
+    <form action="#" method="POST" class="test-form">
+        <h1 class="test-form__title">{{title}}</h1>
+        {{#each questions}}
+        <fieldset class="test-form__item">
+            <legend class="test-form__item-title">{{topic}}</legend>
+            {{#each answers}}
+            {{#ifEquals @index ../correctAnswer}}
+            <label class="test-from__label">
+                <input type="checkbox" class="test-form__checkbox" name="" data-correct="true">
+                {{this}}
+            </label>
+            {{else}}
+            <label class="test-from__label">
+                <input type="checkbox" class="test-form__checkbox" name="" data-correct="false">
+                {{this}}
+            </label>
+            {{/ifEquals}}
+            {{/each}}
+        </fieldset>
+        {{/each}}
+        <input type="submit" class="test-form__submit" value="Проверить результаты">
+    </form>
+</script>
