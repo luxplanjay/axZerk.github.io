@@ -18,9 +18,7 @@ promise.then(function () {
     submitBtn.addEventListener('click', function (e) {
         e.preventDefault();
 
-        var correctCheckboxes = document.querySelectorAll('.test-form__checkbox[data-correct = "true"]');
-
-        let result = checkAnswers(correctCheckboxes);
+        let result = checkAnswers();
 
         if (result === true) {
             modalWindowText.innerHTML = 'WELL DONE!';
@@ -46,15 +44,20 @@ promise.then(function () {
         }
     };
 
-    function checkAnswers(arr) {
-        let length = arr.length;
+    function checkAnswers() {
+        let checkedEl = document.querySelectorAll('.test-form__checkbox:checked');
+        let length = checkedEl.length;
 
-        for (let i = 0; i < length; i++) {
-            if (!arr[i].checked) {
-                return false;
+        if (length > 0) {
+            for (let i = 0; i < length; i++) {
+                if (checkedEl[i].dataset.correct !== "true") {
+                    return false;
+                }
             }
+            return true;
         }
-        return true;
+
+        return false;
     }
 
     function resetTest(arr, modal) {

@@ -1,31 +1,31 @@
 {
-  "title":"Test title",
+  "title":"Тест по математике",
   "questions":[
     {
-      "topic":"Question topic 1",
+      "topic":"Выберите правильный ответ: 2 + 2",
       "answers":[
-        "Answer number 1",
-        "Answer number 2",
-        "Answer number 3"
+        "2 + 2 = 2",
+        "2 + 2 = 4",
+        "2 + 2 = 5"
       ],
       "correctAnswer":2
     },
     {
-      "topic":"Question topic 2",
+      "topic":"Выберите правильный ответ: 3 * 4",
       "answers":[
-        "Answer number 1",
-        "Answer number 2",
-        "Answer number 3",
-        "Answer number 4"
+        "3 * 4 = 12",
+        "3 * 4 = 9",
+        "3 * 4 = 27",
+        "3 * 4 = 11"
       ],
       "correctAnswer":1
     },
     {
-      "topic":"Question topic 3",
+      "topic":"Выберите правильный ответ: 8 / 2",
       "answers":[
-        "Answer number 1",
-        "Answer number 2",
-        "Answer number 3"
+        "8 / 2 = 2",
+        "8 / 2 = 5",
+        "8 / 2 = 4"
       ],
       "correctAnswer":3
     }
