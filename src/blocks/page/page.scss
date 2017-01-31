@@ -3,11 +3,5 @@
 
 .page {
   min-height: 100vh;
-  padding: 50px 0;
   background: url('../img/page-bg.png');
-  color: $primary-light;
-}
-
-.wrapper {
-  @include container();
 }

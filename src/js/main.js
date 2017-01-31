@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
     "use strict";
 
     Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
@@ -8,5 +7,3 @@ document.addEventListener('DOMContentLoaded', function () {
             return options.inverse(this);
         }
     });
-
-});

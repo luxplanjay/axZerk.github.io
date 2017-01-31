@@ -127,66 +127,89 @@ p, input[type="text"], textarea, label {
 
 .page {
   min-height: 100vh;
-  padding: 50px 0;
   background: url("../img/page-bg.png");
+}
+
+.modal {
+  display: none;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_visible {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal__content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border: 1px solid #666;
+  box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.2);
+  width: 500px;
+}
+
+.modal__results {
+  height: 200px;
+  padding-top: 70px;
+  font-size: 1.777rem;
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  color: #050709;
+}
+
+.modal__close-btn {
+  display: block;
+  color: #17212a;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: #e96839;
+}
+
+.modal__close-btn:hover {
+  background-color: #6666ff;
   color: #fefefe;
 }
 
-.wrapper {
-  max-width: 1280px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wrapper:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-head {
-  display: block;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red;
-}
-
-head:hover ~ .wrapper,
-head:hover ~ body .wrapper {
-  position: relative;
-}
-
-head:hover ~ .wrapper:before,
-head:hover ~ body .wrapper:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5)), linear-gradient(to bottom, #000 1px, transparent 1px);
-  background-size: 8.33333%, 100% 1.25rem;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
+.container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .test-form {
@@ -200,10 +223,10 @@ head:hover ~ body .wrapper:before {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 100px;
-  margin: 0 auto;
   width: 500px;
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(50, 50, 50, 0.3);
+  color: #fefefe;
 }
 
 .test-form__title {
@@ -213,7 +236,17 @@ head:hover ~ body .wrapper:before {
 
 .test-form__submit {
   padding: 15px;
-  font-size: 1.1rem;
+  background-color: #e96839;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: #17212a;
+  text-transform: uppercase;
+}
+
+.test-form__submit:hover {
+  background-color: #6666ff;
+  color: #fefefe;
 }
 
 .test-form__item {
@@ -229,7 +262,7 @@ head:hover ~ body .wrapper:before {
   width: 100%;
   margin-bottom: 30px;
   padding: 15px 15px;
-  border: 1px solid black;
+  border: 1px solid #999;
 }
 
 .test-form__item-title {
@@ -241,23 +274,28 @@ head:hover ~ body .wrapper:before {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1rem;
+  line-height: 1.25rem;
   margin-bottom: 5px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .test-form__label:last-child {
   margin-bottom: 0;
 }
 
+.test-form__label:hover {
+  color: #e96839;
+}
+
 .test-form__checkbox {
-  display: inline;
-  vertical-align: middle;
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  cursor: pointer;
 }
 

@@ -1,12 +1,23 @@
+@import "susy";
+@import "tools";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
 .test-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 100px;
-  margin: 0 auto;
   width: 500px;
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(50, 50, 50, 0.3);
+  color: $primary-light;
 
   &__title {
     margin-bottom: 30px;
@@ -15,7 +26,16 @@
 
   &__submit {
     padding: 15px;
-    font-size: 1.1rem;
+    background-color: lighten(#e65722, 5%);
+    @include type-setting(medium);
+    font-weight: 700;
+    color: lighten($primary-dark, 10%);
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #6666ff;
+      color: $primary-light;
+    }
   }
 
   &__item {
@@ -25,7 +45,7 @@
     width: 100%;
     margin-bottom: 30px;
     padding: 15px 15px;
-    border: 1px solid black;
+    border: 1px solid #999;
   }
 
   &__item-title {
@@ -35,21 +55,25 @@
 
   &__label {
     display: flex;
-    align-items: flex-start;
-    font-size: 1rem;
+    align-items: center;
+    @include type-setting(medium);
     margin-bottom: 5px;
     margin-left: 20px;
+    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
     }
+
+    &:hover {
+      color: lighten(#e65722, 5%);
+    }
   }
 
   &__checkbox {
-    display: inline;
-    vertical-align: middle;
     width: 20px;
     height: 20px;
     margin-right: 10px;
+    cursor: pointer;
   }
 }
