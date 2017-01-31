@@ -6,13 +6,13 @@ requirejs(['model'], function (model) {
 
 
 requirejs(['view'], function (view) {
-    requirejs('model');
+    requirejs(['model']);
 });
 
 
 requirejs(['controller'], function (controller) {
-    requirejs('model');
-    requirejs('view');
+    requirejs(['model']);
+    requirejs(['view']);
 });
 
 
