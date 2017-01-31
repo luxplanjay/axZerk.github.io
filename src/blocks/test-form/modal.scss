@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darken($primary-light, 80%);
+    background-color: #252a2a;
     //background: url('../img/page-bg.png');
     padding: 20px;
     border: 1px solid #666;
@@ -62,7 +62,7 @@
 
     &:hover {
       background-color: #6666ff;
-      color: $primary-dark;
+      color: #252a2a;
     }
   }
 }

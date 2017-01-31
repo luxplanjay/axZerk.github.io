@@ -166,7 +166,7 @@ p, input[type="text"], textarea, label {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #323232;
+  background-color: #252a2a;
   padding: 20px;
   border: 1px solid #666;
   box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.1);
@@ -208,7 +208,7 @@ p, input[type="text"], textarea, label {
 
 .modal__close-btn:hover {
   background-color: #6666ff;
-  color: #050709;
+  color: #252a2a;
 }
 
 .container {
@@ -259,7 +259,7 @@ p, input[type="text"], textarea, label {
 
 .test-form__submit:hover {
   background-color: #6666ff;
-  color: #050709;
+  color: #252a2a;
 }
 
 .test-form__item {
