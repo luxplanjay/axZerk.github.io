@@ -126,6 +126,7 @@ p, input[type="text"], textarea, label {
 }
 
 .page {
+  min-height: 100vh;
   padding: 50px 0;
   background: url("../img/page-bg.png");
   color: #fefefe;
@@ -135,7 +136,6 @@ p, input[type="text"], textarea, label {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  min-height: 100vh;
 }
 
 .wrapper:after {
@@ -187,5 +187,77 @@ head:hover ~ body .wrapper:before {
   background-origin: content-box, border-box;
   background-clip: content-box, border-box;
   background-position: left top;
+}
+
+.test-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 100px;
+  margin: 0 auto;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(50, 50, 50, 0.3);
+}
+
+.test-form__title {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.test-form__submit {
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.test-form__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  border: 1px solid black;
+}
+
+.test-form__item-title {
+  padding: 0 10px;
+  font-size: 1.1rem;
+}
+
+.test-form__label {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.test-form__label:last-child {
+  margin-bottom: 0;
+}
+
+.test-form__checkbox {
+  display: inline;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 

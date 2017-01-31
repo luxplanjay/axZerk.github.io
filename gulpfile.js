@@ -75,7 +75,7 @@ gulp.task('rigger', function() {
 // Assembling .js files
 gulp.task('bundleJs', function() {
     gulp.src(paths.srcJs)
-        .pipe(plugins.concat('common.js'))
+        .pipe(plugins.concat('main.js'))
         .pipe(gulp.dest(paths.destJs))
         .pipe(browserSync.reload({
             stream: true
