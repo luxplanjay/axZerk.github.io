@@ -47,7 +47,6 @@ function createTest() {
 
                 render: function (container) {
                     promise.then(function (result) {
-                        // let obj, resultHtml;
 
                         try {
                             let obj = JSON.parse(result);
