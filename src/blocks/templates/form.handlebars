@@ -6,12 +6,12 @@
             {{#each answers}}
                 {{#ifEquals @index ../correctAnswer}}
                     <label class="test-from__label">
-                        <input type="checkbox" class="test-form__checkbox" name="" data-correct="true">
+                        <input type="checkbox" class="test-form__checkbox" data-correct="true">
                         {{this}}
                     </label>
                 {{else}}
                     <label class="test-from__label">
-                        <input type="checkbox" class="test-form__checkbox" name="" data-correct="false">
+                        <input type="checkbox" class="test-form__checkbox" data-correct="false">
                         {{this}}
                     </label>
                 {{/ifEquals}}
