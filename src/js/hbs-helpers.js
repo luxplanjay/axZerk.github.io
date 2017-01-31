@@ -1,7 +1,3 @@
-/**
- * Created by Zerk on 31-Jan-17.
- */
-
 "use strict";
 
 console.log('Helpers are active!');
