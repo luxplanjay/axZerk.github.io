@@ -42,11 +42,15 @@ function createModalWindow() {
     let results = document.createElement('p');
     results.classList.add('modal__results');
 
+    let img = document.createElement('i');
+    img.classList.add('modal__img');
+
     let btn = document.createElement('button');
     btn.classList.add('modal__close-btn');
     btn.innerHTML = 'Close';
 
     content.append(results);
+    content.append(img);
     content.append(btn);
     modal.append(content);
 

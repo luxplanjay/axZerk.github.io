@@ -22,33 +22,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: darken($primary-light, 5%);
+    background-color: darken($primary-light, 80%);
+    //background: url('../img/page-bg.png');
     padding: 20px;
     border: 1px solid #666;
-    box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.2);
-    width: 500px;
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.1);
+    width: 400px;
   }
 
   &__results {
-    height: 200px;
-    padding-top: 70px;
     @include type-setting(large);
     text-transform: uppercase;
-    color: $primary-dark;
+    color: $primary-light;
+  }
+
+  &__img {
+    display: block;
+    width: 128px;
+    height: 128px;
+
+    &_happy {
+      background: url(../img/happy-face.png) no-repeat;
+    }
+
+    &_sad {
+      background: url(../img/sad-face.png) no-repeat;
+    }
   }
 
   &__close-btn {
     display: block;
-    color: lighten($primary-dark, 10%);
+    margin-top: 20px;
+    color: darken($primary-light, 0%);
     @include type-setting(medium);
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px 20px;
-    background-color: lighten(#e65722, 5%);
+    background-color: darken(#e65722, 5%);
 
     &:hover {
       background-color: #6666ff;
-      color: $primary-light;
+      color: $primary-dark;
     }
   }
 }

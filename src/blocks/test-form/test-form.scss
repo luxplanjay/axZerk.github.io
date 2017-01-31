@@ -26,15 +26,15 @@
 
   &__submit {
     padding: 15px;
-    background-color: lighten(#e65722, 5%);
+    background-color: darken(#e65722, 5%);
     @include type-setting(medium);
     font-weight: 700;
-    color: lighten($primary-dark, 10%);
+    color: darken($primary-light, 0%);
     text-transform: uppercase;
 
     &:hover {
       background-color: #6666ff;
-      color: $primary-light;
+      color: $primary-dark;
     }
   }
 

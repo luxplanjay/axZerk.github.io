@@ -10,6 +10,7 @@ promise.then(function () {
     let submitBtn = document.querySelector('.test-form__submit'),
         modalWindow = document.querySelector('.modal'),
         modalWindowText = document.querySelector('.modal__results'),
+        modalWindowIcon = document.querySelector('.modal__img'),
         modalBtn = document.querySelector('.modal__close-btn'),
         checkboxes = document.querySelectorAll('.test-form__checkbox');
 
@@ -22,9 +23,13 @@ promise.then(function () {
         let result = checkAnswers(correctCheckboxes);
 
         if (result === true) {
-            modalWindowText.innerHTML = 'CORRECT!';
+            modalWindowText.innerHTML = 'WELL DONE!';
+            modalWindowIcon.classList.remove('modal__img_sad');
+            modalWindowIcon.classList.add('modal__img_happy');
         } else {
-            modalWindowText.innerHTML = 'FAIL!';
+            modalWindowText.innerHTML = 'EPIC FAIL!';
+            modalWindowIcon.classList.remove('modal__img_happy');
+            modalWindowIcon.classList.add('modal__img_sad');
         }
 
         modalWindow.classList.toggle('modal_visible');

@@ -47,16 +47,15 @@ function createTest() {
 
                 render: function (container) {
                     promise.then(function (result) {
-                        let obj, resultHtml;
+                        // let obj, resultHtml;
 
                         try {
-                            obj = JSON.parse(result);
+                            let obj = JSON.parse(result);
+                            let resultHtml = template(obj);
+                            container.innerHTML = resultHtml;
                         } catch (e) {
                             console.log('ERROR in', e);
                         }
-
-                        resultHtml = template(obj);
-                        container.innerHTML = resultHtml;
                     });
                 }
         }

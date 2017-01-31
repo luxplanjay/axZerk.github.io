@@ -1,9 +1,16 @@
-    "use strict";
+requirejs(['hbs-helpers'], function (hbsHelpers) {
+});
 
-    Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
-        if ((arg1 + 1) === arg2) {
-            return options.fn(this);
-        } else {
-            return options.inverse(this);
-        }
-    });
+requirejs(['model'], function (model) {
+});
+
+
+requirejs(['view'], function (view) {
+});
+
+
+requirejs(['controller'], function (controller) {
+});
+
+
+
