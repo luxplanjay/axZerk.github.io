@@ -14,7 +14,7 @@ body.append(container);
 // Initializing test with template + external .json and getting a Promise as result
 let promise = initTest(test, Handlebars.templates.form, 'db/form.json', container);
 
-// When async call is done and we have .json as a result
+// When async call is done and we have data as a result
 promise.then(function () {
     console.log('View is active');
 

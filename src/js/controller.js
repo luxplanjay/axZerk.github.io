@@ -4,7 +4,7 @@
 
 "use strict";
 
-// When out app is done rendering the Form we are rdy to accept user input
+// When our app is done rendering the Form we are rdy to accept user input
 promise.then(function (result) {
 
     console.log('Controller is active!');
