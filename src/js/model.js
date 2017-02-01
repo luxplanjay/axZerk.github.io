@@ -6,13 +6,15 @@
 
 console.log('Model is active!');
 
+// Creating new instance of test
 const test = createTest();
 
 function createTest() {
     let template,
         promise;
 
-    function getJSON(path) {
+    // Getting .json file from path with async call and returning a Promise
+    function loadJSON(path) {
         return new Promise(function (resolve, reject) {
             let request = new XMLHttpRequest();
             request.open('GET', path, true);
@@ -28,35 +30,27 @@ function createTest() {
 
     let test = {
         methods: {
-                init: function (template, json) {
-                    this.loadTemplate(template);
-                    promise = this.loadJSON(json);
-                },
+            init: function (tpl, path) {
+                template = tpl;
+                promise = loadJSON(path);
+            },
+            // returning the result on loadJSON so we can use promise.then(...)
+            getPromise: function () {
+                return promise;
+            },
 
-                loadTemplate: function (value) {
-                    template = value;
-                },
-
-                loadJSON: function (path) {
-                    return getJSON(path);
-                },
-
-                getPromise: function () {
-                    return promise;
-                },
-
-                render: function (container) {
-                    promise.then(function (result) {
-
-                        try {
-                            let obj = JSON.parse(result);
-                            let resultHtml = template(obj);
-                            container.innerHTML = resultHtml;
-                        } catch (e) {
-                            console.log('ERROR in', e);
-                        }
-                    });
-                }
+            //getting json -> parsing to object -> using template to get HTML -> attaching to specified container
+            render: function (container) {
+                promise.then(function (result) {
+                    try {
+                        let obj = JSON.parse(result);
+                        let resultHtml = template(obj);
+                        container.innerHTML = resultHtml;
+                    } catch (e) {
+                        console.log('ERROR in: ', e);
+                    }
+                });
+            }
         }
     };
 

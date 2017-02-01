@@ -5,16 +5,20 @@
 "use strict";
 
 const body = document.body;
-const container = createContainer('div', body);
-const modal = createModalWindow();
+
+// container for whole test
+const container = createNode('div', 'container');
 
 body.append(container);
 
+// Initializing test with template + external .json and getting a Promise as result
 let promise = initTest(test, Handlebars.templates.form, 'db/form.json', container);
 
+// When async call is done and we have .json as a result
 promise.then(function () {
     console.log('View is active');
 
+    const modal = createModalWindow();
     container.append(modal);
 });
 
@@ -25,28 +29,14 @@ function initTest(obj, tpl, json, container) {
     return obj.methods.getPromise();
 }
 
-function createContainer(tag) {
-    let container = document.createElement(tag);
-    container.classList.add('container');
-
-    return container;
-}
-
 function createModalWindow() {
-    let modal = document.createElement('div');
-    modal.classList.add('modal');
 
-    let content = document.createElement('div');
-    content.classList.add('modal__content');
+    let modal = createNode('div', 'modal'),
+        content = createNode('div', 'modal__content'),
+        results = createNode('p', 'modal__results'),
+        img = createNode('i', 'modal__img'),
+        btn = createNode('button', 'modal__close-btn');
 
-    let results = document.createElement('p');
-    results.classList.add('modal__results');
-
-    let img = document.createElement('i');
-    img.classList.add('modal__img');
-
-    let btn = document.createElement('button');
-    btn.classList.add('modal__close-btn');
     btn.innerHTML = 'Close';
 
     content.append(results);
@@ -55,4 +45,11 @@ function createModalWindow() {
     modal.append(content);
 
     return modal;
+}
+
+function createNode(tag, cls) {
+    let el = document.createElement(tag);
+    el.classList.add(cls);
+
+    return el;
 }
