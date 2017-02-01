@@ -32,19 +32,21 @@ function createTest() {
         methods: {
             init: function (tpl, path) {
                 template = tpl;
-                promise = loadJSON(path);
+                promise = loadJSON(path).then(function (result) {
+                    let data = JSON.parse(result);
+
+                    return data;
+                });
             },
-            // returning the result on loadJSON so we can use promise.then(...)
+            // returning promise, result of init so we can use promise.then(...)
             getPromise: function () {
                 return promise;
             },
-
-            //getting json -> parsing to object -> using template to get HTML -> attaching to specified container
+            //getting object -> using template to get HTML -> attaching to specified container
             render: function (container) {
                 promise.then(function (result) {
                     try {
-                        let obj = JSON.parse(result);
-                        let resultHtml = template(obj);
+                        let resultHtml = template(result);
                         container.innerHTML = resultHtml;
                     } catch (e) {
                         console.log('ERROR in: ', e);

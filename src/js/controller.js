@@ -5,7 +5,7 @@
 "use strict";
 
 // When out app is done rendering the Form we are rdy to accept user input
-promise.then(function () {
+promise.then(function (result) {
 
     console.log('Controller is active!');
 
@@ -48,17 +48,27 @@ promise.then(function () {
         }
     };
 
-    //how thsi works - we are getting every :checked checkbox in the form, and then if the count is greater then 0 we compare data-correct, if at least one of checked checkboxes has data-correct !== "true" then the whole test is not correct.
+    //how this works - we are getting every :checked and also every correct checkbox in the form, and then if the count is greater then 0 we compare data-correct, if at least one of checked checkboxes has data-correct !== "true" then the whole test is not correct.
     function checkAnswers() {
-        let checkedEl = document.querySelectorAll('.test-form__checkbox:checked');
-        let length = checkedEl.length;
 
-        if (length > 0) {
-            for (let i = 0; i < length; i++) {
+        let checkedEl = document.querySelectorAll('.test-form__checkbox:checked'),
+            correctEl = document.querySelectorAll('.test-form__checkbox[data-correct = "true"]'),
+            checkedElLength = checkedEl.length,
+            correctElLength = correctEl.length;
+
+        for (let i = 0; i < correctElLength; i++) {
+            if (!correctEl[i].checked) {
+                return false;
+            }
+        }
+
+        if (checkedElLength > 0) {
+            for (let i = 0; i < checkedElLength; i++) {
                 if (checkedEl[i].dataset.correct !== "true") {
                     return false;
                 }
             }
+
             return true;
         }
 
