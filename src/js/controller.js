@@ -48,7 +48,9 @@ promise.then(function (result) {
         }
     };
 
-    //how this works - we are getting every :checked and also every correct checkbox in the form, and then if the count is greater then 0 we compare data-correct, if at least one of checked checkboxes has data-correct !== "true" then the whole test is not correct.
+    //how this works - we are getting every :checked and also every correct checkbox in the form,
+    // and then if the count is greater then 0 we compare data-correct, if at least one of checked checkboxes has data-correct !== "true"
+    // then the whole test is not correct. Same goes for when at least one of correct answers is not checked
     function checkAnswers() {
 
         let checkedEl = document.querySelectorAll('.test-form__checkbox:checked'),
