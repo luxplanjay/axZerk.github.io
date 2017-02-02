@@ -9,7 +9,7 @@ const body = document.body;
 // container for whole test
 const container = createNode('div', 'container');
 
-body.append(container);
+body.prepend(container);
 
 // Initializing test with template + external .json and getting a Promise as result
 let promise = initTest(test, Handlebars.templates.form, 'db/form.json', container);
