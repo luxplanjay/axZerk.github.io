@@ -6,12 +6,12 @@
 
 const body = document.body;
 
-// container for whole test
+// container for the whole test
 const container = createNode('div', 'container');
 
 body.prepend(container);
 
-// Initializing test with template + external .json and getting a Promise as result
+// Initializing test with template + external .json and getting a Promise as a result
 let promise = initTest(test, Handlebars.templates.form, 'db/form.json', container);
 
 // When async call is done and we have data as a result
