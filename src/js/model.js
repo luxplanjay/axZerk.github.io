@@ -48,8 +48,8 @@ function createTest() {
                     try {
                         let resultHtml = template(result);
                         container.innerHTML = resultHtml;
-                    } catch (e) {
-                        console.log('ERROR in: ', e);
+                    } catch (ex) {
+                        console.log('ERROR in: ', ex);
                     }
                 });
             }
