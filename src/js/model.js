@@ -7,7 +7,7 @@
 console.log('Model is active!');
 
 // Creating new instance of test
-const test = createTest();
+let test = createTest();
 
 function createTest() {
     let template,
