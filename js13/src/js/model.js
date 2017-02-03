@@ -2,59 +2,48 @@
  * Created by Zerk on 31-Jan-17.
  */
 
-"use strict";
+define(['handlebars', 'template'], function (Handlebars) {
 
-console.log('Model is active!');
+    'use strict';
 
-// Creating new instance of test
-let test = createTest();
+    function init() {
+        // private variables and foo
+        const template = Handlebars.templates.form;
+        let promise;
 
-function createTest() {
-    let template,
-        promise;
+        // Getting .json file from path with async call and returning a Promise
+        function loadJSON(path) {
+            return new Promise(function (resolve, reject) {
+                let request = new XMLHttpRequest();
+                request.open('GET', path, true);
 
-    // Getting .json file from path with async call and returning a Promise
-    function loadJSON(path) {
-        return new Promise(function (resolve, reject) {
-            let request = new XMLHttpRequest();
-            request.open('GET', path, true);
+                request.onload = function () {
+                    resolve(this.responseText);
+                };
 
-            request.onload = function () {
-                resolve(this.responseText);
-            };
+                request.onerror = reject;
+                request.send(null);
+            });
+        }
 
-            request.onerror = reject;
-            request.send(null);
-        });
-    }
-
-    let test = {
-        methods: {
-            init: function (tpl, path) {
-                template = tpl;
-                promise = loadJSON(path).then(function (result) {
-                    let data = JSON.parse(result);
-
-                    return data;
-                });
+        const test = {
+            init: function (path) {
+                promise = loadJSON(path);
+            },
+            getHtml: function (json) {
+                let result = JSON.parse(json);
+                return template(result);
             },
             // returning promise, result of init so we can use promise.then(...)
             getPromise: function () {
                 return promise;
-            },
-            //getting object -> using template to get HTML -> attaching to specified container
-            render: function (container) {
-                promise.then(function (result) {
-                    try {
-                        let resultHtml = template(result);
-                        container.innerHTML = resultHtml;
-                    } catch (ex) {
-                        console.log('ERROR in: ', ex);
-                    }
-                });
             }
-        }
-    };
+        };
 
-    return test;
-}
+        return test;
+    }
+
+    return init();
+
+});
+

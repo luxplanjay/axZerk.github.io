@@ -30,6 +30,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^2.3.2",
     "gulp-sass-glob-import": "^0.1.0",
+    "handlebars": "^4.0.6",
     "imagemin-pngquant": "^5.0.0",
     "susy": "^2.2.12"
   }
