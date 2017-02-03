@@ -1,0 +1,208 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, input, button, textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input[type="button"], input[type="submit"] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+img, embed, object, video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_light-webfont.eot");
+  src: url("../fonts/gotham_pro_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_light-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_light-webfont.woff") format("woff"), url("../fonts/gotham_pro_light-webfont.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro-webfont.eot");
+  src: url("../fonts/gotham_pro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro-webfont.woff2") format("woff2"), url("../fonts/gotham_pro-webfont.woff") format("woff"), url("../fonts/gotham_pro-webfont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_medium-webfont.eot");
+  src: url("../fonts/gotham_pro_medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_medium-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_medium-webfont.woff") format("woff"), url("../fonts/gotham_pro_medium-webfont.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/gotham_pro_bold-webfont.eot");
+  src: url("../fonts/gotham_pro_bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_pro_bold-webfont.woff2") format("woff2"), url("../fonts/gotham_pro_bold-webfont.woff") format("woff"), url("../fonts/gotham_pro_bold-webfont.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, input[type="button"], input[type="submit"], button {
+  font-family: "Gotham Pro", "Roboto", Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham Pro", "Roboto", Arial, sans-serif;
+}
+
+p, input[type="text"], textarea, label {
+  font-family: "Gotham Pro", "Roboto", Tahoma, sans-serif;
+}
+
+.page {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding: 50px 0;
+  background: url("../img/page-bg.png");
+}
+
+.container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 960px;
+}
+
+.search-form {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 600px;
+  padding: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+.search-form__input {
+  -webkit-flex: 1 0 70%;
+      -ms-flex: 1 0 70%;
+          flex: 1 0 70%;
+  padding: 6px 10px;
+  font-size: 1.333rem;
+  line-height: 1.875rem;
+  background-color: aliceblue;
+  outline: 0;
+  border: 0;
+}
+
+.search-form__btn {
+  font-size: 1.333rem;
+  line-height: 1.875rem;
+  padding: 6px 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #aa5535;
+  color: #fefefe;
+}
+
+.search-form__btn_hover {
+  background-color: #4b6a88;
+}
+
+.results {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.results__img {
+  margin-bottom: 20px;
+}
+
