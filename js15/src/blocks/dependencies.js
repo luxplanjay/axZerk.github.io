@@ -20,3 +20,7 @@ requirejs(['model'], function (model) {
 
 requirejs(['controller'], function (controller) {
 });
+
+requirejs(['prototyping'], function (proto) {
+
+});
