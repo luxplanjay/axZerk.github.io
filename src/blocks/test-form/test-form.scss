@@ -1,0 +1,80 @@
+@import "susy";
+@import "tools";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.test-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 100px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px rgba(50, 50, 50, 0.3);
+  background-color: darken(#fefefe, 5%);
+  color: $primary-dark;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+
+  &__submit {
+    padding: 15px;
+    background-color: darken(#e65722, 5%);
+    @include type-setting(medium);
+    font-weight: 700;
+    color: darken($primary-light, 0%);
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #1e90ff;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 15px 15px;
+    border: 1px solid #999;
+  }
+
+  &__item-title {
+    padding: 0 10px;
+    font-size: 1.1rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    @include type-setting(medium);
+    font-weight: 700;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: #e65722;
+    }
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
