@@ -1,24 +1,14 @@
-/**
- * Created by Zerk on 03-Feb-17.
- */
+import '../sass/page.scss';
 
-require.config({
-    baseUrl: 'js',
-    paths: {
-        'handlebars': [
-            'https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min',
-            'libs/handlebars'
-        ],
-        'hbsHelpers': 'hbs-helpers',
-        'template': 'templates/form.tpl'
-    }
-});
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {App} from './App';
 
-requirejs(['view'], function (view) {
-});
 
-requirejs(['model'], function (model) {
-});
+const person = {
+    firstName: 'Alex',
+    lastName: 'Repeta'
+};
 
-requirejs(['controller'], function (controller) {
-});
+ReactDOM.render(<App user = {person} />, document.getElementById('root'));
+
