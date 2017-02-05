@@ -1,5 +1,10 @@
 @import "core/colors";
 
-body {
-  background-color: $primary-color;
+.page {
+  background-color: $primary-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
 }
+

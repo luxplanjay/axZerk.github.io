@@ -1,14 +1,18 @@
+import '../sass/core/core.scss';
 import '../sass/page.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import {App} from './App';
 
 
 const person = {
-    firstName: 'Alex',
-    lastName: 'Repeta'
+    firstName: 'Vasya',
+    lastName: 'Pupkin'
 };
 
-ReactDOM.render(<App user = {person} />, document.getElementById('root'));
+let el = <App user={person}/>;
+
+ReactDOM.render(el, document.getElementById('root'));
 

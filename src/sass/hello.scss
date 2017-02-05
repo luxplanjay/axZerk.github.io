@@ -1,0 +1,10 @@
+@import "core/colors";
+
+.hello {
+  border: 1px solid #ccc;
+  padding: 30px 50px;
+  border-radius: 20px;
+  font-size: 40px;
+  color: $primary-dark;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
