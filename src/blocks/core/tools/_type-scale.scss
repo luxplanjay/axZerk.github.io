@@ -1,0 +1,48 @@
+// Vars
+$browser-context: 16;
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.25;
+
+$font-size: (
+        'xs-small': 0.8125rem, //13px
+        'small': 0.875rem, //14px
+        'medium': $base-font-size, //16px
+        'strong': 1.25rem, //20px
+        'large': 1.5rem, //24px
+        'xs-large': 1.875rem, //30px
+        'ultra-large': 5.625rem //90px
+);
+
+$line-height: (
+        'xs-small': $base-line-height,
+        'small': $base-line-height,
+        'medium': $base-line-height,
+        'strong': $base-line-height * 1.5,
+        'large': $base-line-height * 2,
+        'xs-large': $base-line-height,
+        'ultra-large': 1
+);
+
+// Rules
+@function rem($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px
+  }
+  @return $pixels / $context * 1rem
+}
+
+@function font-size($level) {
+  @return map-get($font-size, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-height, $level);
+}
+
+@mixin font-settings($level: 0) {
+  font-size: font-size($level);
+  line-height: line-height($level);
+}
