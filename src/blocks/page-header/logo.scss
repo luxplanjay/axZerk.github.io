@@ -15,7 +15,6 @@
   }
 
   &__title {
-
     @include font-settings(xs-large);
     font-weight: 700;
     text-transform: capitalize;
@@ -23,10 +22,13 @@
   }
 
   &__text {
+    display: inline-block;
+    margin-top: 3px;
     opacity: 0.65;
-    color: #333;
     @include font-settings(xs-small);
     font-weight: 400;
     text-transform: uppercase;
+    letter-spacing: 2.6px;
+    color: #333;
   }
 }

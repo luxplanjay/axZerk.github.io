@@ -1,7 +1,7 @@
 @import 'susy';
 @import 'tools';
 
-.slider {
+.page-basement {
   @include container();
-  padding-top: 40px;
+  padding: 20px 0px;
 }

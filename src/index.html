@@ -2,38 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>HW 19-20, I miss JS already Q.Q</title>
+    <title>HW 19-20, css fun</title>
 </head>
 <body class="page">
 
+<!-- page-header start -->
 <div class="container">
     <header class="page-header">
         <div class="page-header__headline">
-            <div class="logo">
+            <!-- logo start -->
+            <a href="#" class="logo link">
                 <i class="logo__icon"></i>
                 <h1 class="logo__title">build home</h1>
-                <p class="logo__text">industrial theme</p>
-            </div>
+                <span class="logo__text">industrial theme</span>
+            </a>
+            <!-- logo end -->
 
+            <!-- social-links start -->
             <div class="social-links">
-                <a href="" class="social-links__item link"></a>
-                <a href="" class="social-links__item link"></a>
-                <a href="" class="social-links__item link"></a>
-                <a href="" class="social-links__item link"></a>
-                <a href="" class="social-links__item link"></a>
+                <a href="" class="social-links__item link">
+                    <svg class="social-links__icon">
+                        <use xlink:href="./img/social/facebook.svg#main"></use>
+                    </svg>
+                </a>
+                <a href="" class="social-links__item link">
+                    <svg class="social-links__icon">
+                        <use xlink:href="./img/social/twitter.svg#main"></use>
+                    </svg>
+                </a>
+                <a href="" class="social-links__item link">
+                    <svg class="social-links__icon">
+                        <use xlink:href="./img/social/rss.svg#main"></use>
+                    </svg>
+                </a>
+                <a href="" class="social-links__item link">
+                    <svg class="social-links__icon">
+                        <use xlink:href="./img/social/linkedin.svg#main"></use>
+                    </svg>
+                </a>
+                <a href="" class="social-links__item link">
+                    <svg class="social-links__icon">
+                        <use xlink:href="./img/social/skype.svg#main"></use>
+                    </svg>
+                </a>
             </div>
+            <!-- social-links end -->
         </div>
 
         <nav class="navbar">
+            <!-- main-nav start -->
             <ul class="main-nav">
                 <li class="main-nav__item">
-                    <a href="#" class="main-nav__link link">home</a>
+                    <a href="#" class="main-nav__link main-nav__link_current link">home</a>
                 </li>
                 <li class="main-nav__item">
                     <a href="#" class="main-nav__link link">features</a>
@@ -48,14 +73,22 @@
                     <a href="#" class="main-nav__link link">shop</a>
                 </li>
             </ul>
+            <!-- main-nav end -->
 
-            <form action="" class="search-form">
+            <!-- search-form start -->
+            <form action="#" class="search-form">
                 <input type="text" class="search-form__input" placeholder="Search...">
-                <input type="submit" value="" class="search-form__submit">
+                <a href="" class="search-form__submit">
+                    <svg class="search-form__submit-icon">
+                        <use xlink:href="img/search.svg#main"></use>
+                    </svg>
+                </a>
             </form>
+            <!-- search-form end -->
         </nav>
     </header>
 </div>
+<!-- page-header end -->
 <div class="container">
     <div class="slider">
         <img src="img/slider.jpg" alt="">
@@ -64,57 +97,218 @@
 <div class="container">
     <div class="about">
         <article class="about__item">
-            <p class="about__number">01</p>
+            <p class="about__count">01</p>
             <div class="about__item-body">
-                <i class="about__icon about__icon_power"></i>
+                <svg class="about__icon">
+                    <use xlink:href="./img/about/settings.svg#main"></use>
+                </svg>
                 <h2 class="about__title">power inside</h2>
-                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
-                <a href="#" class="about__link link"><span>read more</span><i></i></a>
+                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim
+                    ipsam voluptatem.</p>
+                <a href="#" class="about__link link">
+                    <span>read more</span>
+                    <svg class="about__link-icon">
+                        <use xlink:href="./img/right-arrow.svg#main"></use>
+                    </svg>
+                </a>
             </div>
         </article>
         <article class="about__item">
-            <p class="about__number">02</p>
+            <p class="about__count">02</p>
             <div class="about__item-body">
-                <i class="about__icon about__icon_tech"></i>
+                <svg class="about__icon">
+                    <use xlink:href="./img/about/params.svg#main"></use>
+                </svg>
                 <h2 class="about__title">new technologies</h2>
-                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
-                <a href="#" class="about__link link"><span>read more</span><i></i></a>
+                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim
+                    ipsam voluptatem.</p>
+                <a href="#" class="about__link link">
+                    <span>read more</span>
+                    <svg class="about__link-icon">
+                        <use xlink:href="./img/right-arrow.svg#main"></use>
+                    </svg>
+                </a>
             </div>
         </article>
         <article class="about__item">
-            <p class="about__number">03</p>
+            <p class="about__count">03</p>
             <div class="about__item-body">
-                <i class="about__icon about__icon_support"></i>
+                <svg class="about__icon">
+                    <use xlink:href="./img/about/delivery.svg#main"></use>
+                </svg>
                 <h2 class="about__title">fast support</h2>
-                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.</p>
-                <a href="#" class="about__link link"><span>read more</span><i></i></a>
+                <p class="about__text">Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et
+                    elit mollis commodo et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim
+                    ipsam voluptatem.</p>
+                <a href="#" class="about__link link">
+                    <span>read more</span>
+                    <svg class="about__link-icon">
+                        <use xlink:href="./img/right-arrow.svg#main"></use>
+                    </svg>
+                </a>
             </div>
         </article>
     </div>
 </div>
-<div class="container">
+<div class="container container_color_dark">
     <section class="services">
         <h2 class="services__title">our services</h2>
         <figure class="services__item">
-            <img src="" alt="" class="services__img">
-            <h3 class="services__text">schedule services</h3>
+            <a href="#">
+                <img src="img/services/schedule.jpg" alt="" class="services__img">
+            </a>
+            <figcaption class="services__text">
+                <a href="#" class="services__link link">schedule services</a>
+            </figcaption>
         </figure>
         <figure class="services__item">
-            <img src="" alt="" class="services__img">
-            <h3 class="services__text">preventive maintence </h3>
+            <a href="#">
+                <img src="img/services/maintence.jpg" alt="" class="services__img">
+            </a>
+            <figcaption class="services__text">
+                <a href="#" class="services__link link">preventive maintence </a>
+            </figcaption>
         </figure>
         <figure class="services__item">
-            <img src="" alt="" class="services__img">
-            <h3 class="services__text">tire & wheel services </h3>
+            <a href="#">
+                <img src="img/services/support.jpg" alt="" class="services__img">
+            </a>
+            <figcaption class="services__text">
+                <a href="#" class="services__link link">tire & wheel services </a>
+            </figcaption>
         </figure>
         <figure class="services__item">
-            <img src="" alt="" class="services__img">
-            <h3 class="services__text">repair services</h3>
+            <a href="#"><img src="img/services/repair.jpg" alt="" class="services__img">
+            </a>
+            <figcaption class="services__text">
+                <a href="#" class="services__link link">repair services</a>
+            </figcaption>
         </figure>
     </section>
 </div>
 
+<div class="container">
+    <div class="logos">
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/rbp.png" alt="">
+        </a>
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/moto.png" alt="">
+        </a>
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/2crave.png" alt="">
+        </a>
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/atx.png" alt="">
+        </a>
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/cruiser.png" alt="">
+        </a>
+        <a href="#" class="logos__item">
+            <img src="img/brand-logos/gear.png" alt="">
+        </a>
+    </div>
+</div>
+<div class="container container_color_dark">
+    <footer class="page-footer">
+        <div class="page-footer__item">
+            <h3 class="page-footer__item-title">socials</h3>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="" class="list__link link">facebook</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">flickr</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">twitter</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">vimeo</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__item">
+            <h3 class="page-footer__item-title">links</h3>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="" class="list__link link">how to write a blog</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">create a blog in 4 steps</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">15 tips to increase traffic</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">20 blog post ideas</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__item">
+            <h3 class="page-footer__item-title">blogroll</h3>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="" class="list__link link">blogs blog</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">roll up roll up</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">blog free</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">wordpress blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__item">
+            <h3 class="page-footer__item-title">about us</h3>
+            <ul class="list">
+                <li class="list__item">
+                    <a href="" class="list__link link">agriculture</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">harvest</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">company news</a>
+                </li>
+                <li class="list__item">
+                    <a href="" class="list__link link">investro relations</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</div>
+<div class="container container_color_lighter">
+    <div class="page-basement">
+        <div class="contacts">
+            <div class="contacts__item">
+                <svg class="contacts__icon">
+                    <use xlink:href="./img/contacts/location.svg#main"></use>
+                </svg>
+                <p class="contacts__text">BuildHomeLtd.  Street Name 123   23 45 Cityname</p>
+            </div>
+            <div class="contacts__item">
+                <svg class="contacts__icon">
+                    <use xlink:href="./img/contacts/smartphone.svg#main"></use>
+                </svg>
+                <p class="contacts__text">+123 900 123 456</p>
+            </div>
+            <div class="contacts__item">
+                <svg class="contacts__icon">
+                    <use xlink:href="./img/contacts/email.svg#main"></use>
+                </svg>
+                <p class="contacts__text">info@buildhome.web</p>
+            </div>
+        </div>
 
+        <p class="legal">&copy; 2014 Build Home</p>
+    </div>
+</div>
 
 </body>
 </html>

@@ -2,5 +2,17 @@
 
 .container {
   width: 100%;
-  background-color: $primary-light;
+
+
+  &_color_light {
+    background-color: $primary-light;
+  }
+
+  &_color_dark {
+    background-color: $primary-dark;
+  }
+
+  &_color_lighter {
+    background-color: lighten($primary-dark, 4%);
+  }
 }

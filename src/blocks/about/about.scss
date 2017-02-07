@@ -2,7 +2,6 @@
 @import 'tools';
 
 .about {
-  outline: 1px solid brown;
   @include container();
   padding: 70px 0 80px;
 
@@ -11,12 +10,12 @@
     @include span(4 of 12);
   }
 
-  &__number {
+  &__count {
     @include span(4 of 12);
     color: $primary-dark;
     @include font-settings(ultra-large);
     font-weight: 700;
-    opacity: 0.2;
+    opacity: 0.15;
   }
 
   &__item-body {
@@ -28,18 +27,7 @@
     width: 32px;
     height: 32px;
     margin-bottom: 10px;
-
-    &_power {
-      background: url('../img/about/settings.png') no-repeat;
-    }
-
-    &_tech {
-      background: url('../img/about/params.png') no-repeat;
-    }
-
-    &_support {
-      background: url('../img/about/truck.png') no-repeat;
-    }
+    fill: #f4b60d;
   }
 
   &__title {
@@ -52,26 +40,42 @@
   &__text {
     margin-top: 10px;
     color: $secondary-dark;
-    @include font-settings(xs-small);
+    @include font-settings(small);
     font-weight: 400;
     overflow: hidden;
     max-height: $base-line-height * 3;
   }
 
   &__link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     color: $primary-dark;
-    @include font-settings(xs-small);
+    @include font-settings(small);
     font-weight: 700;
     text-transform: capitalize;
 
-    & span {
-      display: inline-block;
+    &:hover {
+      & > span {
+        color: $secondary-accent;
+      }
+
+      & > .about__link-icon {
+        height: 15px;
+        width: 15px;
+      }
     }
 
-    & i {
-      display: inline-block;
+    & span {
+      margin-right: 10px;
+      display: block;
+      color: $primary-dark;
+    }
+
+    &-icon {
+      display: block;
+      height: 10px;
+      width: 10px;
     }
 
   }

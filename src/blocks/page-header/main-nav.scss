@@ -8,15 +8,19 @@
   
   &__link {
     display: block;
-    padding: 25px 35px;
+    padding: 20px 40px;
     @include font-settings(small);
     text-transform: uppercase;
     color: $primary-light;
     border-right: 1px solid rgb(21, 21, 21);
     border-right: 1px solid rgba(21, 21, 21, 0.5);
 
-    &:hover {
+    &_current {
       background-color: $secondary-accent;
+    }
+
+    &:hover {
+      color: $primary-accent;
       cursor: pointer;
     }
   }

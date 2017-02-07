@@ -15,17 +15,21 @@
     border: 1px solid #181a1d;
     @include font-settings(small);
     font-weight: 400;
-    color: darken($primary-light, 30%);
+    color: $primary-light;
     background-color: rgba(255, 255, 255, 0.05);
-    
+
   }
 
   &__submit {
     position: absolute;
-    right: 20px;
-    width: 14px;
-    height: 14px;
-    background: transparent;
-    background: url('../img/search.png') no-repeat;
+    display: block;
+    right: 10px;
+    padding: 10px;
+
+    &-icon {
+      width: 17px;
+      height: 17px;
+      fill: $primary-light;
+    }
   }
 }
