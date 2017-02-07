@@ -1,0 +1,8 @@
+@import 'susy';
+@import 'tools';
+
+.services {
+  height: 200px;
+  outline: 1px solid brown;
+  @include container();
+}

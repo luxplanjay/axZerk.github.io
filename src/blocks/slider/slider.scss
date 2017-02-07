@@ -1,0 +1,7 @@
+@import 'susy';
+@import 'tools';
+
+.slider {
+  outline: 1px solid brown;
+  @include container();
+}

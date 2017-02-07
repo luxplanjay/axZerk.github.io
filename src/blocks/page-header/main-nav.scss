@@ -1,0 +1,23 @@
+@import 'susy';
+@import 'tools';
+
+.main-nav {
+  display: flex;
+  justify-content: flex-start;
+  @include span(8 of 12);
+  
+  &__link {
+    display: block;
+    padding: 25px 35px;
+    @include font-settings(small);
+    text-transform: uppercase;
+    color: $primary-light;
+    border-right: 1px solid rgb(21, 21, 21);
+    border-right: 1px solid rgba(21, 21, 21, 0.5);
+
+    &:hover {
+      background-color: $secondary-accent;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import 'susy';
+@import 'tools';
+
+.page-header {
+  outline: 1px solid brown;
+  @include container();
+
+  &__headline {
+    @include span(12 of12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 0;
+  }
+}

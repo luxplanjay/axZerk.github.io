@@ -1,0 +1,78 @@
+@import 'susy';
+@import 'tools';
+
+.about {
+  outline: 1px solid brown;
+  @include container();
+  padding: 70px 0 80px;
+
+  &__item {
+    display: flex;
+    @include span(4 of 12);
+  }
+
+  &__number {
+    @include span(4 of 12);
+    color: $primary-dark;
+    @include font-settings(ultra-large);
+    font-weight: 700;
+    opacity: 0.2;
+  }
+
+  &__item-body {
+    @include span(8 of 12);
+  }
+
+  &__icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+
+    &_power {
+      background: url('../img/about/settings.png') no-repeat;
+    }
+
+    &_tech {
+      background: url('../img/about/params.png') no-repeat;
+    }
+
+    &_support {
+      background: url('../img/about/truck.png') no-repeat;
+    }
+  }
+
+  &__title {
+    color: $primary-dark;
+    @include font-settings(strong);
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    margin-top: 10px;
+    color: $secondary-dark;
+    @include font-settings(xs-small);
+    font-weight: 400;
+    overflow: hidden;
+    max-height: $base-line-height * 3;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 20px;
+    color: $primary-dark;
+    @include font-settings(xs-small);
+    font-weight: 700;
+    text-transform: capitalize;
+
+    & span {
+      display: inline-block;
+    }
+
+    & i {
+      display: inline-block;
+    }
+
+  }
+}
