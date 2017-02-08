@@ -1,7 +1,57 @@
 @import 'susy';
 @import 'tools';
 
-.slider {
+.slider-container {
   @include container();
+  position: relative;
   padding-top: 40px;
 }
+
+.slider {
+  position: relative;
+  width: 1160px;
+  overflow: hidden;
+}
+
+.slider ul {
+  width: 20000em;
+  position: relative;
+}
+
+.slider li {
+  float: left;
+  width: 1160px;
+}
+
+.slider li img {
+  height: 470px;
+}
+
+.slider-pagination {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider-pagination a {
+  display: block;
+  height: 18px;
+  width: 18px;
+  background-color: $primary-light;
+
+  margin-right: 15px;
+  font-size: 0;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider-pagination__link_active {
+  background-color: $primary-dark !important;
+  border: 3px solid $primary-light;
+}
+

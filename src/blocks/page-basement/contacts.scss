@@ -7,6 +7,7 @@
 
   &__item {
     display: flex;
+    align-items: center;
     margin-right: 40px;
     cursor: default;
 
@@ -15,16 +16,21 @@
     }
 
     &:hover > .contacts__text {
-      color: #fefefe;
+      color: $primary-light;
     }
+
+    &:hover > .contacts__icon {
+      fill: $primary-accent;
+    }
+
   }
 
   &__icon {
     display: block;
     margin-right: 15px;
-    width: 15px;
-    height: 15px;
-    fill: #fefefe;
+    width: 18px;
+    height: 18px;
+    fill: #6f7073;
   }
 
   &__text {
