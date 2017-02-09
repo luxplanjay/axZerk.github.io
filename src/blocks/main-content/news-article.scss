@@ -51,10 +51,14 @@
     color: $secondary-accent;
   }
 
-  &__title {
+  &__title a {
     @include font-settings(medium);
     color: $primary-dark;
     font-weight: 700;
+
+    &:hover {
+      color: $secondary-accent;
+    }
   }
 
   &__author, &__comments, &__text {
@@ -70,10 +74,18 @@
 
   &__author {
     margin-right: 10px;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   &__comments {
     text-transform: capitalize;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   &__text {
