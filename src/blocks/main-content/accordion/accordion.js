@@ -21,7 +21,7 @@ $(function () {
             if ($(this).hasClass('accordion__link_active')) {
 
                 $(this).removeClass("accordion__link_active");
-                $(this).siblings('.accordion__content').slideUp(300);
+                $(this).siblings('.accordion__content').stop().slideUp(300);
                 $icons.removeClass('accordion__icon_active');
                 $icons.removeClass("fa-minus").addClass("fa-plus");
 
@@ -35,8 +35,8 @@ $(function () {
                 $links.removeClass("accordion__link_active");
                 $(this).addClass("accordion__link_active");
 
-                $content.slideUp(300);
-                $(this).siblings('.accordion__content').slideDown(300);
+                $content.stop().slideUp(300);
+                $(this).siblings('.accordion__content').stop().slideDown(300);
             }
         });
     })();
