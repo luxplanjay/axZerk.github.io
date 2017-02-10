@@ -2,6 +2,7 @@
  * Created by Zerk on 08-Feb-17.
  */
 
+// accordion stuff
 $(function () {
     (function () {
         let $links = $('.accordion__link'),

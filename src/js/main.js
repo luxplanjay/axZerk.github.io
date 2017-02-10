@@ -1,82 +1,25 @@
 /**
- * Created by Zerk on 09-Feb-17.
+ * Created by Zerk on 10-Feb-17.
  */
 
-(function () {
+$(function () {
+    (function () {
+        $items = $('.services__item');
 
-    loadJSON('./db/data.json')
-        .then(function (data) {
-            let result = _.attempt(JSON.parse.bind(null, data));
-            console.log('Object: ', result);
+        $items.hover(function () {
+            // in
+            $(this).find('.services__link').addClass('services__link_active');
+            $(this).find('.services__img').addClass('services__img_active');
 
-            let skills = getSkills(result);
-            console.log('Skills: ', skills);
+        }, function () {
+            // out
+            $(this).find('.services__link').removeClass('services__link_active');
+            $(this).find('.services__img').removeClass('services__img_active');
+        })
+    })();
+});
 
-            let names = getNames(result);
-            console.log('Names: ', names);
-
-            let friends = getFriends(result);
-            console.log('Friends: ', friends);
-        });
-
-    function getSkills(arr) {
-        let result = _.chain(arr)
-            .map('skills')
-            .flattenDepth(1)
-            .uniq()
-            .value();
-
-        return result.sort(compare);
-    }
-
-    function getNames(arr) {
-        let result = _.chain(arr)
-            .sortBy('friends')
-            .map('name')
-            .value();
-        return result;
-    }
-
-    function getFriends(arr) {
-        let result = _.chain(arr)
-            .map('friends')
-            .flattenDepth(1)
-            .map('name')
-            .uniq()
-            .value();
-
-        return result;
-    }
-
-    function loadJSON(path) {
-        return new Promise(function (resolve, reject) {
-            let request = new XMLHttpRequest();
-            request.open('GET', path, true);
-
-            request.onload = function () {
-                resolve(this.responseText);
-            };
-
-            request.onerror = reject;
-            request.send(null);
-        });
-    }
-
-    function compare(x, y) {
-        var tmp = x.toLowerCase().localeCompare(y.toLowerCase());
-
-        if (tmp != 0) return tmp;
-
-        if (x > y) {
-            return 1;
-        } else if (x < y) {
-            return -1;
-        } else {
-            return 0;
-        }
-    }
-
-})();
+//Slider stuff
 $(function () {
     // init
     let $slider = $('.slider');
@@ -109,6 +52,7 @@ $(function () {
  * Created by Zerk on 08-Feb-17.
  */
 
+// accordion stuff
 $(function () {
     (function () {
         let $links = $('.accordion__link'),

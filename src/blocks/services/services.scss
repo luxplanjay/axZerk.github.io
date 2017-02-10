@@ -24,9 +24,8 @@
   &__img {
     height: 260px;
     width: 260px;
-    border-radius: 10%;
 
-    &:hover {
+    &_active {
       opacity: 0.5;
     }
   }
@@ -36,12 +35,13 @@
   }
 
   &__link {
+    display: block;
     @include font-settings(medium);
     font-weight: 700;
     text-transform: capitalize;
     color: $primary-light;
 
-    &:hover {
+    &_active {
       color: $primary-accent;
     }
   }

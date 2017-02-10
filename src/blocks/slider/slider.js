@@ -1,3 +1,4 @@
+//Slider stuff
 $(function () {
     // init
     let $slider = $('.slider');

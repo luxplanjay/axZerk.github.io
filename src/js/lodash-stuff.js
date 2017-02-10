@@ -2,6 +2,7 @@
  * Created by Zerk on 09-Feb-17.
  */
 
+// Lodash stuff
 (function () {
 
     loadJSON('./db/data.json')
