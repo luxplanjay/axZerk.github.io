@@ -1,8 +1,0 @@
-@import 'susy';
-@import 'tools';
-
-.navbar {
-  display: flex;
-  @include span(12 of 12);
-  background-color: $primary-dark;
-}

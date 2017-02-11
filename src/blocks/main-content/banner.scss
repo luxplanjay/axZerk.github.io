@@ -1,9 +1,0 @@
-@import 'susy';
-@import 'tools';
-
-.banner p {
-  color: $primary-dark;
-  @include font-settings(large);
-  font-weight: 700;
-  text-transform: capitalize;
-}

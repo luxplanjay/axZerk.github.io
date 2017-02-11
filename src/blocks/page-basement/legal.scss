@@ -1,9 +1,0 @@
-@import 'susy';
-@import 'tools';
-
-.legal {
-  @include span(2 of 12);
-  @include font-settings(xs-small);
-  color: #6f7073;
-  text-align: right;
-}
