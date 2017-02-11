@@ -57,11 +57,11 @@
     // console.log('canvas as OBJ: ', canvas.toObject());
 
     var jsonResult = JSON.stringify(canvas);
-    console.log('canvas as JSON: ', jsonResult);
+    console.log('Canvas as JSON: \n', jsonResult);
 
     var objResult = JSON.parse(jsonResult);
-    console.log('canvas as OBJ from jsonResult: ', objResult);
+    console.log('\nCanvas as OBJ from jsonResult: ', objResult);
 
     var result = _.map(objResult.objects, 'id');
-    console.log('result ID list is: ', result);
+    console.log('\nResult ID list is: ', result);
 })();
