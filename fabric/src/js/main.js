@@ -79,11 +79,22 @@
     var result = _.map(asObj.objects, 'objectId');
     console.log('\nResult ID list is: ', result);
 
+
     // загружаем канвас из json по новой, для проверки сериализации всех полей фигур
     setTimeout(function () {
         canvas.loadFromJSON(asJson);
         console.log('\nCANVAS RELOADED FROM JSON!!! \n');
         console.log(canvas.toObject());
+
+        // потом можно по objectId легко выбрать нужную фигуру
+        var canvasObjects = canvas.getObjects();
+
+        _.forEach(canvasObjects, function (item) {
+            if (item.objectId === 'TABLE-RECT-2') {
+                console.log('\nGOT IT!, id = TABLE-RECT-2: ', item);
+            }
+        });
+
     }, 2000);
 
 })();
