@@ -9,14 +9,27 @@
         height: 600
     });
 
-    // при создании шейпа у него нету ID, так мы сможем прямо в конструкторе давать ID
+    // >>>> fabric.util.object.extend не сработал!!!
+    // После сериализации терялись некоторые фигуры, в моем случае оба круга
+    //
+    // fabric.Object.prototype.toObject = (function (toObject) {
+    //     return function () {
+    //         return fabric.util.object.extend(toObject.call(this), {
+    //             objectId: this.objectId
+    //         });
+    //     };
+    // })(fabric.Object.prototype.toObject);
+
+    // Так работает ок
     fabric.Object.prototype.toObject = (function (toObject) {
-        return function () {
-            return fabric.util.object.extend(toObject.call(this), {
-                id: this.id
-            });
+        return function (propertiesToInclude) {
+            propertiesToInclude = (propertiesToInclude || []).concat(
+                ['objectId']
+            );
+            return toObject.apply(this, [propertiesToInclude]);
         };
     })(fabric.Object.prototype.toObject);
+
 
     var tableRect1 = new fabric.Rect({
         top: 100,
@@ -24,7 +37,7 @@
         width: 100,
         height: 100,
         fill: 'red',
-        id: 'TABLE-RECT-1'
+        objectId: 'TABLE-RECT-1'
     });
 
     var tableRect2 = new fabric.Rect({
@@ -33,7 +46,7 @@
         width: 100,
         height: 100,
         fill: 'blue',
-        id: 'TABLE-RECT-2'
+        objectId: 'TABLE-RECT-2'
     });
 
     var tableRound1 = new fabric.Circle({
@@ -41,7 +54,7 @@
         left: 400,
         radius: 50,
         fill: 'green',
-        id: 'TABLE-ROUND-1'
+        objectId: 'TABLE-ROUND-1'
     });
 
     var tableRound2 = new fabric.Circle({
@@ -49,19 +62,26 @@
         left: 550,
         radius: 50,
         fill: 'orange',
-        id: 'TABLE-ROUND-2'
+        objectId: 'TABLE-ROUND-2'
     });
 
     canvas.add(tableRect1, tableRect2, tableRound1, tableRound2);
 
-    // console.log('canvas as OBJ: ', canvas.toObject());
 
-    var jsonResult = JSON.stringify(canvas);
-    console.log('Canvas as JSON: \n', jsonResult);
+    var asJson = JSON.stringify(canvas);
+    console.log('Canvas as JSON: \n', asJson);
 
-    var objResult = JSON.parse(jsonResult);
-    console.log('\nCanvas as OBJ from jsonResult: ', objResult);
+    var asObj = JSON.parse(asJson);
+    console.log('\nCanvas as OBJ from jsonResult: ', asObj);
 
-    var result = _.map(objResult.objects, 'id');
+    var result = _.map(asObj.objects, 'objectId');
     console.log('\nResult ID list is: ', result);
+
+    // загружаем канвас из json по новой, для проверки сериализации всех полей фигур
+    setTimeout(function () {
+        canvas.loadFromJSON(asJson);
+        console.log('\nCANVAS RELOADED FROM JSON!!! \n');
+        console.log(canvas.toObject());
+    }, 2000);
+
 })();
