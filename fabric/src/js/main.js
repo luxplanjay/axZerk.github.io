@@ -91,7 +91,7 @@
 
         _.forEach(canvasObjects, function (item) {
             if (item.objectId === 'TABLE-RECT-2') {
-                console.log('\nGOT IT!, id = TABLE-RECT-2: ', item);
+                console.log('\nGOT IT!, objectId = TABLE-RECT-2: ', item);
             }
         });
 
