@@ -48,8 +48,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 'use strict';
 
-try {} catch (e) {}
-
 var mapImg = void 0,
     centerLat = 0,
     centerLon = 0,

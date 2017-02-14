@@ -4,11 +4,6 @@
 
 'use strict';
 
-try {
-
-} catch (e) {
-}
-
 let mapImg,
     centerLat = 0,
     centerLon = 0,
