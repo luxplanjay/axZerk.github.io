@@ -30,7 +30,7 @@ const config = {
                 include: SRC_DIR,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader?sourceMap!postcss-loader!resolve-url-loader!sass-loader?sourceMap'
+                    use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
                 })
             },
 
