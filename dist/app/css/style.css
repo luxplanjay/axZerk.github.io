@@ -212,7 +212,7 @@ label {
   -ms-flex-align: center;
   align-items: center;
   font-family: Roboto;
-  background: url(app/img/page-bg.png) repeat;
+  background: url(../img/page-bg.png) repeat;
 }
 
 .list-container {
