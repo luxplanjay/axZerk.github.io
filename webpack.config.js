@@ -1,19 +1,16 @@
 var webpack = require('webpack'),
     path = require('path'),
     SRC_DIR = path.resolve(__dirname, 'src'),
-    DIST_DIR = path.resolve(__dirname, 'dist'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    context: SRC_DIR,
     entry: {
-        main: './main.js'
+        main: './src/index.js'
     },
     output: {
-        path: DIST_DIR + '/app',
-        filename: '[name].bundle.js',
-        publicPath: 'app/',
-        library: 'app'
+        path: path.resolve(__dirname, 'dist'),
+        // publicPath: 'app/',
+        filename: '[name].bundle.js'
     },
     module: {
         loaders: [
@@ -33,20 +30,25 @@ const config = {
                     use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
                 })
             },
-
             {
                 test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
                 include: /\/node_modules\//,
                 loader: 'file-loader?name=[1].[ext]&regExp=node_modules/(.*)'
             },
             {
-                test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
+                test: /\.(svg|otf|ttf|eot|woff|woff2)$/,
                 exclude: /\/node_modules\//,
                 loader: 'file-loader?name=[path][name].[ext]'
             },
             {
+                test: /\.(png|gif|jpg|jpeg)$/,
+                exclude: /\/node_modules\//,
+                loader: 'file-loader?name=[path][name].[ext]'
+                // loader: 'url-loader?limit=10000&name=img/[name].[ext]'
+            },
+            {
                 test: /\.handlebars$/,
-                loader: "handlebars-loader"
+                loader: "handlebars-loader?helperDirs[]=${clientHelpersPath}"
             }
         ]
     },
