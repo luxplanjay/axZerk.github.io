@@ -9,7 +9,7 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist') + '/assets',
-        publicPath: "/https://axzerk.github.io/",
+        publicPath: "https://axzerk.github.io/dist/",
         filename: './[name].bundle.js'
     },
     module: {
