@@ -9,7 +9,7 @@ const config = {
     },
     output: {
         path: path.resolve(__dirname, 'dist') + '/assets',
-        publicPath: "https://axzerk.github.io/dist/",
+        publicPath: "http://localhost:3000/assets/",
         filename: './[name].bundle.js'
     },
     module: {
@@ -75,7 +75,9 @@ const config = {
     devtool: 'source-map',
     devServer: {
         inline: true,
-        port: 3000
+        hot: true,
+        port: 3000,
+        contentBase: './src/'
     },
     watchOptions: {
         aggregateTimeout: 100
