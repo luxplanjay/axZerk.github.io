@@ -3,17 +3,21 @@ var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    context: __dirname,
+    context: path.resolve(__dirname, 'src'),
     entry: {
-        main: './src/index.js'
+        main: './index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist') + '/assets',
-        publicPath: "/assets/",
+        publicPath: "/https://axzerk.github.io/",
         filename: './[name].bundle.js'
     },
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                loader: "html-loader"
+            },
             {
                 test: /\.(js|jsx)$/,
                 include: path.resolve(__dirname, 'src'),
@@ -45,7 +49,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=img/[name].[ext]&limit=10000'
+                use: 'url-loader?name=[path][name].[ext]&limit=10000'
             },
             {
                 test: /\.handlebars$/,
@@ -54,7 +58,8 @@ const config = {
         ]
     },
     resolve: {
-        extensions: [".js", ".json", ".jsx", ".scss"],
+        extensions: ['.js', ".json", ".jsx", ".scss"],
+        modules: [path.resolve(__dirname, "src"), path.resolve(__dirname, 'node_modules')]
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin('vendors'),
