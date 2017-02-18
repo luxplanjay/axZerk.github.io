@@ -16,7 +16,7 @@ const config = {
         rules: [
             {
                 test: /\.html$/,
-                loader: "html-loader"
+                use: "html-loader"
             },
             {
                 test: /\.(js|jsx)$/,
@@ -67,7 +67,7 @@ const config = {
             "React": "react",
             'ReactDOM': 'react-dom'
         }),
-        new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
@@ -75,7 +75,7 @@ const config = {
     devtool: 'source-map',
     devServer: {
         inline: true,
-        hot: true,
+        // hot: true,
         port: 3000,
         contentBase: './src/'
     },
