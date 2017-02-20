@@ -1,5 +1,9 @@
 .article {
+  outline: 1px solid #333;
+
   &__title {
+    font-size: 24px;
+
     &:hover {
       color: darkred;
     }

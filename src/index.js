@@ -3,40 +3,27 @@ import './sass/index.scss';
 
 import  React from 'react';
 import ReactDOM from 'react-dom';
+import uuid from 'uuid';
 
-import {Box} from './components/box/Box';
-import {List} from './components/list/List';
-import {Article} from './components/article/Article';
-import {Menu} from './components/menu/Menu'
+import {App} from './components/App';
 
-const user = {
-    name: 'Alex',
-    initialAge: 31
-}
-
-const list = {
-    title: 'List of hobbies',
-    hobbies: ['hobbie 1', 'hobbie 2', 'hobbie 3']
-}
-
-const items = ['item 1', 'item 2', 'item 3', 'item 4', 'item 5'];
-
-class App extends React.Component {
-    sayHi() {
-        alert('Hello child!');
+const listData = [
+    {
+        id: uuid.v4(),
+        text: 'item 1'
+    },
+    {
+        id: uuid.v4(),
+        text: 'item 2'
+    },
+    {
+        id: uuid.v4(),
+        text: 'item 3'
+    },
+    {
+        id: uuid.v4(),
+        text: 'item 4'
     }
+];
 
-    render() {
-        return (
-            <div className="app-container">
-                <Menu items={items}></Menu>
-                <Box user={this.props.user} greet={this.sayHi}/>
-                <List list={this.props.list}/>
-                <Article articleTitle="Artcile 1"/>
-                <Article articleTitle="Artcile 2"/>
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(<App user={user} list={list}/>, window.document.getElementById('root'));
+ReactDOM.render(<App list={listData}/>, window.document.getElementById('root'));

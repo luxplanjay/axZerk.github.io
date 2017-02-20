@@ -27,6 +27,5 @@ export class Menu extends React.Component {
 }
 
 Menu.propTypes = {
-    items: React.PropTypes.array,
-    greet: React.PropTypes.func
+    items: React.PropTypes.array
 }

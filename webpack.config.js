@@ -77,7 +77,8 @@ const config = {
         inline: true,
         // hot: true,
         port: 3000,
-        contentBase: './src/'
+        contentBase: './src/',
+        historyApiFallback: true
     },
     watchOptions: {
         aggregateTimeout: 100

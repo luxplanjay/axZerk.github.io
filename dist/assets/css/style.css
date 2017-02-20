@@ -16,13 +16,27 @@
   font-family: Roboto;
 }
 
-.box {
+.list-container {
   border: 1px solid #ccc;
-  padding: 20px 100px;
+  padding: 20px;
+  width: 500px;
 }
 
-.box__title {
-  font-size: 50px;
-  text-decoration: underline;
+.list-title {
+  text-align: center;
+}
+
+.list__item {
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.list__item:last-child {
+  margin-bottom: 0;
+}
+
+.list__item:hover {
+  background-color: aquamarine;
+  cursor: pointer;
 }
 

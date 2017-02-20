@@ -1,0 +1,25 @@
+.list-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 500px;
+}
+
+.list-title {
+  text-align: center;
+}
+
+.list {
+  &__item {
+    padding: 3px;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: aquamarine;
+      cursor: pointer;
+    }
+  }
+}
