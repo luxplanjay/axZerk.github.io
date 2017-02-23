@@ -5,14 +5,14 @@ var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    // context: SRC_DIR,
+    context: SRC_DIR,
     entry: {
-        main: './src/index.js'
+        main: './index.js'
     },
     output: {
         // path: DIST_DIR + '/assets',
         path: DIST_DIR,
-        // publicPath: "assets/",
+        publicPath: "/",
         filename: 'js/[name].bundle.js'
     },
     module: {
@@ -52,7 +52,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=img/[name].[ext]&limit=10000'
+                use: 'url-loader?name=[path][name].[ext]&limit=10000'
             },
             {
                 test: /\.(handlebars|hbs)$/,
