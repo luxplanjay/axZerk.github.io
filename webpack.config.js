@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "http://localhost:3000/assets/",
+        publicPath: "https://axzerk.github.io/dist/assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
