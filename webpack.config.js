@@ -51,7 +51,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=[path][name].[ext]&limit=10000'
+                use: 'url-loader?name=assets/[path][name].[ext]&limit=10'
             },
             {
                 test: /\.handlebars$/,
@@ -71,7 +71,7 @@ const config = {
         }),
         // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin({filename: './css/style.css', allChunks: true}),
+        new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
     ],
     devtool: 'source-map',

@@ -35,7 +35,6 @@ export class App extends React.Component {
 
                 result.forEach(function (item, i) {
                     if (i < 10) {
-                        item.title = `${i + 1}) ${item.title}`;
                         data.push(item);
                     }
                 });
