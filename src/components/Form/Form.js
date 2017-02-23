@@ -5,7 +5,7 @@
 import React from 'react';
 import uuid from 'uuid';
 
-export class AddListItem extends React.Component {
+export class Form extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -21,6 +21,7 @@ export class AddListItem extends React.Component {
             alert('Cannot submit empty list item!');
         } else {
             this.setState({
+                inputValue: '',
                 newListItem: {
                     id: uuid.v4(),
                     text: this.state.inputValue
@@ -53,6 +54,6 @@ export class AddListItem extends React.Component {
 }
 
 
-AddListItem.propTypes = {
+Form.propTypes = {
     addListItem: React.PropTypes.func
 }

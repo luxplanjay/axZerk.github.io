@@ -27,3 +27,25 @@ const listData = [
 ];
 
 ReactDOM.render(<App list={listData}/>, window.document.getElementById('root'));
+
+function Particle() {
+    this.x = 1;
+    this.y = 2;
+}
+
+Particle.prototype.show = function () {
+    console.log(`x = ${this.x}, y = ${this.y}`);
+}
+
+let a = new Particle();
+console.log(a);
+a.show();
+
+let b = new Particle();
+console.log(b);
+
+b.show = function () {
+    console.log('overwritten!');
+}
+
+b.show();

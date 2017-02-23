@@ -1,15 +1,17 @@
 var webpack = require('webpack'),
     path = require('path'),
+    SRC_DIR = path.resolve(__dirname, 'src'),
+    DIST_DIR = path.resolve(__dirname, 'dist'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    context: path.resolve(__dirname, 'src'),
+    context: SRC_DIR,
     entry: {
         main: './index.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist') + '/assets',
-        publicPath: "http://localhost:3000/assets/",
+        path: DIST_DIR + '/assets',
+        publicPath: "assets/",
         filename: './[name].bundle.js'
     },
     module: {
@@ -69,7 +71,7 @@ const config = {
         }),
         // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
+        new ExtractTextPlugin({filename: './css/style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
     ],
     devtool: 'source-map',
