@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "/assets/",
+        publicPath: "assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
