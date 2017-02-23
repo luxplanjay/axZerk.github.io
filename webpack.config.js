@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "assets/",
+        publicPath: "/assets/",
         filename: './js/[name].bundle.js'
     },
     module: {
@@ -35,9 +35,10 @@ const config = {
                 include: path.resolve(__dirname, 'src'),
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
+                    use: 'css-loader!resolve-url-loader!postcss-loader!sass-loader'
                 })
             },
+                // ?sourceMap
             {
                 test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
                 include: /\/node_modules\//,
@@ -51,7 +52,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=assets/[path][name].[ext]&limit=10'
+                use: 'url-loader?name=[path][name].[ext]&limit=10'
             },
             {
                 test: /\.handlebars$/,
