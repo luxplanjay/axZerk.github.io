@@ -12,7 +12,7 @@ const config = {
     output: {
         path: DIST_DIR + '/assets',
         publicPath: "/assets/",
-        filename: './js/[name].bundle.js'
+        filename: 'js/[name].bundle.js'
     },
     module: {
         rules: [
