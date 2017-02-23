@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "https://axzerk.github.io/dist/assets/",
+        publicPath: "/assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
@@ -35,10 +35,9 @@ const config = {
                 include: path.resolve(__dirname, 'src'),
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader!resolve-url-loader!postcss-loader!sass-loader'
+                    use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
                 })
             },
-                // ?sourceMap
             {
                 test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
                 include: /\/node_modules\//,
@@ -52,7 +51,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=[path][name].[ext]&limit=1'
+                use: 'url-loader?name=[path][name].[ext]&limit=10000'
             },
             {
                 test: /\.handlebars$/,
@@ -75,7 +74,7 @@ const config = {
         new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
     ],
-    // devtool: 'source-map',
+    devtool: 'source-map',
     devServer: {
         inline: true,
         // hot: true,
