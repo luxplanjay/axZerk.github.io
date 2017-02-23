@@ -1,25 +1,41 @@
 .list-container {
   border: 1px solid #ccc;
-  padding: 20px;
-  width: 500px;
-}
-
-.list-title {
-  text-align: center;
+  padding: 0 20px;
+  width: 600px;
 }
 
 .list {
+  list-style: none;
+  padding: 0;
+
   &__item {
-    padding: 3px;
-    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px 8px;
+    border-bottom: 1px solid #ccc;
 
     &:last-child {
-      margin-bottom: 0;
+      border-bottom: 0;
     }
 
     &:hover {
-      background-color: aquamarine;
+      background-color: beige;
       cursor: pointer;
+    }
+  }
+
+  &__del {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    background-color: darkgoldenrod;
+    color: #fefefe;
+
+    &:hover {
+      background-color: chocolate;
     }
   }
 }

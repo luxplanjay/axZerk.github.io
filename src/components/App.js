@@ -3,7 +3,6 @@
  */
 
 import  React from 'react';
-import {Router, Route} from 'react-router';
 import {List} from './List/List';
 import {Form} from './Form/Form';
 
@@ -12,16 +11,12 @@ export class App extends React.Component {
         super();
 
         this.state = {
-            listData: [],
-            todos: []
+            listData: []
         }
     }
 
     componentWillMount() {
         this.getTodos();
-        this.setState({
-            listData: this.props.list
-        });
     }
 
     componentDidMount() {
@@ -36,8 +31,17 @@ export class App extends React.Component {
                 }
             })
             .then(function (result) {
+                let data = [];
+
+                result.forEach(function (item, i) {
+                    if (i < 10) {
+                        item.title = `${i + 1}) ${item.title}`;
+                        data.push(item);
+                    }
+                });
+
                 this.setState({
-                    todos: result
+                    listData: data
                 });
             }.bind(this))
             .catch(alert);
@@ -45,7 +49,7 @@ export class App extends React.Component {
 
     addListItem(item) {
         let newListData = this.state.listData;
-        newListData.push(item);
+        newListData.unshift(item);
         this.setState({
             listData: newListData
         });
@@ -65,12 +69,11 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app-container">
-                <List
-                    /*items={this.state.listData}*/
-                    deleteListItem={this.deleteListItem.bind(this)}
-                    items={this.state.todos}
-                />
                 <Form addListItem={(event) => this.addListItem(event)}/>
+                <List
+                    deleteListItem={this.deleteListItem.bind(this)}
+                    items={this.state.listData}
+                />
             </div>
         );
     }

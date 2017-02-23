@@ -5,6 +5,8 @@
 import React from 'react';
 import uuid from 'uuid';
 
+import css from './form.scss';
+
 export class Form extends React.Component {
     constructor() {
         super();
@@ -24,7 +26,7 @@ export class Form extends React.Component {
                 inputValue: '',
                 newListItem: {
                     id: uuid.v4(),
-                    text: this.state.inputValue
+                    title: this.state.inputValue
                 }
             }, function () {
                 this.props.addListItem(this.state.newListItem);
@@ -47,7 +49,7 @@ export class Form extends React.Component {
                     value={this.state.inputValue}
                     onChange={(event) => this.handleInputChange(event)}
                 />
-                <input type="submit" value="Add" className="list-form__btn"/>
+                <input type="submit" value="add to list" className="list-form__btn"/>
             </form>
         );
     }
