@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "assets/",
+        publicPath: "http://localhost:3000/assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
@@ -72,10 +72,10 @@ const config = {
         }),
         // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin({filename: 'style.css', allChunks: true}),
+        new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
     ],
-    devtool: 'source-map',
+    // devtool: 'source-map',
     devServer: {
         inline: true,
         // hot: true,
