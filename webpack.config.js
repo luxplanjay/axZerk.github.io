@@ -36,7 +36,7 @@ const config = {
                 include: path.resolve(__dirname, 'src'),
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader!resolve-url-loader!postcss-loader!sass-loader'
+                    use: 'css-loader?SourceMap!resolve-url-loader!postcss-loader!sass-loader?SourceMap'
                 })
             },
             {
@@ -80,7 +80,8 @@ const config = {
         inline: true,
         // hot: true,
         port: 3000,
-        contentBase: './src/',
+        // contentBase: './src/',
+        contentBase: SRC_DIR,
         historyApiFallback: true
     },
     watchOptions: {
