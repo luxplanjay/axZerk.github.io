@@ -5,21 +5,22 @@ var webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    context: SRC_DIR,
+    // context: SRC_DIR,
     entry: {
-        main: './index.js'
+        main: './src/index.js'
     },
     output: {
-        path: DIST_DIR + '/assets',
-        publicPath: "assets/",
+        // path: DIST_DIR + '/assets',
+        path: DIST_DIR,
+        // publicPath: "assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
         rules: [
-            {
-                test: /\.html$/,
-                use: "html-loader"
-            },
+            // {
+            //     test: /\.html$/,
+            //     use: "html-loader"
+            // },
             {
                 test: /\.(js|jsx)$/,
                 include: path.resolve(__dirname, 'src'),
@@ -35,7 +36,7 @@ const config = {
                 include: path.resolve(__dirname, 'src'),
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
+                    use: 'css-loader!resolve-url-loader!postcss-loader!sass-loader'
                 })
             },
             {
@@ -51,10 +52,10 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=[path][name].[ext]&limit=10000'
+                use: 'url-loader?name=img/[name].[ext]&limit=10000'
             },
             {
-                test: /\.handlebars$/,
+                test: /\.(handlebars|hbs)$/,
                 use: "handlebars-loader?helperDirs[]=${clientHelpersPath}"
             }
         ]

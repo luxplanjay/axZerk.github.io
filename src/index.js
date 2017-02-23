@@ -1,4 +1,4 @@
-require("./index.html");
+// require("./index.html");
 import './sass/index.scss';
 
 import  React from 'react';
