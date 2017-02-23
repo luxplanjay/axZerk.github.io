@@ -11,7 +11,7 @@ const config = {
     },
     output: {
         path: DIST_DIR + '/assets',
-        publicPath: "/assets/",
+        publicPath: "assets/",
         filename: 'js/[name].bundle.js'
     },
     module: {
@@ -52,7 +52,7 @@ const config = {
             {
                 test: /\.(png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=[path][name].[ext]&limit=10'
+                use: 'url-loader?name=[path][name].[ext]&limit=1'
             },
             {
                 test: /\.handlebars$/,
@@ -72,7 +72,7 @@ const config = {
         }),
         // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
+        new ExtractTextPlugin({filename: 'style.css', allChunks: true}),
         new webpack.optimize.OccurrenceOrderPlugin()
     ],
     devtool: 'source-map',
