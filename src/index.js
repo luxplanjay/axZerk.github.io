@@ -1,9 +1,8 @@
-// require("./index.html");
 import './sass/index.scss';
 
 import  React from 'react';
 import ReactDOM from 'react-dom';
-import uuid from 'uuid';
+// import uuid from 'uuid';
 
 import {App} from './components/App';
 

@@ -2,7 +2,8 @@ var webpack = require('webpack'),
     path = require('path'),
     SRC_DIR = path.resolve(__dirname, 'src'),
     DIST_DIR = path.resolve(__dirname, 'dist'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin');
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
     context: SRC_DIR,
@@ -10,33 +11,33 @@ const config = {
         main: './index.js'
     },
     output: {
-        // path: DIST_DIR + '/assets',
         path: DIST_DIR,
         publicPath: "/",
         filename: 'js/[name].bundle.js'
     },
     module: {
         rules: [
-            // {
-            //     test: /\.html$/,
-            //     use: "html-loader"
-            // },
             {
                 test: /\.(js|jsx)$/,
-                include: path.resolve(__dirname, 'src'),
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ["react", "es2015", "stage-2"]
+                include: SRC_DIR,
+                use: [
+                    {
+                        loader: 'react-hot-loader'
+                    },
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ["react", "es2015", "stage-2"]
+                        }
                     }
-                }
+                ]
             },
             {
                 test: /\.scss$/,
-                include: path.resolve(__dirname, 'src'),
+                include: SRC_DIR,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader?SourceMap!resolve-url-loader!postcss-loader!sass-loader?SourceMap'
+                    use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader?sourceMap!sass-loader?sourceMap'
                 })
             },
             {
@@ -45,14 +46,14 @@ const config = {
                 use: 'file-loader?name=[1].[ext]&regExp=node_modules/(.*)'
             },
             {
-                test: /\.(svg|otf|ttf|eot|woff|woff2)$/,
+                test: /\.(otf|ttf|eot|woff|woff2)$/,
                 exclude: /\/node_modules\//,
                 use: 'file-loader?name=[path][name].[ext]'
             },
             {
-                test: /\.(png|gif|jpg|jpeg)$/,
+                test: /\.(svg|png|gif|jpg|jpeg)$/,
                 exclude: /\/node_modules\//,
-                use: 'url-loader?name=[path][name].[ext]&limit=10000'
+                use: 'url-loader?name=[path][name].[ext]&limit=8192!img-loader'
             },
             {
                 test: /\.(handlebars|hbs)$/,
@@ -65,22 +66,26 @@ const config = {
         modules: [path.resolve(__dirname, "src"), path.resolve(__dirname, 'node_modules')]
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin('vendors'),
-        new webpack.ProvidePlugin({
-            "React": "react",
-            'ReactDOM': 'react-dom'
-        }),
-        // new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new ExtractTextPlugin({filename: 'css/style.css', allChunks: true}),
-        new webpack.optimize.OccurrenceOrderPlugin()
+        new ExtractTextPlugin({
+            filename: 'css/style.css',
+            allChunks: true
+        }),
+        new HtmlWebpackPlugin({
+            title: 'My App',
+            filename: 'index.html',
+            template: './index.html',
+            inject: false
+        })
     ],
-    devtool: 'source-map',
+    devtool: 'cheap-eval-source-map',
     devServer: {
         inline: true,
-        // hot: true,
-        port: 3000,
-        // contentBase: './src/',
+        port: 9000,
         contentBase: SRC_DIR,
         historyApiFallback: true
     },
