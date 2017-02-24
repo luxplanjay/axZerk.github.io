@@ -40,6 +40,7 @@
   align-items: center;
   padding: 5px 5px 8px;
   border-bottom: 1px solid #ccc;
+  font-size: 18px;
 }
 
 .list__item:last-child {
@@ -52,12 +53,22 @@
 }
 
 .list__del {
-  display: inline-block;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #000;
-  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
   background-color: darkgoldenrod;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
   color: #fefefe;
 }
 
