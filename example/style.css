@@ -1,0 +1,60 @@
+/*FOOTER*/
+* {
+    /*это для ресета простенького*/
+    padding: 0;
+    margin: 0;
+}
+
+footer {
+    width: 966px;
+    margin-top: 40px;
+    /*height: 40px;  не задавай блокам фиксированую высоту, в 99% случаев это не верно, запомни - высота контейнера считается по контенту*/
+    background-color: #e1e1e1;
+}
+
+.footer-nav {
+    outline: 1px solid darkcyan;
+    width: 700px;
+    float: left;
+    list-style: none;
+}
+
+.footer-nav li {
+    outline: 1px solid royalblue;
+    float: left;
+    /*display: inline-block;*/
+    /*если мы точно не знаем ширину елемента меню, делай в % относительно кол-ва елементов, если у нас изначльно 4 то 25%, смотри тогда как хорошо можно расширять наше меню если добавлять туда море елементов :) */
+    width: 25%;
+    /*width: 96px;*/
+    /*margin-right: 48px;*/
+
+}
+
+.footer-nav a {
+    display: block;
+    /* text-align: center; тут ставим внутри ссылки чтобы выроснять сам текст*/
+    text-align: center;
+    line-height: 40px;
+    color: inherit;
+    text-decoration: none;
+    /* полезная штука чтобы автоматически разбивать слова, там я пару примеров сделал где куча 1 и 2 :) */
+    word-break: break-all;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    background-color: aquamarine;
+}
+
+.copyright {
+    outline: 1px solid brown;
+    float: right;
+    /*padding-right: 25px; лишний падинг, если нужно отступить от края родителя задай падинг родителю этого блока!*/
+}
+
+/*так делается clearfix*/
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
