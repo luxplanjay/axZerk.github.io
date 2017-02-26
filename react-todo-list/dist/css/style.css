@@ -189,7 +189,7 @@ video {
   -ms-flex-align: center;
   align-items: center;
   font-family: Roboto;
-  background: #fefefe url(/img/page-bg.png);
+  background-color: #fefefe;
 }
 
 .list-container {
@@ -223,7 +223,7 @@ video {
 }
 
 .list__item:hover {
-  background-color: beige;
+  background-color: floralwhite;
   cursor: pointer;
 }
 
@@ -240,7 +240,7 @@ video {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: darkgoldenrod;
+  background-color: #333;
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
