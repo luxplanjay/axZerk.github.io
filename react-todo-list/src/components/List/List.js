@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import {ListItem} from '../ListItem/ListItem.js'
+import {ListItem} from '../ListItem/ListItem.js';
 import uuid from 'uuid';
 
 import css from './list.scss';

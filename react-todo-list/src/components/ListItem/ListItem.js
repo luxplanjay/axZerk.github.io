@@ -4,6 +4,8 @@
 
 import React from 'react';
 
+import css from './ListItem.scss';
+
 export const ListItem = ({id, title, deleteItem}) => {
     return (
         <li key={id}

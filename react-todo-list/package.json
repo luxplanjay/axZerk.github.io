@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build",
-    "build": "rimraf  dist/ && webpack -d --display-error-details && webpack-dev-server --hot --colors --progress --watch",
+    "build": "rimraf  dist/ && webpack -d --display-error-details && webpack-dev-server --colors --progress --watch",
     "build:prod": "rimraf  dist/ && webpack -p"
   },
   "author": "axZerk",
