@@ -87,12 +87,14 @@ const config = {
     devServer: {
         inline: true,
         port: 9000,
-        contentBase: SRC_DIR
-        // historyApiFallback: true
+        contentBase: SRC_DIR,
+        historyApiFallback: true
     },
     watchOptions: {
         aggregateTimeout: 100
     }
 };
+
+// process.traceDeprecation = true;
 
 module.exports = config;

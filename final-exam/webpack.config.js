@@ -95,4 +95,6 @@ const config = {
     }
 };
 
+// process.traceDeprecation = true;
+
 module.exports = config;
