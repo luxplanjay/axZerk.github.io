@@ -51,7 +51,7 @@ const config = {
                 use: 'file-loader?name=[path][name].[ext]'
             },
             {
-                test: /\.(svg|png|gif|jpg|jpeg)$/,
+                test: /\.(jpeg|jpg|png|gif|svg)$/,
                 exclude: /\/node_modules\//,
                 use: 'url-loader?name=img/[name].[ext]&limit=8192!img-loader'
             },
