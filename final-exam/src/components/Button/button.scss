@@ -1,0 +1,27 @@
+@import "../../sass/core/tools/tools";
+
+.button {
+  margin: 0;
+  outline: 0;
+  padding: 12px 52px;
+
+  border: 2px solid #ff4e50;
+  border-radius: 20px;
+  background: $accent;
+
+  color: $primary-light;
+  @include font-settings(medium);
+  font-weight: 700;
+
+  &--small {
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: $primary-light;
+  }
+
+  &--small:hover {
+    border: 2px solid $primary-light;
+  }
+}

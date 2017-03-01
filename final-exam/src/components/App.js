@@ -1,13 +1,16 @@
 /**
- * Created by Zerk on 20-Feb-17.
+ * Created by Zerk on 01-Mar-17.
  */
 
-import  React from 'react';
+import React from 'react';
+import {PromoContainer} from './PromoContainer/PromoContainer';
+import {AboutContainer} from './AboutContainer/AboutContainer';
+
+import css from './app-container.scss';
 
 export class App extends React.Component {
     constructor(props) {
         super();
-
         this.state = {}
     }
 
@@ -20,6 +23,8 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app-container">
+                <PromoContainer/>
+                <AboutContainer title = {'How Urlaubsglück works?'}/>
             </div>
         );
     }

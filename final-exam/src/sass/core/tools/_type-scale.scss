@@ -1,22 +1,20 @@
 // Vars
 $browser-context: 16;
-$base-font-size: 1rem;
+$base-font-size: 0.875rem;
 $base-line-height: $base-font-size * 1.25;
 
-$type-scale: (
-        'small': 0.75rem,
-        'medium': $base-font-size,
-        'strong': 1.333rem,
-        'large': 1.777rem,
-        'xs-large': 2.369rem
+$font-size: (
+        'small': 0.625rem, //10px
+        'medium': 0.875rem, //14px
+        'large': 1.25rem, //20px
+        'xs-large': 1.5rem, //24px
 );
 
 $line-height: (
         'small': $base-line-height,
         'medium': $base-line-height,
-        'strong': $base-line-height * 1.5,
-        'large': $base-line-height * 2,
-        'xs-large': $base-line-height * 2
+        'large': $base-line-height * 1.5,
+        'xs-large': $base-line-height * 1.5,
 );
 
 // Rules
@@ -30,21 +28,15 @@ $line-height: (
   @return $pixels / $context * 1rem
 }
 
-;
-
-@function type-scale($level) {
-  @return map-get($type-scale, $level);
+@function font-size($level) {
+  @return map-get($font-size, $level);
 }
-
-;
 
 @function line-height($level) {
   @return map-get($line-height, $level);
 }
 
-;
-
-@mixin type-setting($level: 0) {
-  font-size: type-scale($level);
+@mixin font-settings($level: 0) {
+  font-size: font-size($level);
   line-height: line-height($level);
 }

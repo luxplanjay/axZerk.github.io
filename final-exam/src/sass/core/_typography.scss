@@ -1,12 +1,9 @@
 // Vars
-$title-font: 'Gotham Pro', 'Roboto', Arial, sans-serif;
-$text-font: 'Gotham Pro', 'Roboto', Tahoma, sans-serif;
-$link-font: 'Gotham Pro', 'Roboto', Arial, sans-serif;
+$title-font: 'Montserrat', 'Roboto', Arial, sans-serif;
+$text-font: 'Roboto', Tahoma, sans-serif;
+$link-font: 'Montserrato', 'Roboto', Arial, sans-serif;
 
 // Rules
-a, input[type="button"], input[type="submit"], button {
-  font-family: $link-font;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $title-font;
@@ -15,3 +12,9 @@ h1, h2, h3, h4, h5, h6 {
 p, input[type="text"], textarea, label {
   font-family: $text-font;
 }
+
+a, input[type="button"], input[type="submit"], button {
+  font-family: $link-font;
+}
+
+

@@ -1,0 +1,41 @@
+@import "../../sass/core/tools/tools";
+
+.step-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 20px 14px 22px;
+  height: 240px;
+  width: 300px;
+  text-align: left;
+
+  &__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 20px;
+    margin-bottom: 18px;
+    background-color: $accent;
+    border-radius: 10px;
+
+    color: $primary-light;
+    font-family: Montserrat, sans-serif;
+    @include font-settings(small);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $primary-light;
+    @include font-settings(xs-large);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $secondary-light;
+    @include font-settings(medium);
+    font-weight: 400;
+  }
+}

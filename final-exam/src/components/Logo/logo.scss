@@ -1,0 +1,17 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.logo {
+  order: 1;
+  margin-bottom: 25px;
+
+  &__link {
+    display: block;
+    color: $primary-light;
+    @include font-settings(large);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+}
