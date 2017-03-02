@@ -15,7 +15,10 @@ export class PromoContainer extends React.Component {
         return (
             <div className="promo-headline">
                 <Logo text={'URLAUBSGLÜCK'}/>
-                <AuthContainer text1={'Log in'} text2={'Sign up'}/>
+                <AuthContainer
+                    leftBtnText={'Log in'}
+                    rightBtnText={'Sign up'}
+                />
                 <PartnerSearch
                     title={'Share your holiday dreams'}
                     text={'And find the perfect partner to fullfill it'}

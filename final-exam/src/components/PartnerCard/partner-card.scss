@@ -1,0 +1,27 @@
+@import "../../sass/core/tools/tools";
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    @include font-settings(mediun);
+    font-weight: 700;
+    color: $primary-dark;
+    text-align: center;
+  }
+
+  &__about {
+    color: $secondary-dark;
+    @include font-settings(medium);
+    font-weight: 300;
+    text-align: center;
+  }
+}

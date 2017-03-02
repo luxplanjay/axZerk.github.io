@@ -390,7 +390,7 @@ button {
   font-weight: 400;
 }
 
-.about {
+.steps {
   padding-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,15 +404,15 @@ button {
   align-items: center;
 }
 
-.about__title {
+.steps__title {
   margin-bottom: 15px;
 }
 
-.about__item {
+.steps__item {
   margin-bottom: 10px;
 }
 
-.about__item:last-child {
+.steps__item:last-child {
   margin-bottom: 0;
 }
 

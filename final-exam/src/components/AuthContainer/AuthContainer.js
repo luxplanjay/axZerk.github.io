@@ -6,15 +6,15 @@ import React from 'react';
 import {Button} from '../Button/Button';
 import css from './auth-form.scss';
 
-export const AuthContainer = ({text1, text2}) => {
+export const AuthContainer = ({leftBtnText, rightBtnText}) => {
     return (
         <div className="auth-form">
             <Button
-                text={text1}
+                text={leftBtnText}
                 cls={'button--small'}
             />
             <Button
-                text={text2}
+                text={rightBtnText}
                 cls={'button--small'}
             />
         </div>

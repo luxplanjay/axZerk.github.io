@@ -1,0 +1,33 @@
+@import "../../sass/core/tools/tools";
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38px;
+
+  &__title {
+    color: $primary-dark;
+    @include font-settings(large);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__content {
+
+  }
+
+  &__item {
+    margin-top: 25px;
+
+    &:first-child {
+      margin-top: 15px;
+    }
+  }
+
+  & .button {
+    margin-top: 25px;
+    background: transparent;
+    color: $accent;
+  }
+}

@@ -7,15 +7,22 @@ import css from './step-card.scss';
 
 export const StepCard = ({title, text, number, img}) => {
     let stepText = `step ${number}`,
-        background = {
+        backgroundStyle = {
             background: `url(${img})`
         };
 
     return (
-        <div className="step-card" style={background}>
+        <div className="step-card" style={backgroundStyle}>
             <span className="step-card__number">{stepText}</span>
             <h2 className="step-card__title">{title}</h2>
             <p className="step-card__text">{text}</p>
         </div>
     )
+}
+
+StepCard.propTypes = {
+    title: React.PropTypes.string,
+    text: React.PropTypes.string,
+    number: React.PropTypes.number,
+    img: React.PropTypes.string
 }

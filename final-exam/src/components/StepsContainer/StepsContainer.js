@@ -5,9 +5,9 @@
 import React from 'react';
 import {StepCard} from '../StepCard/StepCard';
 import uuid from 'uuid';
-import css from './about.scss';
+import css from './steps.scss';
 
-export class AboutContainer extends React.Component {
+export class StepsContainer extends React.Component {
     constructor(props) {
         super();
         this.title = props.title;
@@ -43,23 +43,22 @@ export class AboutContainer extends React.Component {
         if (this.stepsData) {
             items = this.stepsData.map((item) => {
                 return (
-                    <div key={uuid.v4()} className="about__item">
+                    <div key={uuid.v4()} className="steps__item">
                         <StepCard
                             key={uuid.v4()}
                             title={item.title}
                             text={item.text}
                             number={item.number}
-                            img = {item.img}
+                            img={item.img}
                         />
                     </div>
                 )
             });
-
         }
 
         return (
-            <section className="about">
-                <h2 className="about__title">{this.title}</h2>
+            <section className="steps">
+                <h2 className="steps__title">{this.title}</h2>
                 {items}
             </section>
         )

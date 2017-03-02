@@ -1,0 +1,19 @@
+@import "../../sass/core/tools/tools";
+
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  border-top: 4px solid $accent;
+
+  & .logo {
+    order: 0;
+
+    &__link {
+      color: $accent;
+    }
+  }
+}

@@ -4,12 +4,14 @@
 
 import React from 'react';
 import {PromoContainer} from './PromoContainer/PromoContainer';
-import {AboutContainer} from './AboutContainer/AboutContainer';
+import {StepsContainer} from './StepsContainer/StepsContainer';
+import {PartnersContainer} from './PartnersContainer/PartnersContainer';
+import {FooterContainer} from './FooterContainer/FooterContainer';
 
 import css from './app-container.scss';
 
 export class App extends React.Component {
-    constructor(props) {
+    constructor() {
         super();
         this.state = {}
     }
@@ -24,7 +26,9 @@ export class App extends React.Component {
         return (
             <div className="app-container">
                 <PromoContainer/>
-                <AboutContainer title = {'How Urlaubsglück works?'}/>
+                <StepsContainer title = {'How Urlaubsglück works?'}/>
+                <PartnersContainer title = {'Meet a partner for your best holiday'}/>
+                <FooterContainer/>
             </div>
         );
     }
