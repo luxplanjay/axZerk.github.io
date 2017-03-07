@@ -7,7 +7,17 @@
   padding: 0 50px;
 
   &__img {
+    position: relative;
     margin-bottom: 20px;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 40px;
+    height: 40px;
   }
 
   &__name {

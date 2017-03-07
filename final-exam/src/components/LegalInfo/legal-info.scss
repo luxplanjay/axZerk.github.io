@@ -2,16 +2,26 @@
 
 .legal-info {
   margin-top: 20px;
-  width: 110px;
-  height: 50px;
-  background: url("../img/legal-logo.png") no-repeat bottom;
   text-align: center;
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__text {
+    display: block;
+    margin-bottom: 5px;
     color: $secondary-light;
     @include font-settings(small);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+  }
+
+  &__img {
+    display: block;
+    width: 110px;
+    height: 24px;
+    background: url("../img/legal-logo.png") no-repeat;
   }
 }

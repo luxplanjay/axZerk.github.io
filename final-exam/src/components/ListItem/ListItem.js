@@ -6,7 +6,9 @@ import React from 'react';
 
 export const ListItem = ({text}) => {
     return (
-        <li className="list__item"><a href="#" className="list__link">{text}</a></li>
+        <li className="list__item">
+            <a href="#" className="list__link">{text}</a>
+        </li>
     )
 };
 

@@ -14,15 +14,15 @@ export const StepCard = ({title, text, number, img}) => {
     return (
         <div className="step-card" style={backgroundStyle}>
             <span className="step-card__number">{stepText}</span>
-            <h2 className="step-card__title">{title}</h2>
+            <h3 className="step-card__title">{title}</h3>
             <p className="step-card__text">{text}</p>
         </div>
     )
-}
+};
 
 StepCard.propTypes = {
     title: React.PropTypes.string,
     text: React.PropTypes.string,
     number: React.PropTypes.number,
     img: React.PropTypes.string
-}
+};

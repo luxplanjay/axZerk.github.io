@@ -4,11 +4,11 @@
 
 import React from 'react';
 import {Button} from '../Button/Button';
-import css from './auth-form.scss';
+import css from './user-login.scss';
 
-export const AuthContainer = ({leftBtnText, rightBtnText}) => {
+export const UserLoginOptions = ({leftBtnText, rightBtnText}) => {
     return (
-        <div className="auth-form">
+        <div className="user-login">
             <Button
                 text={leftBtnText}
                 cls={'button--small'}

@@ -5,14 +5,15 @@
 import React from 'react';
 import css from './logo.scss';
 
-export const Logo = ({text}) => {
+export const Logo = ({text, url}) => {
     return (
         <div className="logo">
-            <a href="#" className="logo__link">{text}</a>
+            <a href={url} className="logo__link">{text}</a>
         </div>
     )
-}
+};
 
 Logo.propTypes = {
-    text: React.PropTypes.string
-}
+    text: React.PropTypes.string,
+    url: React.PropTypes.string
+};

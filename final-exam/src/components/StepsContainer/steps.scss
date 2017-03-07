@@ -8,6 +8,9 @@
 
   &__title {
     margin-bottom: 15px;
+    color: $primary-dark;
+    @include font-settings(large);
+    font-weight: 700;
   }
 
   &__item {

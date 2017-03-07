@@ -20,4 +20,11 @@ export const PartnerSearch = ({title, text, btnText, inputVis = 'hidden'}) => {
             </form>
         </div>
     )
-}
+};
+
+PartnerSearch.propTypes = {
+    title: React.PropTypes.string,
+    text: React.PropTypes.string,
+    btnText: React.PropTypes.string,
+    inputVis: React.PropTypes.string
+};

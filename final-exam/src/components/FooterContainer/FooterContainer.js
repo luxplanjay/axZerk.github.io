@@ -5,7 +5,7 @@
 import React from 'react';
 import {Logo} from '../Logo/Logo';
 import {ListContainer} from '../ListContainer/ListContainer';
-import {Legal} from '../Legal/Legal';
+import {LegalInfo} from '../LegalInfo/LegalInfo';
 
 import css from './page-footer.scss';
 
@@ -19,7 +19,7 @@ export class FooterContainer extends React.Component {
             <footer className="page-footer">
                 <Logo text={'URLAUBSGLÜCK'}/>
                 <ListContainer/>
-                <Legal/>
+                <LegalInfo text={'designed by'}/>
             </footer>
         )
     }

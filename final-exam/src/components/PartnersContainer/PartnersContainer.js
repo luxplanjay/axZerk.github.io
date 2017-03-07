@@ -22,25 +22,25 @@ export class PartnersContainer extends React.Component {
                 name: 'Bradley Hunter',
                 about: 'Based in Chicago. I love playing tennis and loud music.',
                 img: '../img/partners/bradley.png',
-                icon: ''
+                icon: '../img/partners/tv-icon.png'
             },
             {
                 name: 'Lucas Marsha',
                 about: 'I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.',
                 img: '../img/partners/lucas.png',
-                icon: ''
+                icon: '../img/partners/coffee-icon.png'
             },
             {
                 name: 'Heather Walker',
                 about: 'I\'m a happy person that loves cats and climbing on mountains.',
                 img: '../img/partners/heather.png',
-                icon: ''
+                icon: '../img/partners/science-icon.png'
             },
             {
                 name: 'Alice MacGyver',
                 about: 'Action movie superstar looking to blow of some steam. Let\'s get wasted.',
                 img: '../img/partners/alice.png',
-                icon: ''
+                icon: '../img/partners/airplane-icon.png'
             }
         ];
     }
@@ -57,6 +57,7 @@ export class PartnersContainer extends React.Component {
                             name={item.name}
                             about={item.about}
                             img={item.img}
+                            icon={item.icon}
                         />
                     </div>
                 )

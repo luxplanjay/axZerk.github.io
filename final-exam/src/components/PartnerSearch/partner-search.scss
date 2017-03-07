@@ -2,7 +2,6 @@
 @import "../../sass/core/tools/tools";
 
 .partner-search {
-  @include span(12);
   text-align: center;
   order: 1;
 
@@ -37,7 +36,7 @@
     }
 
     &--visible {
-      display: none;
+      display: block;
     }
   }
 }

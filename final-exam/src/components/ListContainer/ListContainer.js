@@ -20,6 +20,10 @@ export class ListContainer extends React.Component {
             },
             {
                 title: 'Partners',
+                items: []
+            },
+            {
+                title: 'Some List 1',
                 items: ['item 1', 'item 2', 'item 3']
             }
         ];
