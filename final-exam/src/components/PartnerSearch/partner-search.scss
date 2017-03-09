@@ -2,8 +2,13 @@
 @import "../../sass/core/tools/tools";
 
 .partner-search {
+  outline:1px solid #333;
   text-align: center;
-  order: 1;
+  order: 3;
+
+  @include susy-breakpoint(tablet) {
+    @include span(12);
+  }
 
   &__title {
     color: $primary-light;
@@ -23,6 +28,7 @@
   &__input {
     width: 280px;
     height: 40px;
+    padding: 5px 10px;
     background-color: $primary-light;
     border: 1px solid #ccc;
     border-radius: 4px;

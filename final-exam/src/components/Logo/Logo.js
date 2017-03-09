@@ -5,7 +5,7 @@
 import React from 'react';
 import css from './logo.scss';
 
-export const Logo = ({text, url}) => {
+export const Logo = ({text, url = '#'}) => {
     return (
         <div className="logo">
             <a href={url} className="logo__link">{text}</a>

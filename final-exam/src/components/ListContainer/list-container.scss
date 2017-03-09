@@ -1,0 +1,9 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.list-container {
+
+  @include susy-breakpoint(tablet) {
+    @include span(7 of 12);
+  }
+}

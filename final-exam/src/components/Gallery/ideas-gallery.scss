@@ -1,0 +1,38 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.ideas-gallery {
+  @include container();
+
+  &__item {
+    @include span(12);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+    @include susy-breakpoint(tablet) {
+      @include span(4 of 12);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+  }
+
+  &__text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: $primary-light;
+    @include font-settings(large);
+    font-weight: 700;
+    text-align: center;
+  }
+}

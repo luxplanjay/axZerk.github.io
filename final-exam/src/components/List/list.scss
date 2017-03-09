@@ -1,3 +1,4 @@
+@import "~susy/sass/susy";
 @import "../../sass/core/tools/tools";
 
 .list {
@@ -5,6 +6,11 @@
   flex-direction: column;
   align-items: center;
   margin-top: 18px;
+
+  @include susy-breakpoint(tablet) {
+    @include span(4 of 12);
+    margin-top: 0;
+  }
 
   &:first-child {
     margin-top: 0;
@@ -20,7 +26,10 @@
   & ul {
     display: flex;
     justify-content: center;
-    width: 100%;
+
+    @include susy-breakpoint(tablet) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -28,6 +37,16 @@
 
     &:last-child {
       margin-right: 0;
+    }
+
+    @include susy-breakpoint(tablet) {
+      margin-bottom: 10px;
+      margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
     }
   }
 

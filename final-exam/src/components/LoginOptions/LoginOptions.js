@@ -6,7 +6,7 @@ import React from 'react';
 import {Button} from '../Button/Button';
 import css from './user-login.scss';
 
-export const UserLoginOptions = ({leftBtnText, rightBtnText}) => {
+export const LoginOptions = ({leftBtnText, rightBtnText}) => {
     return (
         <div className="user-login">
             <Button

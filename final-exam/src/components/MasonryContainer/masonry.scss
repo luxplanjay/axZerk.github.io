@@ -1,0 +1,42 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.masonry {
+  @include container();
+  padding-top: 40px;
+
+  &__title {
+    margin-bottom: 15px;
+    padding: 0 20px;
+    color: $primary-dark;
+    @include font-settings(large);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  & .partner-search {
+    margin-top: 40px;
+
+    &__title {
+      color: $primary-dark;
+      @include font-settings(large);
+      font-weight: 700;
+    }
+
+    &__text {
+      color: $primary-dark;
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__input {
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -3,37 +3,47 @@
  */
 
 import React from 'react';
-import {PromoContainer} from './PromoContainer/PromoContainer';
+import {Logo} from './Logo/Logo';
+import {LoginOptions} from './LoginOptions/LoginOptions';
+import {LegalInfo} from './LegalInfo/LegalInfo';
+import {PartnerSearch} from './PartnerSearch/PartnerSearch';
+
 import {StepsContainer} from './StepsContainer/StepsContainer';
 import {PartnersContainer} from './PartnersContainer/PartnersContainer';
 import {MasonryContainer} from './MasonryContainer/MasonryContainer';
-import {FooterContainer} from './FooterContainer/FooterContainer';
+import {ListContainer} from './ListContainer/ListContainer';
 
 import css from './app-container.scss';
 
 export class App extends React.Component {
     constructor() {
         super();
-        this.state = {}
-    }
-
-    componentWillMount() {
-    }
-
-    componentDidMount() {
     }
 
     render() {
         return (
             <div className="app-container">
-                <PromoContainer/>
+                <div className="promo-headline">
+                    <Logo text={'URLAUBSGLÜCK'}/>
+                    <LoginOptions
+                        leftBtnText={'Log in'}
+                        rightBtnText={'Sign up'}
+                    />
+                    <PartnerSearch
+                        title={'Share your holiday dreams'}
+                        text={'And find the perfect partner to fulfill it'}
+                        btnText={'Find your holiday partner'}
+                    />
+                </div>
                 <StepsContainer title={'How Urlaubsglück works?'}/>
                 <PartnersContainer title={'Meet a partner for your best holiday'}/>
-                <MasonryContainer title = {'Discover holiday activity ideas'}/>
-                <FooterContainer/>
+                <MasonryContainer title={'Discover holiday activity ideas'}/>
+                <footer className="page-footer">
+                    <Logo text={'URLAUBSGLÜCK'}/>
+                    <ListContainer/>
+                    <LegalInfo text={'designed by'}/>
+                </footer>
             </div>
         );
     }
 }
-
-App.propTypes = {}

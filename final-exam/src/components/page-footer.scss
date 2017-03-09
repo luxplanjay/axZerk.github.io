@@ -1,0 +1,24 @@
+@import "~susy/sass/susy";
+@import "../sass/core/tools/tools";
+
+.page-footer {
+  @include container();
+  margin-top: 40px;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  border-top: 4px solid $accent;
+
+  @include susy-breakpoint(tablet) {
+    padding: 40px 20px;
+  }
+
+  & .logo {
+    @include susy-breakpoint(tablet) {
+      @include span(3 of 12);
+    }
+
+    &__link {
+      color: $accent;
+    }
+  }
+}

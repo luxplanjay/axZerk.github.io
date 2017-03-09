@@ -6,6 +6,8 @@ import React from 'react';
 import {List} from '../List/List';
 import uui from 'uuid';
 
+import css from './list-container.scss';
+
 export class ListContainer extends React.Component {
     constructor(props) {
         super();
@@ -20,11 +22,11 @@ export class ListContainer extends React.Component {
             },
             {
                 title: 'Partners',
-                items: []
+                items: ['good weather', 'olympics', 'adidas']
             },
             {
-                title: 'Some List 1',
-                items: ['item 1', 'item 2', 'item 3']
+                title: 'News',
+                items: ['news article 1', 'news article 2', 'news article 3']
             }
         ];
     }
@@ -43,7 +45,7 @@ export class ListContainer extends React.Component {
             });
         }
         return (
-            <div>
+            <div className="list-container">
                 {lists}
             </div>
         )

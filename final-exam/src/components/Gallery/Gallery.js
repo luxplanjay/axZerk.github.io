@@ -5,8 +5,10 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
 
+import css from './ideas-gallery.scss';
+
 const masonryOptions = {
-    transitionDuration: 0
+    transitionDuration: '0.5s'
 };
 
 export class Gallery extends React.Component {
@@ -22,7 +24,7 @@ export class Gallery extends React.Component {
                 return (
                     <li className="ideas-gallery__item">
                         <a href="" className="ideas-gallery__link">
-                            <p className="ideas-gallery__text">{element.text}</p>
+                            <span className="ideas-gallery__text">{element.text}</span>
                             <img src={element.src} className="ideas-gallery__img"/>
                         </a>
                     </li>
@@ -36,7 +38,7 @@ export class Gallery extends React.Component {
                 elementType={'ul'}
                 options={masonryOptions}
                 disableImagesLoaded={false}
-                updateOnEachImageLoad={false}>
+                updateOnEachImageLoad={true}>
                 {childElements}
             </Masonry>
         );

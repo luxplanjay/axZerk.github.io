@@ -6,37 +6,39 @@ import React from 'react';
 import {PartnerSearch} from '../PartnerSearch/PartnerSearch';
 import {Gallery} from '../Gallery/Gallery';
 
+import css from './masonry.scss';
+
 export class MasonryContainer extends React.Component {
     constructor(props) {
         super();
         this.title = props.title;
         this.masonryData = [
             {
-                text: 'item 1',
+                text: 'Sport and Activity',
                 src: '../img/gallery/1.png'
             },
             {
-                text: 'item 2',
+                text: 'Wellnes and Health',
                 src: '../img/gallery/2.png'
             },
             {
-                text: 'item 3',
+                text: 'Extreme Sports and Expeditions',
                 src: '../img/gallery/3.png'
             },
             {
-                text: 'item 4',
+                text: 'Games',
                 src: '../img/gallery/4.png'
             },
             {
-                text: 'item 5',
+                text: 'Culture and Education',
                 src: '../img/gallery/5.png'
             },
             {
-                text: 'item 6',
+                text: 'Relaxation',
                 src: '../img/gallery/6.png'
             },
             {
-                text: 'item 7',
+                text: 'Travelling',
                 src: '../img/gallery/7.png'
             }
         ];
