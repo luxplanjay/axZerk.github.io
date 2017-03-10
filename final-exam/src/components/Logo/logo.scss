@@ -2,27 +2,32 @@
 @import "../../sass/core/tools/tools";
 
 .logo {
-  outline:1px solid #333;
-  order: 2;
+  @include span(12);
   margin-bottom: 25px;
+  order: 2;
   text-align: center;
 
   @include susy-breakpoint(tablet) {
     @include span(6 of 12);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    order: 1;
     margin-bottom: 0;
-    padding-left: 50px;
+    order: 1;
+    text-align: left;
   }
 
   &__link {
-    color: $primary-light;
     @include font-settings(large);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
+    color: $primary-light;
+
+    @include susy-breakpoint(tablet) {
+      letter-spacing: 2px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
   }
 }

@@ -9,6 +9,10 @@
     padding-top: 100px;
   }
 
+  @include susy-breakpoint(desktop) {
+    padding: 100px 250px 0;
+  }
+
   &__title {
     margin-bottom: 15px;
     color: $primary-dark;
@@ -26,12 +30,12 @@
     justify-content: center;
     margin-bottom: 10px;
 
-    &:last-child {
+    @include susy-breakpoint(tablet) {
+      @include span(4 of 12);
       margin-bottom: 0;
     }
 
-    @include susy-breakpoint(tablet) {
-      @include span(4 of 12);
+    &:last-child {
       margin-bottom: 0;
     }
   }

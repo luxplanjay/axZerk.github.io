@@ -10,10 +10,10 @@ import {PartnerSearch} from './PartnerSearch/PartnerSearch';
 
 import {StepsContainer} from './StepsContainer/StepsContainer';
 import {PartnersContainer} from './PartnersContainer/PartnersContainer';
-import {MasonryContainer} from './MasonryContainer/MasonryContainer';
+import {GalleryContainer} from './GalleryContainer/GalleryContainer';
 import {ListContainer} from './ListContainer/ListContainer';
 
-import css from './app-container.scss';
+import css from './page-wrapper.scss';
 
 export class App extends React.Component {
     constructor() {
@@ -22,7 +22,7 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div className="app-container">
+            <div className="page-wrapper">
                 <div className="promo-headline">
                     <Logo text={'URLAUBSGLÜCK'}/>
                     <LoginOptions
@@ -37,7 +37,7 @@ export class App extends React.Component {
                 </div>
                 <StepsContainer title={'How Urlaubsglück works?'}/>
                 <PartnersContainer title={'Meet a partner for your best holiday'}/>
-                <MasonryContainer title={'Discover holiday activity ideas'}/>
+                <GalleryContainer title={'Discover holiday activity ideas'}/>
                 <footer className="page-footer">
                     <Logo text={'URLAUBSGLÜCK'}/>
                     <ListContainer/>

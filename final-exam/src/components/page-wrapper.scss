@@ -1,7 +1,8 @@
-@import "~susy/sass/susy";
-@import "../sass/core/tools/tools";
 @import "./page-footer";
 @import "./promo-headline";
+
+@import "~susy/sass/susy";
+@import "../sass/core/tools/tools";
 
 .app-container {
   @include container();

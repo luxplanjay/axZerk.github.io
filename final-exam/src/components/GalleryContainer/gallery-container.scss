@@ -1,0 +1,87 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.gallery-container {
+  @include container();
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include susy-breakpoint(tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @include susy-breakpoint(desktop) {
+    padding: 100px 250px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    padding: 0 20px;
+    color: $primary-dark;
+    @include font-settings(large);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  // gallery partner-search
+  & .partner-search {
+    margin-top: 40px;
+
+    @include susy-breakpoint(tablet) {
+      margin-top: 100px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+      color: $primary-dark;
+      @include font-settings(large);
+      font-weight: 700;
+      text-transform: none;
+
+      @include susy-breakpoint(tablet) {
+        margin-bottom: 45px;
+      }
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    &__text {
+      margin-bottom: 15px;
+      color: $primary-dark;
+      @include font-settings(strong);
+      font-weight: 300;
+
+      @include susy-breakpoint(tablet) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include susy-breakpoint(tablet) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &__input {
+      margin-bottom: 10px;
+
+      @include susy-breakpoint(tablet) {
+        margin-bottom: 0;
+        margin-right: 10px;
+        width: 240px;
+      }
+    }
+
+    & .button {
+      width: 160px;
+    }
+  }
+}

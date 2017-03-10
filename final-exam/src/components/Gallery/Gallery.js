@@ -4,6 +4,7 @@
 
 import React from 'react';
 import Masonry from 'react-masonry-component';
+import uuid from 'uuid';
 
 import css from './ideas-gallery.scss';
 
@@ -22,7 +23,7 @@ export class Gallery extends React.Component {
         if (this.elements) {
             childElements = this.elements.map(element => {
                 return (
-                    <li className="ideas-gallery__item">
+                    <li className="ideas-gallery__item" key={uuid.v4()}>
                         <a href="" className="ideas-gallery__link">
                             <span className="ideas-gallery__text">{element.text}</span>
                             <img src={element.src} className="ideas-gallery__img"/>

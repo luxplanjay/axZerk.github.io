@@ -1,0 +1,16 @@
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
+
+.login-options {
+  @include span(12);
+  margin-bottom: 110px;
+  order: 1;
+  text-align: center;
+
+  @include susy-breakpoint(tablet) {
+    @include span(6 of 12);
+    margin-bottom: 0;
+    order: 2;
+    text-align: right;
+  }
+}

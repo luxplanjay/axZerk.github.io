@@ -6,9 +6,9 @@ import React from 'react';
 import {PartnerSearch} from '../PartnerSearch/PartnerSearch';
 import {Gallery} from '../Gallery/Gallery';
 
-import css from './masonry.scss';
+import css from './gallery-container.scss';
 
-export class MasonryContainer extends React.Component {
+export class GalleryContainer extends React.Component {
     constructor(props) {
         super();
         this.title = props.title;
@@ -46,8 +46,8 @@ export class MasonryContainer extends React.Component {
 
     render() {
         return (
-            <section className="masonry">
-                <h2 className="masonry__title">{this.title}</h2>
+            <section className="gallery-container">
+                <h2 className="gallery-container__title">{this.title}</h2>
                 <Gallery elements={this.masonryData}/>
                 <PartnerSearch
                     title={'Discover holiday activity ideas'}

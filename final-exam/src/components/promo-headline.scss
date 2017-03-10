@@ -11,10 +11,63 @@
   background-size: cover;
 
   @include susy-breakpoint(tablet) {
-    flex-flow: row wrap;
-    align-content: space-between;
+    position: relative;
+    flex-direction: row;
+    align-items: baseline;
     height: 700px;
-    padding-top: 38px;
-    padding-bottom: 240px;
+    padding: 38px 50px 0;
+  }
+
+  @include susy-breakpoint(desktop) {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+
+  & .partner-search {
+    width: 280px;
+    margin: 0 auto;
+    order: 3;
+
+    @include susy-breakpoint(tablet) {
+      width: 500px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include susy-breakpoint(desktop) {
+      width: 550px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title {
+      margin-bottom: 10px;
+
+      @include susy-breakpoint(tablet) {
+        font-size: 52px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 15px;
+      padding: 0 30px;
+
+      @include susy-breakpoint(tablet) {
+        margin-bottom: 30px;
+        @include font-settings(xs-large);
+        font-weight: 300;
+      }
+    }
+
+    & .button {
+      @include susy-breakpoint(tablet) {
+        width: 226px;
+      }
+    }
   }
 }

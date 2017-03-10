@@ -3,13 +3,16 @@
 
 .page-footer {
   @include container();
-  margin-top: 40px;
   padding-top: 16px;
   padding-bottom: 20px;
   border-top: 4px solid $accent;
 
   @include susy-breakpoint(tablet) {
     padding: 40px 20px;
+  }
+
+  @include susy-breakpoint(desktop) {
+    padding: 40px 250px;
   }
 
   & .logo {
@@ -19,6 +22,10 @@
 
     &__link {
       color: $accent;
+
+      &:hover {
+        color: $primary-dark;
+      }
     }
   }
 }

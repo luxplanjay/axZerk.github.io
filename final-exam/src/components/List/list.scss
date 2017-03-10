@@ -25,6 +25,7 @@
 
   & ul {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
 
     @include susy-breakpoint(tablet) {
@@ -34,6 +35,7 @@
 
   &__item {
     margin-right: 18px;
+    margin-top: 5px;
 
     &:last-child {
       margin-right: 0;
@@ -56,5 +58,10 @@
     font-weight: 300;
     text-decoration: none;
     text-transform: capitalize;
+
+    &:hover {
+      color: $accent;
+      text-decoration: underline;
+    }
   }
 }

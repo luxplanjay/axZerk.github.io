@@ -88,6 +88,7 @@ const config = {
         inline: true,
         port: 9000,
         contentBase: SRC_DIR,
+        open: true,
         historyApiFallback: true
     },
     watchOptions: {

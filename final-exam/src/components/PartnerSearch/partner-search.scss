@@ -2,27 +2,20 @@
 @import "../../sass/core/tools/tools";
 
 .partner-search {
-  outline:1px solid #333;
   text-align: center;
-  order: 3;
-
-  @include susy-breakpoint(tablet) {
-    @include span(12);
-  }
 
   &__title {
     color: $primary-light;
     font-size: 1.875rem;
+    line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 20px;
   }
 
   &__text {
     color: $primary-light;
-    @include font-settings(large);
+    @include font-settings(strong);
     font-weight: 400;
-    margin-bottom: 20px;
   }
 
   &__input {

@@ -3,10 +3,16 @@
 
 .partners {
   @include container();
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 38px;
+  text-align: center;
+
+  @include susy-breakpoint(tablet) {
+    padding: 100px 150px 0;
+  }
+
+  @include susy-breakpoint(desktop) {
+    padding: 100px 250px 0;
+  }
 
   &__title {
     margin-bottom: 25px;
@@ -16,7 +22,7 @@
     text-align: center;
 
     @include susy-breakpoint(tablet) {
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
   }
 
@@ -26,10 +32,18 @@
 
   &__item {
     @include span(12);
+    margin-bottom: 25px;
 
     @include susy-breakpoint(tablet) {
       @include span(6 of 12);
-      padding: 0 50px;
+    }
+
+    @include susy-breakpoint(desktop) {
+      @include span(3 of 12);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -37,5 +51,9 @@
     margin-top: 25px;
     background: transparent;
     color: $accent;
+
+    @include susy-breakpoint(tablet) {
+      width: 200px;
+    }
   }
 }

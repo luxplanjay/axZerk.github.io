@@ -2,6 +2,7 @@
 @import "../../sass/core/tools/tools";
 
 .legal-info {
+  @include span(12);
   margin-top: 20px;
   text-align: center;
 

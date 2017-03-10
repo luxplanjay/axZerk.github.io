@@ -4,11 +4,11 @@
 
 import React from 'react';
 import {Button} from '../Button/Button';
-import css from './user-login.scss';
+import css from './login-options.scss';
 
 export const LoginOptions = ({leftBtnText, rightBtnText}) => {
     return (
-        <div className="user-login">
+        <div className="login-options">
             <Button
                 text={leftBtnText}
                 cls={'button--small'}

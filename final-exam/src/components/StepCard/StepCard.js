@@ -8,7 +8,7 @@ import css from './step-card.scss';
 export const StepCard = ({title, text, number, img}) => {
     let stepText = `step ${number}`,
         backgroundStyle = {
-            background: `url(${img})`
+            backgroundImage: `url(${img})`
         };
 
     return (
