@@ -49,8 +49,8 @@ export class GalleryContainer extends React.Component {
     }
 
     componentWillMount() {
-        let str = 'water';
-        this.getGalleryData('https://api.tenor.co/v1/search?tag=' + str + '&key=LIVDSRZULELA');
+        let value = 'cat';
+        this.getGalleryData('https://api.tenor.co/v1/search?tag=' + value + '&key=LIVDSRZULELA');
     }
 
     getGalleryData(path) {
