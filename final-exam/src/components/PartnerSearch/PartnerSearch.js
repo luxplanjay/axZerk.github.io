@@ -7,14 +7,14 @@ import {Button} from '../Button/Button';
 
 import css from './partner-search.scss';
 
-export const PartnerSearch = ({title, text, btnText, inputVis = 'hidden'}) => {
+export const PartnerSearch = ({title, text, btnText, inputVis = 'hidden', action='#'}) => {
     let inputClass = `partner-search__input partner-search__input--${inputVis}`;
 
     return (
         <div className="partner-search">
             <h1 className="partner-search__title">{title}</h1>
             <p className="partner-search__text">{text}</p>
-            <form action="#" method="post" className="partner-search__form">
+            <form action={action} method="post" className="partner-search__form">
                 <input type="text" name="" className={inputClass} placeholder="Enter your interests"/>
                 <Button text={btnText}/>
             </form>

@@ -15,18 +15,18 @@ const masonryOptions = {
 export class Gallery extends React.Component {
     constructor(props) {
         super();
-        this.elements = props.elements;
     }
 
     render() {
         let childElements;
-        if (this.elements) {
-            childElements = this.elements.map(element => {
+        if (this.props.items) {
+            childElements = this.props.items.map(item => {
+
                 return (
                     <li className="ideas-gallery__item" key={uuid.v4()}>
                         <a href="" className="ideas-gallery__link">
-                            <span className="ideas-gallery__text">{element.text}</span>
-                            <img src={element.src} className="ideas-gallery__img"/>
+                            <span className="ideas-gallery__text">{item.text}</span>
+                            <img src={item.src} className="ideas-gallery__img"/>
                         </a>
                     </li>
                 );
@@ -35,7 +35,7 @@ export class Gallery extends React.Component {
 
         return (
             <Masonry
-                className={'ideas-gallery'}
+                className={'none'}
                 elementType={'ul'}
                 options={masonryOptions}
                 disableImagesLoaded={false}
@@ -45,3 +45,7 @@ export class Gallery extends React.Component {
         );
     }
 }
+
+Gallery.propTypes = {
+    items: React.PropTypes.array
+};

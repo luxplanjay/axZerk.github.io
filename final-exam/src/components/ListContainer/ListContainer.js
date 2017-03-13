@@ -26,7 +26,7 @@ export class ListContainer extends React.Component {
             },
             {
                 title: 'News',
-                items: ['news article 1', 'news article 2', 'news article 3', 'news article 4', 'news article 5']
+                items: ['news link 1', 'news link 2', 'news link 3', 'news link 4', 'news link 5']
             }
         ];
     }

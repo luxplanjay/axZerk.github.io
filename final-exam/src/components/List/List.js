@@ -39,3 +39,8 @@ export class List extends React.Component {
         );
     }
 }
+
+List.propTypes = {
+    title: React.PropTypes.string,
+    items: React.PropTypes.array
+};

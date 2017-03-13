@@ -4,15 +4,16 @@
 
 import React from 'react';
 
-export const ListItem = ({text}) => {
+export const ListItem = ({text, href = '#'}) => {
     return (
         <li className="list__item">
-            <a href="#" className="list__link">{text}</a>
+            <a href={href} className="list__link">{text}</a>
         </li>
     )
 };
 
 ListItem.propTypes = {
-    text: React.PropTypes.string
+    text: React.PropTypes.string,
+    href: React.PropTypes.string
 };
 

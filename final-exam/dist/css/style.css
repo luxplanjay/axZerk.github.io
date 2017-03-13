@@ -440,7 +440,7 @@ button {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .step-card {
     width: 300px;
   }
@@ -552,7 +552,7 @@ head:hover ~ body .steps:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .steps {
     padding: 100px 250px 0;
   }
@@ -712,7 +712,7 @@ head:hover ~ body .partners:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .partners {
     padding: 100px 250px 0;
   }
@@ -784,7 +784,7 @@ head:hover ~ body .partners__content:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .partners__item {
     width: 25%;
     float: left;
@@ -872,21 +872,34 @@ head:hover ~ body .ideas-gallery:before {
   float: left;
   padding-left: 0.83333%;
   padding-right: 0.83333%;
-  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 768px) {
+  .ideas-gallery__item {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
   .ideas-gallery__item {
     width: 33.33333%;
     float: left;
     padding-left: 0.83333%;
     padding-right: 0.83333%;
+    height: auto;
   }
 }
 
@@ -899,12 +912,27 @@ head:hover ~ body .ideas-gallery:before {
   position: relative;
 }
 
+.ideas-gallery__link::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  z-index: 1;
+}
+
 .ideas-gallery__text {
   width: 100%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 2;
   color: #fff;
   font-size: 1.25rem;
   line-height: 1.64063rem;
@@ -913,63 +941,8 @@ head:hover ~ body .ideas-gallery:before {
 }
 
 .gallery-container {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 40px;
   padding-bottom: 40px;
-}
-
-.gallery-container:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-head {
-  display: block;
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  z-index: 999;
-  color: #333;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-head:before {
-  content: "|||";
-  display: block;
-  padding: 5px 10px;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-head:hover {
-  background: rgba(255, 255, 255, 0.5);
-  color: red;
-}
-
-head:hover ~ .gallery-container,
-head:hover ~ body .gallery-container {
-  position: relative;
-}
-
-head:hover ~ .gallery-container:before,
-head:hover ~ body .gallery-container:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  content: " ";
-  z-index: 998;
-  background-image: -webkit-linear-gradient(left, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5)), -webkit-linear-gradient(top, #000 1px, transparent 1px);
-  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.5), rgba(179, 179, 255, 0.5)), linear-gradient(to bottom, #000 1px, transparent 1px);
-  background-size: 8.33333%, 100% 1.09375rem;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
 }
 
 @media screen and (min-width: 768px) {
@@ -979,7 +952,7 @@ head:hover ~ body .gallery-container:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .gallery-container {
     padding: 100px 250px;
   }
@@ -1255,7 +1228,7 @@ head:hover ~ body .page-footer:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .page-footer {
     padding: 40px 250px;
   }
@@ -1362,7 +1335,7 @@ head:hover ~ body .promo-headline:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .promo-headline {
     padding-left: 250px;
     padding-right: 250px;
@@ -1388,7 +1361,7 @@ head:hover ~ body .promo-headline:before {
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1440px) {
   .promo-headline .partner-search {
     width: 550px;
     position: absolute;

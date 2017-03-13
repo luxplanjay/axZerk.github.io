@@ -19,4 +19,9 @@ export const LoginOptions = ({leftBtnText, rightBtnText}) => {
             />
         </div>
     )
-}
+};
+
+LoginOptions.propTypes = {
+    leftBtnText: React.PropTypes.string,
+    rightBtnText: React.PropTypes.string
+};
