@@ -12,48 +12,19 @@ export class GalleryContainer extends React.Component {
     constructor(props) {
         super();
         this.title = props.title;
-        // this.galleryData = [
-        //     {
-        //         text: 'Sport and Activity',
-        //         src: '../img/gallery/1.jpg'
-        //     },
-        //     {
-        //         text: 'Wellnes and Health',
-        //         src: '../img/gallery/2.jpg'
-        //     },
-        //     {
-        //         text: 'Extreme Sports and Expeditions',
-        //         src: '../img/gallery/3.jpg'
-        //     },
-        //     {
-        //         text: 'Games',
-        //         src: '../img/gallery/4.jpg'
-        //     },
-        //     {
-        //         text: 'Culture and Education',
-        //         src: '../img/gallery/5.jpg'
-        //     },
-        //     {
-        //         text: 'Relaxation',
-        //         src: '../img/gallery/6.jpg'
-        //     },
-        //     {
-        //         text: 'Travelling',
-        //         src: '../img/gallery/7.jpg'
-        //     }
-        // ];
 
         this.state = {
             galleryData: []
         }
     }
 
-    componentWillMount() {
-        let value = 'cat';
-        this.getGalleryData('https://api.tenor.co/v1/search?tag=' + value + '&key=LIVDSRZULELA');
+    componentDidMount() {
+        this.getGalleryData();
     }
 
-    getGalleryData(path) {
+    getGalleryData(value = 'weekend') {
+        let path = `https://pixabay.com/api/?key=4823621-792051e21e56534e6ae2e472f&q=${value}&image_type=photo`;
+
         fetch(path)
             .then(function (response) {
                 if (response.status === 200) {
@@ -61,18 +32,24 @@ export class GalleryContainer extends React.Component {
                 }
             })
             .then(function (data) {
-                let arr = [];
-                for (let key in data.results) {
-                    if (data.results.hasOwnProperty(key)) {
-                        let el = {
-                            src: data.results[key].media[0].gif.url,
-                            text: data.results[key].title,
-                            width: data.results[key].media[0].gif.dims[0],
-                            height: data.results[key].media[0].gif.dims[1]
-                        };
+                let arr = [],
+                    i = 0;
 
-                        arr.push(el);
+                for (let key in data.hits) {
+                    if (i < 8) {
+                        if (data.hits.hasOwnProperty(key)) {
+                            let el = {
+                                src: data.hits[key].webformatURL,
+                                text: data.hits[key].tags,
+                                width: data.hits[key].webformatWidth,
+                                height: data.hits[key].webformatHeight
+                            };
+
+                            arr.push(el);
+                            i++;
+                        }
                     }
+
                 }
 
                 this.setState({
@@ -86,12 +63,13 @@ export class GalleryContainer extends React.Component {
         return (
             <section className="gallery-container">
                 <h2 className="gallery-container__title">{this.title}</h2>
-                <Gallery items={this.state.galleryData}/>
+                <Gallery galleryData={this.state.galleryData}/>
                 <PartnerSearch
                     title={'Discover holiday activity ideas'}
                     text={'Hi! What are your holiday interests?'}
                     btnText={'Search partners'}
                     inputVis={'visible'}
+                    getData={event => this.getGalleryData(event)}
                 />
             </section>
         )

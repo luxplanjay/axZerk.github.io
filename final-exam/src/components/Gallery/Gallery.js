@@ -19,27 +19,27 @@ export class Gallery extends React.Component {
 
     render() {
         let childElements;
-        if (this.props.items) {
-            childElements = this.props.items.map(item => {
-
+        if (this.props.galleryData) {
+            childElements = this.props.galleryData.map(item => {
                 return (
-                    <li className="ideas-gallery__item" key={uuid.v4()}>
+                    <div className="ideas-gallery__item" key={uuid.v4()}>
                         <a href="" className="ideas-gallery__link">
                             <span className="ideas-gallery__text">{item.text}</span>
                             <img src={item.src} className="ideas-gallery__img"/>
                         </a>
-                    </li>
+                    </div>
                 );
             });
         }
 
         return (
             <Masonry
-                className={'none'}
-                elementType={'ul'}
+                className={'ideas-gallery'}
+                elementType={'div'}
                 options={masonryOptions}
                 disableImagesLoaded={false}
-                updateOnEachImageLoad={true}>
+                updateOnEachImageLoad={false}
+            >
                 {childElements}
             </Masonry>
         );

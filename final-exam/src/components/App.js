@@ -38,7 +38,7 @@ export class App extends React.Component {
                 <StepsContainer title={'How Urlaubsglück works?'}/>
                 <PartnersContainer title={'Meet a partner for your best holiday'}/>
                 <GalleryContainer title={'Discover holiday activity ideas'}/>
-                <footer className="page-footer">
+                 <footer className="page-footer">
                     <Logo text={'URLAUBSGLÜCK'}/>
                     <ListContainer/>
                     <LegalInfo text={'designed by'}/>
