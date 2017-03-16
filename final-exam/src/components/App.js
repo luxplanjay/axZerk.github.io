@@ -22,12 +22,14 @@ export class App extends React.Component {
 
     render() {
         return (
-            <div className="page-wrapper">
+            <div className="app-container">
                 <div className="promo-headline">
-                    <Logo text={'URLAUBSGLÜCK'}/>
+                    <Logo
+                        text={'URLAUBSGLÜCK'}
+                        url={'https://axzerk.github.io/final-exam/dist/'}
+                    />
                     <LoginOptions
-                        leftBtnText={'Log in'}
-                        rightBtnText={'Sign up'}
+                        btnText={['Log in', 'Sign up']}
                     />
                     <PartnerSearch
                         title={'Share your holiday dreams'}
@@ -36,12 +38,21 @@ export class App extends React.Component {
                     />
                 </div>
                 <StepsContainer title={'How Urlaubsglück works?'}/>
-                <PartnersContainer title={'Meet a partner for your best holiday'}/>
+                <PartnersContainer
+                    title={'Meet a partner for your best holiday'}
+                    dataURL={'https://api.myjson.com/bins/mgg6v'}
+                />
                 <GalleryContainer title={'Discover holiday activity ideas'}/>
-                 <footer className="page-footer">
-                    <Logo text={'URLAUBSGLÜCK'}/>
-                    <ListContainer/>
-                    <LegalInfo text={'designed by'}/>
+                <footer className="page-footer">
+                    <Logo
+                        text={'URLAUBSGLÜCK'}
+                        url={'https://axzerk.github.io/final-exam/dist/'}
+                    />
+                    <ListContainer dataURL={'https://api.myjson.com/bins/1gcmh3'}/>
+                    <LegalInfo
+                        text={'designed by'}
+                        url={'https://www.aretodev.com/'}
+                    />
                 </footer>
             </div>
         );

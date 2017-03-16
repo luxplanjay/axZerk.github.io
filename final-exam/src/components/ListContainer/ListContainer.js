@@ -10,31 +10,36 @@ import css from './list-container.scss';
 
 export class ListContainer extends React.Component {
     constructor(props) {
-        super();
-        this.listData = [];
+        super(props);
+
+        this.state = {
+            listData: []
+        }
     }
 
-    componentWillMount() {
-        this.listData = [
-            {
-                title: 'Company',
-                items: ['about', 'contacts', 'press', 'blog']
-            },
-            {
-                title: 'Partners',
-                items: ['good weather', 'olympics', 'adidas']
-            },
-            {
-                title: 'News',
-                items: ['news link 1', 'news link 2', 'news link 3', 'news link 4', 'news link 5']
-            }
-        ];
+    componentDidMount() {
+        this.getGalleryData(this.props.dataURL)
+    }
+
+    getGalleryData(url) {
+        fetch(url)
+            .then(function (response) {
+                if (response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then(function (data) {
+                this.setState({
+                    listData: data
+                });
+            }.bind(this))
+            .catch(alert);
     }
 
     render() {
         let lists;
-        if (this.listData) {
-            lists = this.listData.map(item => {
+        if (this.state.listData) {
+            lists = this.state.listData.map(item => {
                 return (
                     <List
                         key={uui.v4()}
@@ -48,7 +53,6 @@ export class ListContainer extends React.Component {
             <div className="list-container">
                 {lists}
             </div>
-        )
+        );
     }
-
 }

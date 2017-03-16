@@ -1,4 +1,4 @@
-@import "../../sass/core/tools/tools";
+@import "../sass/core/tools/tools";
 
 .button {
   margin: 0;
@@ -13,6 +13,11 @@
   color: $primary-light;
   @include font-settings(medium);
   font-weight: 700;
+  
+  &:hover {
+    color: $primary-dark;
+    border: 2px solid $primary-dark;
+  }
 
   &--small {
     width: 90px;
@@ -24,5 +29,6 @@
 
   &--small:hover {
     border: 2px solid $primary-light;
+    color: $primary-light;
   }
 }

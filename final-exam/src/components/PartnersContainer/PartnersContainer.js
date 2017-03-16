@@ -2,54 +2,46 @@
  * Created by Zerk on 02-Mar-17.
  */
 
-import React from 'react';
-import {PartnerCard} from '../PartnerCard/PartnerCard';
-import {Button} from '../Button/Button';
-import uuid from 'uuid';
+import React from "react";
+import {PartnerCard} from "../PartnerCard/PartnerCard";
+import {Button} from "../Button/Button";
+import uuid from "uuid";
 
-import css from './partners.scss';
+import css from "./partners.scss";
 
 export class PartnersContainer extends React.Component {
     constructor(props) {
-        super();
-        this.title = props.title;
-        this.partnerData = [];
+        super(props);
+
+        this.state = {
+            partnerData: []
+        };
     }
 
-    componentWillMount() {
-        this.partnerData = [
-            {
-                name: 'Bradley Hunter',
-                about: 'Based in Chicago. I love playing tennis and loud music.',
-                img: '../img/partners/bradley.png',
-                icon: '../img/partners/tv-icon.png'
-            },
-            {
-                name: 'Lucas Marsha',
-                about: 'I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.',
-                img: '../img/partners/lucas.png',
-                icon: '../img/partners/coffee-icon.png'
-            },
-            {
-                name: 'Heather Walker',
-                about: 'I\'m a happy person that loves cats and climbing on mountains.',
-                img: '../img/partners/heather.png',
-                icon: '../img/partners/science-icon.png'
-            },
-            {
-                name: 'Alice MacGyver',
-                about: 'Action movie superstar looking to blow of some steam. Let\'s get wasted.',
-                img: '../img/partners/alice.png',
-                icon: '../img/partners/airplane-icon.png'
-            }
-        ];
+    componentDidMount() {
+        this.getPartnerData(this.props.dataURL);
+    }
+
+    getPartnerData(url) {
+        fetch(url)
+            .then(function (response) {
+                if (response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then(function (data) {
+                this.setState({
+                    partnerData: data
+                });
+            }.bind(this))
+            .catch(alert);
     }
 
     render() {
         let items;
 
-        if (this.partnerData) {
-            items = this.partnerData.map(item => {
+        if (this.state.partnerData) {
+            items = this.state.partnerData.map(item => {
                 return (
                     <div className="partners__item" key={uuid.v4()}>
                         <PartnerCard
@@ -65,17 +57,19 @@ export class PartnersContainer extends React.Component {
         }
         return (
             <section className="partners">
-                <h2 className="partners__title">{this.title}</h2>
+                <h2 className="partners__title">{this.props.title}</h2>
                 <div className="partners__content">
                     {items}
                 </div>
-                <Button text={'See other partners'}/>
+                <Button text={'See other partners'} cls={'button'}/>
+
             </section>
-        )
+        );
     }
 
 }
 
 PartnersContainer.propTypes = {
-    title: React.PropTypes.string
+    title: React.PropTypes.string,
+    dataURL: React.PropTypes.string
 };

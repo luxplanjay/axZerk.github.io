@@ -9,18 +9,18 @@ import uuid from 'uuid';
 import css from './ideas-gallery.scss';
 
 const masonryOptions = {
-    transitionDuration: '0.5s'
+    transitionDuration: '0.3s'
 };
 
 export class Gallery extends React.Component {
     constructor(props) {
-        super();
+        super(props);
     }
 
     render() {
         let childElements;
         if (this.props.galleryData) {
-            childElements = this.props.galleryData.map(item => {
+            childElements = this.props.galleryData.slice(0, this.props.size).map(item => {
                 return (
                     <div className="ideas-gallery__item" key={uuid.v4()}>
                         <a href="" className="ideas-gallery__link">
@@ -47,5 +47,6 @@ export class Gallery extends React.Component {
 }
 
 Gallery.propTypes = {
-    items: React.PropTypes.array
+    items: React.PropTypes.array,
+    size: React.PropTypes.number
 };

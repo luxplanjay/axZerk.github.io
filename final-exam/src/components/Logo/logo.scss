@@ -7,6 +7,8 @@
   order: 2;
   text-align: center;
 
+  transition: all 0.5s ease;
+
   @include susy-breakpoint(tablet) {
     @include span(6 of 12);
     margin-bottom: 0;
@@ -15,12 +17,12 @@
   }
 
   &__link {
+    color: $primary-light;
     @include font-settings(large);
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    color: $primary-light;
 
     @include susy-breakpoint(tablet) {
       letter-spacing: 2px;
@@ -28,6 +30,8 @@
 
     &:hover {
       color: $accent;
+      @include font-settings(xs-large);
+      transition: all 0.5s;
     }
   }
 }

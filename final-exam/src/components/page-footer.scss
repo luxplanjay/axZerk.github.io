@@ -7,6 +7,8 @@
   padding-bottom: 20px;
   border-top: 4px solid $accent;
 
+  transition: all 0.5s ease;
+
   @include susy-breakpoint(tablet) {
     padding: 40px 20px;
   }

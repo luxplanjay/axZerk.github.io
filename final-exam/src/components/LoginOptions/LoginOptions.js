@@ -6,16 +6,16 @@ import React from 'react';
 import {Button} from '../Button/Button';
 import css from './login-options.scss';
 
-export const LoginOptions = ({leftBtnText, rightBtnText}) => {
+export const LoginOptions = ({btnText = []}) => {
     return (
         <div className="login-options">
             <Button
-                text={leftBtnText}
-                cls={'button--small'}
+                text={btnText[0]}
+                cls={'button button--small'}
             />
             <Button
-                text={rightBtnText}
-                cls={'button--small'}
+                text={btnText[1]}
+                cls={'button button--small'}
             />
         </div>
     )

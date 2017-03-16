@@ -7,20 +7,21 @@ import css from './partner-card.scss';
 
 export const PartnerCard = ({name, about, img, icon}) => {
     let iconStyle = {
-      background: `url(${icon})`
+        background: `url(${icon})`
     };
+
     return (
         <figure className="partner-card">
-            <div className="partner-card__img">
+            <a href="#" className="partner-card__link partner-card__img">
                 <img src={img} alt=""/>
                 <i className="partner-card__icon" style={iconStyle}></i>
-            </div>
+            </a>
             <figcaption>
                 <h3 className="partner-card__name">{name}</h3>
                 <p className="partner-card__about">{about}</p>
             </figcaption>
         </figure>
-    )
+    );
 };
 
 PartnerCard.propTypes = {

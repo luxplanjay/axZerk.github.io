@@ -3,14 +3,11 @@
  */
 
 import React from 'react';
-import css from './button.scss';
 
-export const Button = ({text, cls = '', onClickHandler}) => {
-    let str = `button ${cls}`;
-
+export const Button = ({text = '', cls = '', onClickHandler}) => {
     return (
-        <button className={str} onClick={onClickHandler}>{text}</button>
-    )
+        <button className={cls} onClick={onClickHandler}>{text}</button>
+    );
 };
 
 Button.propTypes = {

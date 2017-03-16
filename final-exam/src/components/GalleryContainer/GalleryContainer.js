@@ -3,15 +3,14 @@
  */
 
 import React from 'react';
-import {PartnerSearch} from '../PartnerSearch/PartnerSearch';
+import {ActivitySearchForm} from '../ActivitySearchForm/ActivitySearchForm';
 import {Gallery} from '../Gallery/Gallery';
 
 import css from './gallery-container.scss';
 
 export class GalleryContainer extends React.Component {
     constructor(props) {
-        super();
-        this.title = props.title;
+        super(props);
 
         this.state = {
             galleryData: []
@@ -32,25 +31,14 @@ export class GalleryContainer extends React.Component {
                 }
             })
             .then(function (data) {
-                let arr = [],
-                    i = 0;
-
-                for (let key in data.hits) {
-                    if (i < 8) {
-                        if (data.hits.hasOwnProperty(key)) {
-                            let el = {
-                                src: data.hits[key].webformatURL,
-                                text: data.hits[key].tags,
-                                width: data.hits[key].webformatWidth,
-                                height: data.hits[key].webformatHeight
-                            };
-
-                            arr.push(el);
-                            i++;
-                        }
+                let arr = data.hits.map(item => {
+                    return {
+                        src: item.webformatURL,
+                        text: item.tags,
+                        width: item.webformatWidth,
+                        height: item.webformatHeight
                     }
-
-                }
+                });
 
                 this.setState({
                     galleryData: arr
@@ -62,13 +50,15 @@ export class GalleryContainer extends React.Component {
     render() {
         return (
             <section className="gallery-container">
-                <h2 className="gallery-container__title">{this.title}</h2>
-                <Gallery galleryData={this.state.galleryData}/>
-                <PartnerSearch
+                <h2 className="gallery-container__title">{this.props.title}</h2>
+                <Gallery
+                    galleryData={this.state.galleryData}
+                    size={8}
+                />
+                <ActivitySearchForm
                     title={'Discover holiday activity ideas'}
                     text={'Hi! What are your holiday interests?'}
                     btnText={'Search partners'}
-                    inputVis={'visible'}
                     getData={event => this.getGalleryData(event)}
                 />
             </section>
