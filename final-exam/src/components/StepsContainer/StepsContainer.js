@@ -4,54 +4,50 @@
 
 import React from 'react';
 import {StepCard} from '../StepCard/StepCard';
+import {StepSlider} from '../StepSlider/StepSlider';
 import uuid from 'uuid';
 import css from './steps.scss';
 
 export class StepsContainer extends React.Component {
     constructor(props) {
         super();
-        this.stepsData = [];
+
+        this.state = {
+            sliderData: []
+        }
     }
 
-    componentWillMount() {
-        this.stepsData = [
-            {
-                title: 'Sed leo enim, condimentum',
-                text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.',
-                number: 1,
-                img: '../img/steps-slider/step-1.jpg'
-            },
-            {
-                title: 'Morbi velit risus',
-                text: 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.',
-                number: 2,
-                img: '../img/steps-slider/step-2.jpg'
-            },
-            {
-                title: 'Sed leo enim, condimentum',
-                text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.',
-                number: 3,
-                img: '../img/steps-slider/step-3.jpg'
-            }
-        ];
+    componentDidMount() {
+        this.getSliderData(this.props.dataURL);
+    }
+
+    getSliderData(url) {
+        fetch(url)
+            .then(function (response) {
+                if (response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then(function (data) {
+                this.setState({
+                    sliderData: data
+                });
+            }.bind(this))
+            .catch(alert);
     }
 
     render() {
         let items;
-
-        if (this.stepsData) {
-            items = this.stepsData.map((item) => {
+        if (this.state.sliderData) {
+            items = this.state.sliderData.map((item, i) => {
                 return (
-                    <div key={uuid.v4()} className="steps__item">
-                        <StepCard
-                            key={uuid.v4()}
-                            title={item.title}
-                            text={item.text}
-                            number={item.number}
-                            img={item.img}
+                    <div className="steps__item" key={uuid.v4()}>
+                        <StepSlider
+                            data={this.state.sliderData}
+                            startingSlide={i}
                         />
                     </div>
-                );
+                )
             });
         }
 
@@ -60,10 +56,11 @@ export class StepsContainer extends React.Component {
                 <h2 className="steps__title">{this.props.title}</h2>
                 {items}
             </section>
-        )
+        );
     }
 }
 
 StepsContainer.propTypes = {
-    title: React.PropTypes.string
+    title: React.PropTypes.string,
+    dataURL: React.PropTypes.string
 };

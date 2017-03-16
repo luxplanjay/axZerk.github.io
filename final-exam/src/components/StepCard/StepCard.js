@@ -5,11 +5,10 @@
 import React from 'react';
 import css from './step-card.scss';
 
-export const StepCard = ({title, text, number, img}) => {
-    let stepText = `step ${number}`,
-        backgroundStyle = {
-            backgroundImage: `url(${img})`
-        };
+export const StepCard = ({title, text, stepText, img}) => {
+    let backgroundStyle = {
+        backgroundImage: `url(${img})`
+    };
 
     return (
         <div className="step-card" style={backgroundStyle}>

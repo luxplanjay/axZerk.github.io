@@ -37,7 +37,10 @@ export class App extends React.Component {
                         btnText={'Find your holiday partner'}
                     />
                 </div>
-                <StepsContainer title={'How Urlaubsglück works?'}/>
+                <StepsContainer
+                    title={'How Urlaubsglück works?'}
+                    dataURL={'https://api.myjson.com/bins/l82yv'}
+                />
                 <PartnersContainer
                     title={'Meet a partner for your best holiday'}
                     dataURL={'https://api.myjson.com/bins/mgg6v'}

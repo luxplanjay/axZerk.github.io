@@ -1,2 +1,3 @@
 Patrners Data - https://api.myjson.com/bins/mgg6v
 List Data - https://api.myjson.com/bins/1gcmh3
+Slider Data - https://api.myjson.com/bins/l82yv

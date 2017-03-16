@@ -18,7 +18,7 @@ export class ListContainer extends React.Component {
     }
 
     componentDidMount() {
-        this.getGalleryData(this.props.dataURL)
+        this.getGalleryData(this.props.dataURL);
     }
 
     getGalleryData(url) {
@@ -49,6 +49,7 @@ export class ListContainer extends React.Component {
                 )
             });
         }
+
         return (
             <div className="list-container">
                 {lists}
