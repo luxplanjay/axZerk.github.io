@@ -35,6 +35,16 @@
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
       z-index: 1;
     }
+
+    &:hover {
+      & .ideas-gallery__text {
+        color: $accent;
+      }
+
+      &::before {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, transparent 100%);
+      }
+    }
   }
 
   &__img {

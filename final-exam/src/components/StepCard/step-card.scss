@@ -30,11 +30,7 @@
 
   @include susy-breakpoint(tablet) {
     height: 400px;
-    width: 236px;
-  }
-
-  @include susy-breakpoint(desktop) {
-    width: 300px;
+    width: auto;
   }
 
   &__number {

@@ -1,9 +1,9 @@
-.slider-container {
-  outline: 1px solid #333;
-  width: 100%;
-}
+@import "~susy/sass/susy";
+@import "../../sass/core/tools/tools";
 
-.slick-initialized {
+.slider-container {
+  width: 100%;
+  cursor: pointer;
 }
 
 /* Slider */
@@ -122,8 +122,6 @@
 
   position: absolute;
   top: 50%;
-  width: 20px;
-  height: 20px;
   padding: 0;
   margin-top: -10px \9
 ; /*lte IE 8*/
@@ -139,7 +137,10 @@
   color: transparent;
   border: none;
   outline: none;
-  background: transparent;
+
+  width: 50%;
+  height: 100%;
+  background-color: transparent;
 }
 
 .slick-prev:hover,
@@ -174,21 +175,30 @@
 }
 
 .slick-prev {
-  outline: 1px solid red;
-  left: 25px;
-  z-index: 100;
+  left: 0;
 }
 
 .slick-prev:before {
-  content: '<';
+  content: '';
 }
 
 .slick-next {
-  outline: 1px solid red;
-  right: 25px;
-  z-index: 100;
+  right: 0;
 }
 
 .slick-next:before {
-  content: '>';
+  content: '';
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 100;
+  fill: transparent;
+  opacity: 0.3;
+
+  @include susy-breakpoint(tablet) {
+    width: 60px;
+    height: 100%;
+    fill: $primary-light;
+  }
 }

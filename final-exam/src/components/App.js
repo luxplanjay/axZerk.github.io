@@ -18,6 +18,13 @@ import css from './page-wrapper.scss';
 export class App extends React.Component {
     constructor() {
         super();
+
+        this.appData = {
+            homepageURL: 'https://axzerk.github.io/final-exam/dist/',
+            sliderDataURL: 'https://api.myjson.com/bins/l82yv',
+            partnersDataURL: 'https://api.myjson.com/bins/mgg6v',
+            listDataURL: 'https://api.myjson.com/bins/1gcmh3'
+        }
     }
 
     render() {
@@ -26,7 +33,7 @@ export class App extends React.Component {
                 <div className="promo-headline">
                     <Logo
                         text={'URLAUBSGLÜCK'}
-                        url={'https://axzerk.github.io/final-exam/dist/'}
+                        url={this.appData.homepageURL}
                     />
                     <LoginOptions
                         btnText={['Log in', 'Sign up']}
@@ -39,19 +46,19 @@ export class App extends React.Component {
                 </div>
                 <StepsContainer
                     title={'How Urlaubsglück works?'}
-                    dataURL={'https://api.myjson.com/bins/l82yv'}
+                    dataURL={this.appData.sliderDataURL}
                 />
                 <PartnersContainer
                     title={'Meet a partner for your best holiday'}
-                    dataURL={'https://api.myjson.com/bins/mgg6v'}
+                    dataURL={this.appData.partnersDataURL}
                 />
                 <GalleryContainer title={'Discover holiday activity ideas'}/>
                 <footer className="page-footer">
                     <Logo
                         text={'URLAUBSGLÜCK'}
-                        url={'https://axzerk.github.io/final-exam/dist/'}
+                        url={this.appData.homepageURL}
                     />
-                    <ListContainer dataURL={'https://api.myjson.com/bins/1gcmh3'}/>
+                    <ListContainer dataURL={this.appData.listDataURL}/>
                     <LegalInfo
                         text={'designed by'}
                         url={'https://www.aretodev.com/'}

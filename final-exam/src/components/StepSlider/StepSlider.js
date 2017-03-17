@@ -4,7 +4,8 @@
 
 import React from 'react';
 import Slider from 'react-slick';
-
+import {PrevNavBtn} from './PrevNavBtn';
+import {NextNavBtn} from './NextNavBtn';
 import {StepCard} from '../StepCard/StepCard';
 import uuid from 'uuid';
 
@@ -24,7 +25,9 @@ export class StepSlider extends React.Component {
             slidesToScroll: 1,
             initialSlide: this.props.startingSlide,
             vertical: false,
-            autoplay: true
+            autoplay: true,
+            prevArrow: <PrevNavBtn/>,
+            nextArrow: <NextNavBtn/>
         };
 
         let items;
