@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import retina from 'retinajs';
+
 import {Logo} from './Logo/Logo';
 import {LoginOptions} from './LoginOptions/LoginOptions';
 import {LegalInfo} from './LegalInfo/LegalInfo';
@@ -25,6 +27,10 @@ export class App extends React.Component {
             partnersDataURL: 'https://api.myjson.com/bins/mgg6v',
             listDataURL: 'https://api.myjson.com/bins/1gcmh3'
         }
+    }
+
+    componentDidMount() {
+        retina();
     }
 
     render() {

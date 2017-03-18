@@ -3,6 +3,8 @@
  */
 
 import React from "react";
+import retina from 'retinajs';
+
 import {PartnerCard} from "../PartnerCard/PartnerCard";
 import {Button} from "../Button/Button";
 import uuid from "uuid";
@@ -20,6 +22,7 @@ export class PartnersContainer extends React.Component {
 
     componentDidMount() {
         this.getPartnerData(this.props.dataURL);
+        retina();
     }
 
     getPartnerData(url) {

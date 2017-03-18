@@ -5,6 +5,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import uuid from 'uuid';
+import retina from 'retinajs';
 
 import css from './ideas-gallery.scss';
 
@@ -15,6 +16,10 @@ const masonryOptions = {
 export class Gallery extends React.Component {
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        retina();
     }
 
     render() {

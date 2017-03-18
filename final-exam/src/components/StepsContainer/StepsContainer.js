@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import retina from 'retinajs';
+
 import {StepCard} from '../StepCard/StepCard';
 import {StepSlider} from '../StepSlider/StepSlider';
 import uuid from 'uuid';
@@ -19,6 +21,7 @@ export class StepsContainer extends React.Component {
 
     componentDidMount() {
         this.getSliderData(this.props.dataURL);
+        retina();
     }
 
     getSliderData(url) {
