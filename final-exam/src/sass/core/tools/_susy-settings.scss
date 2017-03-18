@@ -34,6 +34,10 @@ $susy-media: (
                 media: screen,
                 min-width: 768px
         ),
+        laptop: (
+                media: screen,
+                min-width: 1024px
+        ),
         desktop: (
                 media: screen,
                 min-width: 1440px

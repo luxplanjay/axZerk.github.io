@@ -13,6 +13,10 @@
       @include span(6 of 12);
     }
 
+    @include susy-breakpoint(laptop) {
+      @include span(4 of 12);
+    }
+
     @include susy-breakpoint(desktop) {
       @include span(4 of 12);
     }
