@@ -30,7 +30,7 @@ export class Gallery extends React.Component {
                     <div className="ideas-gallery__item" key={uuid.v4()}>
                         <a href="" className="ideas-gallery__link">
                             <span className="ideas-gallery__text">{item.text}</span>
-                            <img src={item.src} className="ideas-gallery__img"/>
+                            <img src={item.src} data-rjs="2" className="ideas-gallery__img" alt={item.text}/>
                         </a>
                     </div>
                 );

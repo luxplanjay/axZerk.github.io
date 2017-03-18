@@ -11,7 +11,7 @@ export const StepCard = ({title, text, stepText, img}) => {
     };
 
     return (
-        <div className="step-card" style={backgroundStyle}>
+        <div className="step-card" style={backgroundStyle} data-rjs="2">
             <span className="step-card__number">{stepText}</span>
             <h3 className="step-card__title">{title}</h3>
             <p className="step-card__text">{text}</p>

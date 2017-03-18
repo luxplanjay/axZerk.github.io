@@ -11,7 +11,7 @@ export const LegalInfo = ({text = '', url = '#'}) => {
         <div className="legal-info">
             <a href={url} className="legal-info__link" target="_blank">
                 <span className="legal-info__text">{text}</span>
-                <i className="legal-info__img"></i>
+                <i className="legal-info__img" data-rjs="2"></i>
             </a>
         </div>
     )
