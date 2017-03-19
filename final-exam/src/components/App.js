@@ -9,13 +9,10 @@ import {Logo} from './Logo/Logo';
 import {LoginOptions} from './LoginOptions/LoginOptions';
 import {LegalInfo} from './LegalInfo/LegalInfo';
 import {PartnerSearch} from './PartnerSearch/PartnerSearch';
-
 import {StepsContainer} from './StepsContainer/StepsContainer';
 import {PartnersContainer} from './PartnersContainer/PartnersContainer';
 import {GalleryContainer} from './GalleryContainer/GalleryContainer';
 import {ListContainer} from './ListContainer/ListContainer';
-
-import css from './page-wrapper.scss';
 
 export class App extends React.Component {
     constructor() {
