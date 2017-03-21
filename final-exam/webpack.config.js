@@ -40,11 +40,11 @@ const config = {
                     use: 'css-loader?sourceMap!resolve-url-loader!postcss-loader!sass-loader?sourceMap'
                 })
             },
-            // {
-            //     test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
-            //     include: /\/node_modules\//,
-            //     use: 'file-loader?name=[1].[ext]&regExp=node_modules/(.*)'
-            // },
+            {
+                test: /\.(png|gif|jpg|jpeg|svg|otf|ttf|eot|woff|woff2)$/,
+                include: /\/node_modules\//,
+                use: 'file-loader?name=[1].[ext]&regExp=node_modules/(.*)'
+            },
             {
                 test: /\.(otf|ttf|eot|woff|woff2)$/,
                 exclude: /\/node_modules\//,
@@ -67,10 +67,8 @@ const config = {
         modules: [path.resolve(__dirname, "src"), path.resolve(__dirname, 'node_modules')]
     },
     plugins: [
-        // new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin('vendors'),
         new webpack.optimize.OccurrenceOrderPlugin(),
-        // new webpack.optimize.UglifyJsPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin({
             filename: 'css/style.css',
@@ -81,7 +79,9 @@ const config = {
             filename: 'index.html',
             template: './index.html',
             inject: false
-        })
+        }),
+        // new webpack.optimize.UglifyJsPlugin(),
+        // new webpack.HotModuleReplacementPlugin()
     ],
     devtool: 'source-map',
     devServer: {

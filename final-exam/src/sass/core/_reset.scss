@@ -39,7 +39,6 @@ blockquote, q {
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none;
 }
 
 table {
@@ -47,7 +46,7 @@ table {
   border-spacing: 0;
 }
 
-// Krutie shtuki
+// Custom props
 body, input, button, textarea {
   // -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;

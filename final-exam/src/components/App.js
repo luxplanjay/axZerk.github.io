@@ -33,7 +33,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app-container">
-                <div className="promo-headline">
+                <div className="promo-headline" data-rjs="2">
                     <Logo
                         text={'URLAUBSGLÜCK'}
                         url={this.appData.homepageURL}
