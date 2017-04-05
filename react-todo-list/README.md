@@ -1,1 +1,0 @@
-Simple React ToDo List

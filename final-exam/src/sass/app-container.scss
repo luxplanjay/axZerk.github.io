@@ -1,7 +1,0 @@
-@import "~susy/sass/susy";
-@import "../sass/core/tools/tools";
-
-.app-container {
-  @include container();
-  @include container-min-width();
-}
